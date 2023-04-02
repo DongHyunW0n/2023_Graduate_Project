@@ -14,7 +14,7 @@
 		8FF9200129CDA84B000C2AD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF91FFF29CDA84B000C2AD1 /* Main.storyboard */; };
 		8FF9200329CDA84C000C2AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9200229CDA84C000C2AD1 /* Assets.xcassets */; };
 		8FF9200629CDA84C000C2AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9200429CDA84C000C2AD1 /* LaunchScreen.storyboard */; };
-		8FF9200E29CDA96A000C2AD1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9200D29CDA96A000C2AD1 /* MainViewController.swift */; };
+		8FF9200E29CDA96A000C2AD1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		8FF9200229CDA84C000C2AD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FF9200529CDA84C000C2AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FF9200729CDA84C000C2AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FF9200D29CDA96A000C2AD1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 				8FF91FF929CDA84B000C2AD1 /* AppDelegate.swift */,
 				8FF91FFB29CDA84B000C2AD1 /* SceneDelegate.swift */,
 				8F97513729D9E88300B6A0BE /* DeviceConfig.swift */,
-				8FF9200D29CDA96A000C2AD1 /* MainViewController.swift */,
+				8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */,
 				8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */,
 				8FF91FFF29CDA84B000C2AD1 /* Main.storyboard */,
 				8FF9200229CDA84C000C2AD1 /* Assets.xcassets */,
@@ -148,7 +148,7 @@
 				8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */,
 				8FF91FFC29CDA84B000C2AD1 /* SceneDelegate.swift in Sources */,
 				8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */,
-				8FF9200E29CDA96A000C2AD1 /* MainViewController.swift in Sources */,
+				8FF9200E29CDA96A000C2AD1 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

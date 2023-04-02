@@ -22,7 +22,7 @@ class LaunchScreenViewController: UIViewController {
     
     func checkDeviceNetworkStatus() {
         if(DeviceManager.shared.netWorkStatus) {
-            guard let vc:MainViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateViewController(identifier: "login_UI") as? MainViewController else { return }
+            guard let vc:MapViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateViewController(identifier: "login_UI") as? MapViewController else { return }
             
             self.view.window?.rootViewController = vc
             self.view.window?.makeKeyAndVisible()
