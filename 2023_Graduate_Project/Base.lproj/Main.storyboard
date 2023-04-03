@@ -44,7 +44,7 @@
         <!--내 주변 업체 확인-->
         <scene sceneID="Ird-5k-XYK">
             <objects>
-                <viewController id="72N-KN-N1i" sceneMemberID="viewController">
+                <viewController id="72N-KN-N1i" customClass="MapViewController" customModule="_023_Graduate_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A5D-Cj-1Nd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
