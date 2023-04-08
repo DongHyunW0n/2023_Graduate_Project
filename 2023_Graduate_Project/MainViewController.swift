@@ -12,7 +12,7 @@ import CoreLocation
 class MainViewController: UIViewController {
     
     let bannerInfos: [BannerInfo] = BannerInfo.list
-    let colors: [UIColor] = [.systemPurple, .systemOrange, .systemPink, .systemRed]
+    let colors: [UIColor] = [.systemPurple, .systemOrange, .systemMint, .systemGray6]
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -73,6 +73,8 @@ class MainViewController: UIViewController {
         self.getCurrentWeather(cityName: "Busan")
         // Do any additional setup after loading the view.
         
+        
+        
        
     }
     
@@ -98,17 +100,17 @@ class MainViewController: UIViewController {
     }
     
     
-    
-    
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         for view in self.view.subviews{
             if view is UIPageControl{
-                (view as! UIPageControl).currentPageIndicatorTintColor = .yellow
+                (view as! UIPageControl).currentPageIndicatorTintColor = .black
                 }
             }
         }
+    
+    
+   
     
     
     func configureView(weatherInformation : weatherInformation){
@@ -118,7 +120,7 @@ class MainViewController: UIViewController {
         if let weather = weatherInformation.weather.first {
             self.weatherDescriptLabel?.text = weather.description
         }
-        self.tempLabel?.text = "\(Int(weatherInformation.temp.temp - 273.15))'C"
+        self.tempLabel?.text = "\(Int(weatherInformation.temp.temp - 273.15))°C"
        
         
         

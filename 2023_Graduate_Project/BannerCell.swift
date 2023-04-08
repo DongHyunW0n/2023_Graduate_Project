@@ -23,5 +23,6 @@ class BannerCell: UICollectionViewCell {
     
         titleLabel.text = info.title
         descriptionLabel.text = info.description
+        thumbnailImageView.image = UIImage(named: info.imageName)
     }
 }
