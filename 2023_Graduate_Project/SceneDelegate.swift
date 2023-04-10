@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let vc:LaunchScreenViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateViewController(identifier: "splashViewController") as? LaunchScreenViewController else { return }
         
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+//        window?.rootViewController = vc
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
