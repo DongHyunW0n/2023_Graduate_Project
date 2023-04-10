@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+
 
 class EnterEmailViewController: UIViewController{
     
@@ -44,10 +47,70 @@ class EnterEmailViewController: UIViewController{
     @IBAction func nextButtonTabbed(_ sender: UIButton) {
         
         
+        //firebase 이메일 비밀번호 인증
+        
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        
+        //신규 사용자 생성
+        
+        Auth.auth().createUser(withEmail: email, password: password) {[weak self] authResult, error in
+            
+            guard let self = self else{return}
+            
+            if let error = error{
+                let code = (error as NSError).code
+                switch code {
+                    
+                case 17007 : // 이미 아이디가 있는데?
+                    let alertController = UIAlertController(title: "이미 존재하는 계정입니다", message: "입력하신 계정으로 로그인 합니다.", preferredStyle: UIAlertController.Style.alert)
+
+                    let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
+
+                    alertController.addAction(okButton)
+                present(alertController, animated: true)
+                        loginUser(withEmail: email, password: password)
+                default :
+                    
+                    
+                    self.errorLabel.text = error.localizedDescription
+                }
+            }else{
+                showMainViewController()
+
+            }
+            
+            
+            
+        }
+        
     }
     
-   
+    private func showMainViewController(){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainVC = storyboard.instantiateViewController(identifier: "MainViewController")
+        navigationController?.show(mainVC, sender: nil)
+    }
+    
+    private func loginUser(withEmail email: String, password : String){
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] _, error in
+            guard let self = self else{return}
+            
+            if let error = error{
+                
+                
+                errorLabel.text = error.localizedDescription
+            }
+            else{
+                self.showMainViewController()
+            }
+        }
+    }
 }
+
+
 
 
 extension EnterEmailViewController : UITextFieldDelegate{

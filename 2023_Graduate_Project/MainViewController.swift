@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import CoreLocation
+import FirebaseAuth
 
 class MainViewController: UIViewController {
     
@@ -53,6 +54,8 @@ class MainViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
        
         self.navigationItem.setHidesBackButton(true, animated: false) // 네비게이션 백버튼 숨기기 ~
+        
+        let email = Auth.auth().currentUser?.email ?? "고객" //없으면 고객으로 표시
         
         // Presentation
         datasource = UICollectionViewDiffableDataSource<Section, Item>.init(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
