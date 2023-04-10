@@ -38,11 +38,21 @@ class MainViewController: UIViewController {
     
     var locationManager = CLLocationManager()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+       
+        self.navigationItem.setHidesBackButton(true, animated: false) // 네비게이션 백버튼 숨기기 ~
         
         // Presentation
         datasource = UICollectionViewDiffableDataSource<Section, Item>.init(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
