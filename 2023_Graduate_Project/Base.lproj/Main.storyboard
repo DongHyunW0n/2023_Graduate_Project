@@ -252,18 +252,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME 님 환영합니다 !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUT-mC-EPC">
-                                <rect key="frame" x="20" y="50" width="374" height="24"/>
+                                <rect key="frame" x="20" y="150" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvS-gz-fDm">
+                                <rect key="frame" x="321" y="30" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="로그아웃"/>
+                                <connections>
+                                    <action selector="logoutButtonTabbed:" destination="zAF-jF-Mfv" eventType="touchUpInside" id="66x-EP-UWw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JIw-ZM-60q"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JIw-ZM-60q" firstAttribute="trailing" secondItem="tvS-gz-fDm" secondAttribute="trailing" constant="10" id="Qch-ME-e5N"/>
+                            <constraint firstItem="tvS-gz-fDm" firstAttribute="top" secondItem="JIw-ZM-60q" secondAttribute="top" constant="30" id="X2R-3X-xkC"/>
                             <constraint firstItem="JIw-ZM-60q" firstAttribute="trailing" secondItem="VUT-mC-EPC" secondAttribute="trailing" constant="20" id="XTK-yh-MSD"/>
                             <constraint firstItem="VUT-mC-EPC" firstAttribute="leading" secondItem="JIw-ZM-60q" secondAttribute="leading" constant="20" id="cN5-jV-L1q"/>
-                            <constraint firstItem="VUT-mC-EPC" firstAttribute="top" secondItem="JIw-ZM-60q" secondAttribute="top" constant="50" id="gA3-y1-2eM"/>
+                            <constraint firstItem="VUT-mC-EPC" firstAttribute="top" secondItem="JIw-ZM-60q" secondAttribute="top" constant="150" id="uFw-Oj-g24"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bEk-sk-sbP"/>
@@ -557,7 +567,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHv-bQ-Rx2" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2868.115942028986" y="249.44196428571428"/>
+            <point key="canvasLocation" x="-3271" y="240"/>
         </scene>
     </scenes>
     <resources>

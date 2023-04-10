@@ -33,4 +33,21 @@ class MyInformationViewController: UIViewController {
         userNameLabel.text = "현재 로그인한 계정 : \(email)"
     }
 
+    @IBAction func logoutButtonTabbed(_ sender: UIButton) {
+        
+        
+        let firebaseAuth = Auth.auth()
+        
+        
+        do{
+            try firebaseAuth.signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+
+            
+        }catch let sighOutError as NSError{
+            
+            print("ERROR : SIGNOUT \(sighOutError.localizedDescription)")
+            
+        }
+    }
 }

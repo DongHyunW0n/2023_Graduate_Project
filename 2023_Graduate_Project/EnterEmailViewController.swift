@@ -72,11 +72,25 @@ class EnterEmailViewController: UIViewController{
                         loginUser(withEmail: email, password: password)
                 default :
                     
+                    let alertController = UIAlertController(title: "오류", message: "오류 메시지를 확인해 주세요", preferredStyle: UIAlertController.Style.alert)
+
+                    let okButton = UIAlertAction(title: "ㅠㅠ", style: UIAlertAction.Style.cancel, handler: nil)
+
+                    alertController.addAction(okButton)
+                present(alertController, animated: true)
                     
                     self.errorLabel.text = error.localizedDescription
                 }
             }else{
-                showMainViewController()
+                
+                let alertController = UIAlertController(title: "로그인 완료", message: "로그인 되었습니다", preferredStyle: UIAlertController.Style.alert)
+
+                let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
+
+                alertController.addAction(okButton)
+                present(alertController, animated: true)
+                loginUser(withEmail: email, password: password)
+//                showMainViewController()
 
             }
             

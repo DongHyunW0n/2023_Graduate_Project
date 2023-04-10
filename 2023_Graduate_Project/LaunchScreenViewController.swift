@@ -16,9 +16,7 @@ class LaunchScreenViewController: UIViewController {
         // postDelay
         // 1초 뒤에 실행
     }
-    override func viewDidAppear(_ animated: Bool) {
-        checkDeviceNetworkStatus()
-    }
+  
     
     func checkDeviceNetworkStatus() {
         if(DeviceManager.shared.netWorkStatus) {
