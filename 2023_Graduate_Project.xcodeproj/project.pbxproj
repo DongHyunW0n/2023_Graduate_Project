@@ -15,6 +15,8 @@
 		8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692D29E1B54000E1ED2B /* BannerCell.swift */; };
 		8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */; };
 		8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513729D9E88300B6A0BE /* DeviceConfig.swift */; };
+		8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */; };
+		8F9C762E29FFA84C00EC9478 /* FreeBoardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F9C762C29FFA84C00EC9478 /* FreeBoardTableViewCell.xib */; };
 		8FE5DC8E29E32E68008CCE25 /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5DC8D29E32E68008CCE25 /* EnterEmailViewController.swift */; };
 		8FE5DC9029E3DE1B008CCE25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5DC8F29E3DE1B008CCE25 /* GoogleService-Info.plist */; };
 		8FE5DC9229E3F94C008CCE25 /* MyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */; };
@@ -37,6 +39,8 @@
 		8F0A692D29E1B54000E1ED2B /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		8F97513729D9E88300B6A0BE /* DeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfig.swift; sourceTree = "<group>"; };
+		8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardTableViewCell.swift; sourceTree = "<group>"; };
+		8F9C762C29FFA84C00EC9478 /* FreeBoardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FreeBoardTableViewCell.xib; sourceTree = "<group>"; };
 		8FE5DC8D29E32E68008CCE25 /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		8FE5DC8F29E3DE1B008CCE25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInformationViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,8 @@
 				8F0A690929E0856300E1ED2B /* ErrorMessage.swift */,
 				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
 				8F0A692D29E1B54000E1ED2B /* BannerCell.swift */,
+				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
+				8F9C762C29FFA84C00EC9478 /* FreeBoardTableViewCell.xib */,
 			);
 			path = 2023_Graduate_Project;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 				8FE5DC9029E3DE1B008CCE25 /* GoogleService-Info.plist in Resources */,
 				8FF9200329CDA84C000C2AD1 /* Assets.xcassets in Resources */,
 				8FE5DC9629E42581008CCE25 /* Splash.storyboard in Resources */,
+				8F9C762E29FFA84C00EC9478 /* FreeBoardTableViewCell.xib in Resources */,
 				8FF9200129CDA84B000C2AD1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +257,7 @@
 				8FF91FFA29CDA84B000C2AD1 /* AppDelegate.swift in Sources */,
 				8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */,
 				8FF91FFC29CDA84B000C2AD1 /* SceneDelegate.swift in Sources */,
+				8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */,
 				8FE5DC8E29E32E68008CCE25 /* EnterEmailViewController.swift in Sources */,
 				8F0A690A29E0856300E1ED2B /* ErrorMessage.swift in Sources */,
 				8F0A690629E084C000E1ED2B /* weatherInformation.swift in Sources */,
