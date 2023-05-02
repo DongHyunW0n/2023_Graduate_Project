@@ -14,9 +14,7 @@ import Firebase
 
 class RequestViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    @IBOutlet weak var test: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
+    @IBOutlet weak var requestDateTextField: UITextField!
     @IBOutlet weak var requestPartTextField: UITextField!
     
     @IBOutlet weak var requestDescriptTextView: UITextView!
@@ -136,15 +134,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         
     }
     
-    @IBAction func changeDate(_ sender: UIDatePicker) {
-        
-        let  dateformatter = DateFormatter()
-        dateformatter.dateStyle = .short
-        dateformatter.timeStyle = .short
-        
-        
-        
-    }
+    
     
     @IBAction func requestButtonTabbed(_ sender: UIButton) {
         
@@ -153,9 +143,12 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         
        
         
-        ref.child("1").setValue(["방문 요청 일시" : "", "요청 부분" :"\(String(describing: requestPartTextField.text))" ,"상세 설명" : "\(String(describing: requestDescriptTextView.text))"])
+        ref.child("ServiceRequest").child("Request").setValue(["서비스 요청자" : "\(email)", "요청 일시" : "\(requestDateTextField.text ?? "미입력")", "요청 부분" :"\(requestPartTextField.text ?? "미입력")" ,"상세 설명" : "\(requestDescriptTextView.text ?? "미입력")"])
         print("DB에 전송 완료 !")
 
+        
+        
+        
         
         
         
@@ -187,7 +180,7 @@ extension RequestViewController: UITextViewDelegate {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if requestDescriptTextView.text.isEmpty {
-            requestDescriptTextView.text =  "플레이스홀더입니다"
+            requestDescriptTextView.text =  "자세히 적어주세요"
             requestDescriptTextView.textColor = UIColor.lightGray
         }
 
