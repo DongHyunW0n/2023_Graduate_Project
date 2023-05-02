@@ -8,6 +8,12 @@ target '2023_Graduate_Project' do
 pod 'Alamofire', '~>5.4'
 pod 'Charts'
 pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'FirebaseRemoteConfig'
+pod 'FirebaseAnalytics'	
+pod 'FirebaseStorage'	
+
+
 
   # Pods for 2023_Graduate_Project
 
