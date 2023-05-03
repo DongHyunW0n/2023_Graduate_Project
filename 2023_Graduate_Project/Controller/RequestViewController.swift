@@ -101,20 +101,20 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                 return
             }
             
-            self.storage.child("images/file.png").downloadURL { url, error in
-                
-                guard let url = url, error == nil else{
-                    return
-                }
-                
-                let urlString = url.absoluteString
-                
-                DispatchQueue.main.async {
-                    self.uploadedImage.image = image
-                }
-                print("Download URL : \(urlString)")
-                UserDefaults.standard.set(urlString, forKey: "url")
-            }
+//            self.storage.child("images/file.png").downloadURL { url, error in
+//
+//                guard let url = url, error == nil else{
+//                    return
+//                }
+//
+//                let urlString = url.absoluteString
+//
+//                DispatchQueue.main.async {
+//                    self.uploadedImage.image = image
+//                }
+//                print("Download URL : \(urlString)")
+//                UserDefaults.standard.set(urlString, forKey: "url")
+//            }
             
         })
         //upload image data

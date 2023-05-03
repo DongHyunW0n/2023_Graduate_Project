@@ -42,7 +42,7 @@
                 <outlet property="boardNumber" destination="PVp-hs-mgk" id="Uah-eZ-LZJ"/>
                 <outlet property="boardTitle" destination="JbN-nL-JG7" id="sbG-q0-bu1"/>
             </connections>
-            <point key="canvasLocation" x="131" y="-12"/>
+            <point key="canvasLocation" x="-366" y="-76"/>
         </tableViewCell>
     </objects>
 </document>

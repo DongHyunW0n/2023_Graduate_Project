@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61266053AAFD943652EFEE97 /* Pods_2023_Graduate_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA74098D8EE331AAF39FF2B5 /* Pods_2023_Graduate_Project.framework */; };
 		8F0A690629E084C000E1ED2B /* weatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690529E084C000E1ED2B /* weatherInformation.swift */; };
 		8F0A690829E084F500E1ED2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690729E084F500E1ED2B /* MainViewController.swift */; };
 		8F0A690A29E0856300E1ED2B /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690929E0856300E1ED2B /* ErrorMessage.swift */; };
 		8F0A692C29E1B4DF00E1ED2B /* BannerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */; };
 		8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692D29E1B54000E1ED2B /* BannerCell.swift */; };
+		8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */; };
 		8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */; };
 		8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513729D9E88300B6A0BE /* DeviceConfig.swift */; };
 		8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */; };
@@ -28,16 +30,15 @@
 		8FF9200329CDA84C000C2AD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9200229CDA84C000C2AD1 /* Assets.xcassets */; };
 		8FF9200629CDA84C000C2AD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9200429CDA84C000C2AD1 /* LaunchScreen.storyboard */; };
 		8FF9200E29CDA96A000C2AD1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */; };
-		95265EAC2AF377071129F1A4 /* Pods_2023_Graduate_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A34297FC8931C7300BE79C3 /* Pods_2023_Graduate_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07B8718C88B326E7F8F13ACF /* Pods-2023_Graduate_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2023_Graduate_Project.debug.xcconfig"; path = "Target Support Files/Pods-2023_Graduate_Project/Pods-2023_Graduate_Project.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0A690529E084C000E1ED2B /* weatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherInformation.swift; sourceTree = "<group>"; };
 		8F0A690729E084F500E1ED2B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F0A690929E0856300E1ED2B /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerInfo.swift; sourceTree = "<group>"; };
 		8F0A692D29E1B54000E1ED2B /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardViewController.swift; sourceTree = "<group>"; };
 		8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		8F97513729D9E88300B6A0BE /* DeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfig.swift; sourceTree = "<group>"; };
 		8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -56,8 +57,9 @@
 		8FF9200529CDA84C000C2AD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FF9200729CDA84C000C2AD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		9A34297FC8931C7300BE79C3 /* Pods_2023_Graduate_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2023_Graduate_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB51F39E724F4AA8CAB0048B /* Pods-2023_Graduate_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2023_Graduate_Project.release.xcconfig"; path = "Target Support Files/Pods-2023_Graduate_Project/Pods-2023_Graduate_Project.release.xcconfig"; sourceTree = "<group>"; };
+		A9793F8413EBA9A1B1390E07 /* Pods-2023_Graduate_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2023_Graduate_Project.debug.xcconfig"; path = "Target Support Files/Pods-2023_Graduate_Project/Pods-2023_Graduate_Project.debug.xcconfig"; sourceTree = "<group>"; };
+		BA74098D8EE331AAF39FF2B5 /* Pods_2023_Graduate_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2023_Graduate_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D0B3A78CAB9F0B31D547B9 /* Pods-2023_Graduate_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2023_Graduate_Project.release.xcconfig"; path = "Target Support Files/Pods-2023_Graduate_Project/Pods-2023_Graduate_Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,20 +67,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95265EAC2AF377071129F1A4 /* Pods_2023_Graduate_Project.framework in Frameworks */,
+				61266053AAFD943652EFEE97 /* Pods_2023_Graduate_Project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BAB49D49EC268DD0733E451 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA74098D8EE331AAF39FF2B5 /* Pods_2023_Graduate_Project.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D9677590EDAFECADB647771 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07B8718C88B326E7F8F13ACF /* Pods-2023_Graduate_Project.debug.xcconfig */,
-				EB51F39E724F4AA8CAB0048B /* Pods-2023_Graduate_Project.release.xcconfig */,
+				A9793F8413EBA9A1B1390E07 /* Pods-2023_Graduate_Project.debug.xcconfig */,
+				F1D0B3A78CAB9F0B31D547B9 /* Pods-2023_Graduate_Project.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8F23D7AE2A02BF7E00005174 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F0A690529E084C000E1ED2B /* weatherInformation.swift */,
+				8F0A690929E0856300E1ED2B /* ErrorMessage.swift */,
+				8F97513729D9E88300B6A0BE /* DeviceConfig.swift */,
+				8F0A692D29E1B54000E1ED2B /* BannerCell.swift */,
+				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
+				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8F23D7AF2A02BF8900005174 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FF91FFF29CDA84B000C2AD1 /* Main.storyboard */,
+				8FF9200429CDA84C000C2AD1 /* LaunchScreen.storyboard */,
+				8FE5DC9529E42581008CCE25 /* Splash.storyboard */,
+				8F9C762C29FFA84C00EC9478 /* FreeBoardTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8F23D7B02A02BF9600005174 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FEF07A929E1D5E6001D6962 /* LoginViewController.swift */,
+				8F0A690729E084F500E1ED2B /* MainViewController.swift */,
+				8FE5DC8D29E32E68008CCE25 /* EnterEmailViewController.swift */,
+				8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */,
+				8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */,
+				8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */,
+				8FADDF6D2A0128BA00B2172A /* RequestViewController.swift */,
+				8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		8FF91FED29CDA84B000C2AD1 = {
@@ -87,7 +136,7 @@
 				8FF91FF829CDA84B000C2AD1 /* 2023_Graduate_Project */,
 				8FF91FF729CDA84B000C2AD1 /* Products */,
 				5D9677590EDAFECADB647771 /* Pods */,
-				DA40116D967E21E48A120FCE /* Frameworks */,
+				5BAB49D49EC268DD0733E451 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,38 +151,16 @@
 		8FF91FF829CDA84B000C2AD1 /* 2023_Graduate_Project */ = {
 			isa = PBXGroup;
 			children = (
-				8FF91FF929CDA84B000C2AD1 /* AppDelegate.swift */,
 				8FF91FFB29CDA84B000C2AD1 /* SceneDelegate.swift */,
-				8F97513729D9E88300B6A0BE /* DeviceConfig.swift */,
-				8FEF07A929E1D5E6001D6962 /* LoginViewController.swift */,
-				8FE5DC8D29E32E68008CCE25 /* EnterEmailViewController.swift */,
-				8F0A690729E084F500E1ED2B /* MainViewController.swift */,
-				8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */,
-				8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */,
-				8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */,
-				8FADDF6D2A0128BA00B2172A /* RequestViewController.swift */,
-				8FF91FFF29CDA84B000C2AD1 /* Main.storyboard */,
+				8FF91FF929CDA84B000C2AD1 /* AppDelegate.swift */,
+				8F23D7AE2A02BF7E00005174 /* Model */,
+				8F23D7AF2A02BF8900005174 /* View */,
+				8F23D7B02A02BF9600005174 /* Controller */,
 				8FF9200229CDA84C000C2AD1 /* Assets.xcassets */,
-				8FE5DC9529E42581008CCE25 /* Splash.storyboard */,
-				8FF9200429CDA84C000C2AD1 /* LaunchScreen.storyboard */,
-				8F0A690529E084C000E1ED2B /* weatherInformation.swift */,
 				8FF9200729CDA84C000C2AD1 /* Info.plist */,
 				8FE5DC8F29E3DE1B008CCE25 /* GoogleService-Info.plist */,
-				8F0A690929E0856300E1ED2B /* ErrorMessage.swift */,
-				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
-				8F0A692D29E1B54000E1ED2B /* BannerCell.swift */,
-				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
-				8F9C762C29FFA84C00EC9478 /* FreeBoardTableViewCell.xib */,
 			);
 			path = 2023_Graduate_Project;
-			sourceTree = "<group>";
-		};
-		DA40116D967E21E48A120FCE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9A34297FC8931C7300BE79C3 /* Pods_2023_Graduate_Project.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,11 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8FF9200A29CDA84C000C2AD1 /* Build configuration list for PBXNativeTarget "2023_Graduate_Project" */;
 			buildPhases = (
-				61FA19BBDCA131F1F204EF30 /* [CP] Check Pods Manifest.lock */,
+				F09761A3EA0CD2E4E68ED9AC /* [CP] Check Pods Manifest.lock */,
 				8FF91FF229CDA84B000C2AD1 /* Sources */,
 				8FF91FF329CDA84B000C2AD1 /* Frameworks */,
 				8FF91FF429CDA84B000C2AD1 /* Resources */,
-				3634D4DC3CC845FF957460D4 /* [CP] Embed Pods Frameworks */,
+				641656B29832EF3329D1911F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,7 +235,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3634D4DC3CC845FF957460D4 /* [CP] Embed Pods Frameworks */ = {
+		641656B29832EF3329D1911F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,7 +252,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-2023_Graduate_Project/Pods-2023_Graduate_Project-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		61FA19BBDCA131F1F204EF30 /* [CP] Check Pods Manifest.lock */ = {
+		F09761A3EA0CD2E4E68ED9AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F0A690829E084F500E1ED2B /* MainViewController.swift in Sources */,
+				8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */,
 				8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */,
 				8FADDF6E2A0128BA00B2172A /* RequestViewController.swift in Sources */,
 				8F0A692C29E1B4DF00E1ED2B /* BannerInfo.swift in Sources */,
@@ -410,7 +438,7 @@
 		};
 		8FF9200B29CDA84C000C2AD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 07B8718C88B326E7F8F13ACF /* Pods-2023_Graduate_Project.debug.xcconfig */;
+			baseConfigurationReference = A9793F8413EBA9A1B1390E07 /* Pods-2023_Graduate_Project.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,7 +467,7 @@
 		};
 		8FF9200C29CDA84C000C2AD1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB51F39E724F4AA8CAB0048B /* Pods-2023_Graduate_Project.release.xcconfig */;
+			baseConfigurationReference = F1D0B3A78CAB9F0B31D547B9 /* Pods-2023_Graduate_Project.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
