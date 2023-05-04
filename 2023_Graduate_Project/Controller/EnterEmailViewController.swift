@@ -83,6 +83,7 @@ class EnterEmailViewController: UIViewController{
                 }
             }else{
                 
+            
                 let alertController = UIAlertController(title: "로그인 완료", message: "로그인 되었습니다", preferredStyle: UIAlertController.Style.alert)
 
                 let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)

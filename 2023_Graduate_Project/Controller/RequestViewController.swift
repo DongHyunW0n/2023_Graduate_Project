@@ -143,7 +143,10 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         
        
         
-        ref.child("ServiceRequest").child("Request").setValue(["서비스 요청자" : "\(email)", "요청 일시" : "\(requestDateTextField.text ?? "미입력")", "요청 부분" :"\(requestPartTextField.text ?? "미입력")" ,"상세 설명" : "\(requestDescriptTextView.text ?? "미입력")"])
+        ref.child("ServiceRequest").child("Request").setValue(["서비스 요청자" : "\(email)",
+                                                               "요청 일시" : "\(requestDateTextField.text ?? "미입력")",
+                                                               "요청 부분" :"\(requestPartTextField.text ?? "미입력")" ,
+                                                               "상세 설명" : "\(requestDescriptTextView.text ?? "미입력")"])
         print("DB에 전송 완료 !")
 
         
