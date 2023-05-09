@@ -433,6 +433,9 @@
                                 <rect key="frame" x="168.33333333333334" y="620" width="53.666666666666657" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="등록"/>
+                                <connections>
+                                    <action selector="okButtonTabbed:" destination="7ly-li-Jgr" eventType="touchUpInside" id="DdA-jH-Dsp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b6r-P2-1qZ"/>

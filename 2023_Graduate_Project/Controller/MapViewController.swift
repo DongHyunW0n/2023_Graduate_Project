@@ -9,7 +9,6 @@ import UIKit
 import MapKit
 import CoreLocation
 import Charts
-import Alamofire
 
 
 class MapViewController: UIViewController, MKMapViewDelegate {

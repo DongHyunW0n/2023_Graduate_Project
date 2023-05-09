@@ -10,7 +10,14 @@ import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 
+
+
 class FreeBoardWriteViewController: UIViewController {
+    
+    
+    
+    let ref = Database.database().reference()
+    let storageRef = Storage.storage().reference()
 
     @IBOutlet weak var writeTextView: UITextView!
     @IBOutlet weak var TitleTextField: UITextField!
@@ -19,11 +26,25 @@ class FreeBoardWriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+        
 
         
     }
     
 
+    @IBAction func okButtonTabbed(_ sender: UIButton) {
+        
+        ref.child("FreeBoard").child("Article").setValue(["Title" : "\(TitleTextField.text ?? "입력값 없음")",
+                                 "Detail" : "\(writeTextView.text ?? "입력값 없음")"])
+        
+        
+        
+        
+    }
     
 
 }

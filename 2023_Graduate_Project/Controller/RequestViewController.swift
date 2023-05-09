@@ -8,7 +8,6 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
-import FirebaseStorage
 import Firebase
 
 
@@ -25,27 +24,23 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var requestButton: UIButton!
     
     
-    let storage = Storage.storage().reference()
-    
+    let storageRef = Storage.storage().reference()
     let ref = Database.database().reference()
-    
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
         
         
         requestDescriptTextView.delegate = self
-        
-        
         requestDescriptTextView.text = "자세히 적어주세요 !!"
         requestDescriptTextView.textColor = UIColor.lightGray
-        
-        
         requestDescriptTextView.layer.borderWidth = 1
         requestDescriptTextView.layer.borderColor = UIColor.lightGray.cgColor
-        
-        
         requestPartTextField.layer.borderColor = UIColor.lightGray.cgColor
         
         
@@ -76,56 +71,15 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBAction func findPhoto(_ sender: Any) {
         
         let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
         picker.delegate = self
         picker.allowsEditing = true
         present(picker, animated: true)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
-        
-        picker.dismiss(animated: true,  completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else {
-            return
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            picker.dismiss(animated: true, completion: nil)
+            uploadedImage.image = info[.originalImage] as? UIImage
         }
-        guard let imageData = image.pngData() else{
-            return
-        }
-        
-        storage.child("images/file.png").putData(imageData,
-                                                 metadata: nil,
-                                                 completion: { _, error in
-            
-            guard error == nil else{
-                print("Failed to upload")
-                return
-            }
-            
-//            self.storage.child("images/file.png").downloadURL { url, error in
-//
-//                guard let url = url, error == nil else{
-//                    return
-//                }
-//
-//                let urlString = url.absoluteString
-//
-//                DispatchQueue.main.async {
-//                    self.uploadedImage.image = image
-//                }
-//                print("Download URL : \(urlString)")
-//                UserDefaults.standard.set(urlString, forKey: "url")
-//            }
-            
-        })
-        //upload image data
-        
-        // get download url
-        
-        //save download
-        
-        
-        
-    }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
@@ -141,12 +95,44 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         let email = Auth.auth().currentUser?.email ?? "고객"
         print(email)
         
-       
         
-        ref.child("ServiceRequest").child("Request").setValue(["서비스 요청자" : "\(email)",
-                                                               "요청 일시" : "\(requestDateTextField.text ?? "미입력")",
-                                                               "요청 부분" :"\(requestPartTextField.text ?? "미입력")" ,
-                                                               "상세 설명" : "\(requestDescriptTextView.text ?? "미입력")"])
+        
+        guard let image = uploadedImage.image else{return}
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.5) else {return}
+        
+        
+        
+        let imageName = UUID().uuidString
+        let imageRef = storageRef.child("images/\(imageName)")
+        
+        let uploadTask = imageRef.putData(imageData, metadata: nil) { (metadata, error) in
+                    guard let metadata = metadata else {
+                        print("뭔가 에러가 있다")
+                        return
+                    }
+                    // Metadata contains file metadata such as size, content-type.
+                    let size = metadata.size
+                    // You can also access to download URL after upload.
+                    imageRef.downloadURL { (url, error) in
+                        guard let downloadURL = url else {
+                            print("뭔가 에러가 있다")
+                            return
+                        }
+                        // Save the download URL to the Firebase Realtime Database
+//                        let dbRef = Database.database().reference().child("images").child("ServiceRequest").childByAutoId()
+//                        dbRef.setValue(downloadURL.absoluteString)
+                        let ref = Database.database().reference()
+                    
+                        ref.child("ServiceRequest").child("Request").setValue(["서비스 요청자" : "\(email)",
+                                                                                 "요청 일시" : "\(self.requestDateTextField.text ?? "미입력")",
+                                                                                 "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
+
+                                                                                 "요청 부분" :"\(self.requestPartTextField.text ?? "미입력")" ,
+                                                                                 "상세 설명" : "\(self.requestDescriptTextView.text ?? "미입력")"])
+                    }
+                }
+        
         print("DB에 전송 완료 !")
 
         
