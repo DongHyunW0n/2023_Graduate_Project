@@ -8,7 +8,9 @@
 import Foundation
 
 
-struct article : Codable {
+struct Article : Codable {
     
+    let Detail : String
+    let Title : String
     
 }

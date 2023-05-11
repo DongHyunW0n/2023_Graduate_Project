@@ -41,7 +41,9 @@ class FreeBoardWriteViewController: UIViewController {
         ref.child("FreeBoard").child("Article").setValue(["Title" : "\(TitleTextField.text ?? "입력값 없음")",
                                  "Detail" : "\(writeTextView.text ?? "입력값 없음")"])
         
-        
+        print("DB에 전송 완료 !")
+            
+        self.navigationController?.popViewController(animated: true)
         
         
     }

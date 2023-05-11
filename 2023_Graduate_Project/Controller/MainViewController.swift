@@ -13,7 +13,7 @@ import FirebaseAuth
 class MainViewController: UIViewController {
     
     let bannerInfos: [BannerInfo] = BannerInfo.list
-    let colors: [UIColor] = [.systemPurple, .systemOrange, .systemMint, .systemGray6]
+    let colors: [UIColor] = [.systemYellow, .systemOrange, .systemMint, .systemGray6]
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!

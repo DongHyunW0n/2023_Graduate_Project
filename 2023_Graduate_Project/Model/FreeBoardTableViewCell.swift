@@ -9,9 +9,8 @@ import UIKit
 
 class FreeBoardTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var boardNumber: UILabel!
-    
     @IBOutlet weak var boardTitle: UILabel!
+    
     
     
     override func awakeFromNib() {

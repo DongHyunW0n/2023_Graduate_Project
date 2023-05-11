@@ -58,7 +58,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                 return
             }
             
-            DispatchQueue.main.async {
+            DispatchQueue.main.async {      // 실시간으로 선택한 이미지를 쇼잉 해줍니당
                 let image = UIImage(data: data)
                 self.uploadedImage.image = image
             }
@@ -68,7 +68,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         task.resume()
     }
     
-    @IBAction func findPhoto(_ sender: Any) {
+    @IBAction func findPhoto(_ sender: Any) { //사진 찾아보기 버튼
         
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -94,6 +94,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         
         let email = Auth.auth().currentUser?.email ?? "고객"
         print(email)
+        print(type(of: email))
         
         
         
@@ -124,7 +125,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
 //                        dbRef.setValue(downloadURL.absoluteString)
                         let ref = Database.database().reference()
                     
-                        ref.child("ServiceRequest").child("Request").setValue(["서비스 요청자" : "\(email)",
+                        ref.child("ServiceRequest").child("Request").setValue(["ㄱ서비스 요청자" : "\(email)",
                                                                                  "요청 일시" : "\(self.requestDateTextField.text ?? "미입력")",
                                                                                  "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
 
@@ -134,12 +135,8 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                 }
         
         print("DB에 전송 완료 !")
-
-        
-        
-        
-        
-        
+            
+        self.navigationController?.popViewController(animated: true)
         
     }
     
@@ -151,16 +148,6 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
     
 
 }
-
-
-
-
-
-
-
-
-
-
 
 
 extension RequestViewController: UITextViewDelegate {

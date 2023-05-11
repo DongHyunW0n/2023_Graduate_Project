@@ -63,7 +63,7 @@ class EnterEmailViewController: UIViewController{
                 switch code {
                     
                 case 17007 : // 이미 아이디가 있는데?
-                    let alertController = UIAlertController(title: "이미 존재하는 계정입니다", message: "입력하신 계정으로 로그인 합니다.", preferredStyle: UIAlertController.Style.alert)
+                    let alertController = UIAlertController(title: "이미 존재하는 계정입니다", message: "확인해주세요.", preferredStyle: UIAlertController.Style.alert)
 
                     let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
 
@@ -84,7 +84,7 @@ class EnterEmailViewController: UIViewController{
             }else{
                 
             
-                let alertController = UIAlertController(title: "로그인 완료", message: "로그인 되었습니다", preferredStyle: UIAlertController.Style.alert)
+                let alertController = UIAlertController(title: "계정 생성 완료", message: "계정이 성공적으로 생성되었습니다", preferredStyle: UIAlertController.Style.alert)
 
                 let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
 

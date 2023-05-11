@@ -20,32 +20,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dsuFullLogo" translatesAutoresizingMaskIntoConstraints="NO" id="IyO-A5-xb5">
                                 <rect key="frame" x="10" y="74" width="373" height="240"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-By-fFf">
-                                <rect key="frame" x="123" y="364" width="147" height="83"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20171552" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDb-rB-mYS">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="37"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원동현" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8I-jk-bF8">
-                                        <rect key="frame" x="47.666666666666657" y="59" width="52" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="Ap6-uc-h4i">
+                                <rect key="frame" x="20" y="334" width="353" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="O8r-Zj-fXg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rLP-By-fFf" firstAttribute="top" secondItem="IyO-A5-xb5" secondAttribute="bottom" constant="50" id="1GC-14-mW8"/>
+                            <constraint firstItem="Ap6-uc-h4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="69n-hv-kba"/>
                             <constraint firstItem="IyO-A5-xb5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="796-Bh-Ukc"/>
                             <constraint firstItem="IyO-A5-xb5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="AhV-C5-86M"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IyO-A5-xb5" secondAttribute="trailing" constant="10" id="ekb-tC-Sjm"/>
-                            <constraint firstItem="rLP-By-fFf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbr-Lq-KCL"/>
+                            <constraint firstItem="Ap6-uc-h4i" firstAttribute="top" secondItem="IyO-A5-xb5" secondAttribute="bottom" constant="20" id="VWf-em-mB2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ap6-uc-h4i" secondAttribute="trailing" constant="20" id="XMJ-oD-pNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IyO-A5-xb5" secondAttribute="trailing" constant="10" id="Zh9-un-hoR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -56,6 +46,7 @@
     </scenes>
     <resources>
         <image name="dsuFullLogo" width="787.33331298828125" height="240"/>
+        <image name="spannerImage" width="360" height="360"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
