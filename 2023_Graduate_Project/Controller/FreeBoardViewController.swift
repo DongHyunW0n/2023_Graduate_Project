@@ -11,7 +11,7 @@ import FirebaseDatabase
 class FreeBoardViewController: UIViewController {
 
     
-    let ref = Database.database().reference().child("FreeBoard").child("Article")
+    let ref = Database.database().reference().child("FreeBoard")
     
     var articleList : [Article] = []
     @IBOutlet weak var tableView: UITableView!
@@ -22,8 +22,7 @@ class FreeBoardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-        
+
         ref.observeSingleEvent(of: .value){ snapshot, error  in
                     //snapshot의 값을 딕셔너리 형태로 변경해줍니다.
                     guard let snapData = snapshot.value as? [String:Any] else {return}
@@ -40,18 +39,13 @@ class FreeBoardViewController: UIViewController {
                     }catch let error {
                         print(String(describing: error))
                     }
-           
-            
-            
+            print("snapData")
+            print(snapData)
+            print(self.articleList)
+            print(type(of: self.articleList))
             print(self.articleList.count)
                 }
-               
-
             }
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -68,5 +62,6 @@ class FreeBoardViewController: UIViewController {
     }
 
     
+
 
 

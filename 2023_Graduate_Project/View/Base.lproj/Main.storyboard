@@ -499,42 +499,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZY-vi-4aU">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="800"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="102" id="jfB-E2-DWS" customClass="FreeBoardTableViewCell" customModule="_023_Graduate_Project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="102"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jfB-E2-DWS" id="uYh-nv-brD">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="102"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="우리 동네 동서철물 최고 !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV8-hX-gFd">
-                                                    <rect key="frame" x="40" y="31" width="169.33333333333334" height="40"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="익명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-w1-pTI">
-                                                    <rect key="frame" x="330" y="21" width="30" height="60"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="IGL-w1-pTI" secondAttribute="bottom" constant="10" id="7eC-Pf-xku"/>
-                                                <constraint firstItem="SV8-hX-gFd" firstAttribute="leading" secondItem="uYh-nv-brD" secondAttribute="leadingMargin" constant="20" id="M5G-xF-8Mi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="IGL-w1-pTI" secondAttribute="trailing" constant="10" id="MLD-Ei-AZT"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="SV8-hX-gFd" secondAttribute="bottom" constant="20" id="RrL-kY-5iz"/>
-                                                <constraint firstItem="SV8-hX-gFd" firstAttribute="top" secondItem="uYh-nv-brD" secondAttribute="topMargin" constant="20" id="RsA-nT-321"/>
-                                                <constraint firstItem="IGL-w1-pTI" firstAttribute="top" secondItem="uYh-nv-brD" secondAttribute="topMargin" constant="10" id="WxP-fv-cLH"/>
-                                                <constraint firstItem="IGL-w1-pTI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SV8-hX-gFd" secondAttribute="trailing" constant="20" id="wxY-tR-Ely"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="boardTitle" destination="SV8-hX-gFd" id="BaG-YQ-k6R"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sWf-I2-Mx5"/>
