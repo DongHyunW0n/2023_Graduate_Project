@@ -15,19 +15,8 @@ import FirebaseStorage
 class FreeBoardWriteViewController: UIViewController {
     
     
-    struct articleTest : Codable {
-        
-        var title : String
-        var detail : String
-        
-        var toDictionary : [String : Any] {
-            
-            let dict : [String : Any] = ["title" : title , "detail" : detail]
-            return dict
-        }
-    }
     
-    var article : articleTest = .init(title: "제목", detail: "내용")
+    var article : Article = .init(title: "제목", datail: "내용")
     
     
     let ref = Database.database().reference()
@@ -52,10 +41,19 @@ class FreeBoardWriteViewController: UIViewController {
 
     @IBAction func okButtonTabbed(_ sender: UIButton) {
         
-        article.title = TitleTextField.text ?? "제목없음"
-        article.detail = writeTextView.text ?? "내용없음"
         
-        ref.child("FreeBoard").child("Article").setValue(article.toDictionary)
+        let data = Article(title: "\(TitleTextField.text ?? "제목없음")", datail: "\(writeTextView.text ?? "내용없음")")
+        let encoder = JSONEncoder()
+        
+        do {
+            let jsonData = try encoder.encode(data)
+            print(jsonData)
+        } catch {
+            print("error")
+        }
+        
+        
+        ref.child("FreeBoard").child("Article").setValue(data.toDictionary)
         
         print("DB에 전송 완료 !")
             

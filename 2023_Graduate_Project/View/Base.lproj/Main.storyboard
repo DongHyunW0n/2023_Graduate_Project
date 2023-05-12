@@ -499,6 +499,42 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZY-vi-4aU">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="800"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="cjO-cm-YlM" customClass="FreeBoardTableViewCell" customModule="_023_Graduate_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cjO-cm-YlM" id="7E0-PM-fuE">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목들어가는곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEb-8F-WdV">
+                                                    <rect key="frame" x="30" y="21" width="103" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="익명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijf-8S-VyM">
+                                                    <rect key="frame" x="330" y="21" width="30" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YEb-8F-WdV" firstAttribute="top" secondItem="7E0-PM-fuE" secondAttribute="topMargin" constant="10" id="5BZ-7w-06o"/>
+                                                <constraint firstItem="Ijf-8S-VyM" firstAttribute="top" secondItem="7E0-PM-fuE" secondAttribute="topMargin" constant="10" id="ACh-b0-ai4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ijf-8S-VyM" secondAttribute="trailing" constant="10" id="FYn-Ls-oGf"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ijf-8S-VyM" secondAttribute="bottom" constant="10" id="TTW-T0-h9P"/>
+                                                <constraint firstItem="Ijf-8S-VyM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YEb-8F-WdV" secondAttribute="trailing" constant="50" id="rDj-mh-MlG"/>
+                                                <constraint firstItem="YEb-8F-WdV" firstAttribute="leading" secondItem="7E0-PM-fuE" secondAttribute="leadingMargin" constant="10" id="tZV-7F-CNl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="YEb-8F-WdV" secondAttribute="bottom" constant="10" id="vNC-GP-uAb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="boardTitle" destination="YEb-8F-WdV" id="QRF-1g-a3Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sWf-I2-Mx5"/>

@@ -55,8 +55,8 @@ class FreeBoardViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as? FreeBoardTableViewCell else {return UITableViewCell()}
-            cell.boardTitle.text = articleList[indexPath.row].Title
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? FreeBoardTableViewCell else {return UITableViewCell()}
+            cell.boardTitle.text = articleList[indexPath.row].title
             return cell
         }
     }

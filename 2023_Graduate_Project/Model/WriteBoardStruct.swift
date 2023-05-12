@@ -10,13 +10,14 @@ import Foundation
 
 struct Article : Codable {
     
-    let Detail : String
-    let Title : String
+   
+    var title : String
+    var datail : String
     
     
     var toDictionary : [String : Any] {
         
-        let dict : [String : Any] = ["title" : title , "detail" : detail]
+        let dict : [String : Any] = ["title" : title , "detail" : datail]
         return dict
     }
     
