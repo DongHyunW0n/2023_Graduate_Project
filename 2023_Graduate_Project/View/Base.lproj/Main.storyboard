@@ -244,13 +244,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="okb-Zk-62A">
                                 <rect key="frame" x="10" y="59" width="370" height="34"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청 장소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAO-EA-eka">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청 위치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAO-EA-eka">
                                         <rect key="frame" x="0.0" y="0.0" width="63.333333333333336" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="예) 거실 바닥" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-Mk-I1D">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="예) 동래구 사직로 사직자이 103-1503" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-Mk-I1D">
                                         <rect key="frame" x="83.333333333333343" y="0.0" width="286.66666666666663" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -677,6 +677,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bEk-sk-sbP"/>
                     <connections>
+                        <outlet property="tableView" destination="FT2-GI-Mbb" id="WL6-9c-ZAS"/>
                         <outlet property="userNameLabel" destination="VUT-mC-EPC" id="b4N-zB-gnf"/>
                     </connections>
                 </viewController>
@@ -696,7 +697,7 @@
                                 <rect key="frame" x="0.0" y="47" width="414" height="1312"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RA-kL-2Es" userLabel="제일큰뷰">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="685"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="735"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3W-3E-RTT" userLabel="상단배너뷰">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
@@ -776,7 +777,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGJ-N0-gPs" userLabel="날씨뷰">
-                                                <rect key="frame" x="0.0" y="500" width="414" height="135"/>
+                                                <rect key="frame" x="0.0" y="550" width="414" height="135"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="deZ-yV-dYa">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
@@ -817,7 +818,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utL-fp-tB3" userLabel="하단정보뷰">
-                                                <rect key="frame" x="0.0" y="635" width="414" height="50"/>
+                                                <rect key="frame" x="0.0" y="685" width="414" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소프트웨어학과 원동현 2023학년도 졸업작품 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78W-KS-RzL">
                                                         <rect key="frame" x="10" y="10" width="394" height="30"/>
@@ -836,80 +837,63 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YRU-eP-hCx" userLabel="버튼뷰들">
-                                                <rect key="frame" x="0.0" y="250" width="414" height="250"/>
+                                                <rect key="frame" x="0.0" y="250" width="414" height="300"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-mo-Gyt" userLabel="큰 버튼스택뷰">
-                                                        <rect key="frame" x="25" y="25" width="364" height="200"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vBe-mo-Gyt" userLabel="큰 버튼스택뷰">
+                                                        <rect key="frame" x="25" y="25" width="364" height="250"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="AN2-em-zds" userLabel="버튼스택뷰 1열">
-                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="95"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-w6-x53">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="95"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="수리 요청">
-                                                                            <imageReference key="image" image="figure.wave" catalog="system" symbolScale="default" renderingMode="original"/>
-                                                                            <backgroundConfiguration key="background" cornerRadius="20">
-                                                                                <color key="backgroundColor" red="0.92800839300000004" green="0.94074213500000003" blue="0.73255914740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            </backgroundConfiguration>
-                                                                        </buttonConfiguration>
-                                                                        <connections>
-                                                                            <segue destination="nMK-9I-lGn" kind="show" id="dpb-sW-za6"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-DD-Ggd">
-                                                                        <rect key="frame" x="189.66666666666663" y="0.0" width="174.33333333333337" height="95"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="게시판">
-                                                                            <imageReference key="image" image="pencil.line" catalog="system" renderingMode="original"/>
-                                                                            <backgroundConfiguration key="background" cornerRadius="20">
-                                                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                                            </backgroundConfiguration>
-                                                                        </buttonConfiguration>
-                                                                        <connections>
-                                                                            <segue destination="D0S-iL-d47" kind="show" id="YS6-Se-5hA"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aOU-Z0-Mu0" userLabel="버튼스택뷰 2열">
-                                                                <rect key="frame" x="0.0" y="105" width="364" height="95"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-tO-Dcw">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="95"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="내 주변 업체">
-                                                                            <imageReference key="image" image="network" catalog="system" renderingMode="original"/>
-                                                                            <backgroundConfiguration key="background" cornerRadius="20" strokeWidth="0.0">
-                                                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                                            </backgroundConfiguration>
-                                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                                                        </buttonConfiguration>
-                                                                        <connections>
-                                                                            <segue destination="eQX-TT-e3v" kind="show" id="RKg-ec-7Lj"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46v-B3-fZN">
-                                                                        <rect key="frame" x="189.66666666666663" y="0.0" width="174.33333333333337" height="95"/>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="이벤트">
-                                                                            <imageReference key="image" image="person.fill.checkmark" catalog="system" renderingMode="original"/>
-                                                                            <backgroundConfiguration key="background" cornerRadius="20">
-                                                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                                                            </backgroundConfiguration>
-                                                                        </buttonConfiguration>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DH-w6-x53">
+                                                                <rect key="frame" x="0.0" y="0.0" width="364" height="73.333333333333329"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="수리 견적 요청">
+                                                                    <imageReference key="image" image="figure.wave" catalog="system" symbolScale="default" renderingMode="template"/>
+                                                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="nMK-9I-lGn" kind="show" id="dpb-sW-za6"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfV-DD-Ggd">
+                                                                <rect key="frame" x="0.0" y="88.333333333333314" width="364" height="73.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="익명 게시판">
+                                                                    <imageReference key="image" image="pencil.line" catalog="system" renderingMode="template"/>
+                                                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="D0S-iL-d47" kind="show" id="YS6-Se-5hA"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN3-tO-Dcw">
+                                                                <rect key="frame" x="0.0" y="176.66666666666669" width="364" height="73.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="내 주변 업체 &amp; 후기 확인">
+                                                                    <imageReference key="image" image="network" catalog="system" symbolScale="large" renderingMode="template"/>
+                                                                    <backgroundConfiguration key="background" cornerRadius="20" strokeWidth="0.0">
+                                                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                                    </backgroundConfiguration>
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="eQX-TT-e3v" kind="show" id="RKg-ec-7Lj"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="3SO-3R-6hG"/>
+                                                            <constraint firstAttribute="height" constant="250" id="3SO-3R-6hG"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="250" id="JZE-FK-3Qf"/>
+                                                    <constraint firstAttribute="height" constant="300" id="JZE-FK-3Qf"/>
                                                     <constraint firstItem="vBe-mo-Gyt" firstAttribute="top" secondItem="YRU-eP-hCx" secondAttribute="top" constant="25" id="g9U-Te-t4h"/>
                                                     <constraint firstItem="vBe-mo-Gyt" firstAttribute="leading" secondItem="YRU-eP-hCx" secondAttribute="leading" constant="25" id="rgL-rj-Kaq"/>
                                                     <constraint firstAttribute="trailing" secondItem="vBe-mo-Gyt" secondAttribute="trailing" constant="25" id="tes-Kh-e52"/>
@@ -990,7 +974,6 @@
         <image name="network" catalog="system" width="128" height="123"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <image name="person.fill.checkmark" catalog="system" width="128" height="89"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1000,14 +983,20 @@
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

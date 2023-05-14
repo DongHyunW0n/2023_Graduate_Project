@@ -28,7 +28,7 @@ class FreeBoardWriteViewController: UIViewController {
     //        return dict
         }
     
-    
+    let uid = Auth.auth().currentUser?.uid
     let ref = Database.database().reference()
     let storageRef = Storage.storage().reference()
 
@@ -62,6 +62,7 @@ class FreeBoardWriteViewController: UIViewController {
         
         self.ref
             .child("Freeboard")
+            .child(uid ?? "uid ERROR")
             .childByAutoId()
             .setValue(["제목" : titleInput ,
                        "내용" : descipInput])

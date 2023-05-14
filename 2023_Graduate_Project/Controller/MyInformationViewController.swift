@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 
 struct requestList : Codable {
@@ -21,13 +22,24 @@ struct requestList : Codable {
 
 
 
+
 class MyInformationViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
+    
+    let currentEmail = Auth.auth().currentUser?.email ?? "고객"
+    let ref = Database.database().reference().child("ServiceRequest")
+    let uid = Auth.auth().currentUser?.uid
+    
     @IBOutlet weak var userNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        print("UID is : \(uid ?? "error")")
+
         
         
         
@@ -61,3 +73,26 @@ class MyInformationViewController: UIViewController {
         }
     }
 }
+//
+//extension MyInformationViewController : UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//    
+//    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//
+//    
+//    
+//}
+//
+//extension MyInformationViewController : UITableViewDelegate {
+//    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
+//    
+//    
+//}

@@ -23,7 +23,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var uploadedImage: UIImageView!
     @IBOutlet weak var requestButton: UIButton!
     
-    
+    let uid = Auth.auth().currentUser?.uid
     let storageRef = Storage.storage().reference()
     let ref = Database.database().reference()
     var imagePicker: UIImagePickerController!
@@ -124,20 +124,24 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
 //                        let dbRef = Database.database().reference().child("images").child("ServiceRequest").childByAutoId()
 //                        dbRef.setValue(downloadURL.absoluteString)
                         let ref = Database.database().reference()
-                    
-                        ref.child("ServiceRequest").child("Request").setValue(["ㄱ서비스 요청자" : "\(email)",
+                        
+                        
+                        
+                        
+                        ref.child("ServiceRequest").child(self.uid ?? "error").setValue(["ㄱ서비스 요청자" : "\(email)",
                                                                                  "요청 일시" : "\(self.requestDateTextField.text ?? "미입력")",
                                                                                  "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
 
-                                                                                 "요청 부분" :"\(self.requestPartTextField.text ?? "미입력")" ,
+                                                                                 "요청 위치" :"\(self.requestPartTextField.text ?? "미입력")" ,
                                                                                  "상세 설명" : "\(self.requestDescriptTextView.text ?? "미입력")"])
                     }
                 }
         
         print("DB에 전송 완료 !")
-            
-        self.navigationController?.popViewController(animated: true)
         
+        presentAlert()
+            
+//        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -147,6 +151,17 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         }
     
 
+    
+    
+    fileprivate func presentAlert () {
+        
+        let alert = UIAlertController(title: "완료", message: "등록 완료 되었습니다." , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
 }
 
 
