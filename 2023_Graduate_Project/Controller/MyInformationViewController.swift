@@ -9,6 +9,16 @@ import UIKit
 import FirebaseAuth
 
 
+struct requestList : Codable {
+    
+    
+    var date : String
+    var place : String
+    var detail : String
+    var imageURL : String
+    
+}
+
 
 
 class MyInformationViewController: UIViewController {

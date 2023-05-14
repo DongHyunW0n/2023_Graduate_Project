@@ -15,10 +15,9 @@ struct Article : Codable {
     var datail : String
     
     
-    var toDictionary : [String : Any] {
-        
-        let dict : [String : Any] = ["title" : title , "detail" : datail]
-        return dict
+//    var toDictionary : [String : Any] {
+//
+//        let dict : [String : Any] = ["title" : title , "detail" : datail]
+//        return dict
     }
-    
-}
+

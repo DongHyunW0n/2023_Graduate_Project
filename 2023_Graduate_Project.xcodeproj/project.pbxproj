@@ -24,6 +24,8 @@
 		8FE5DC9029E3DE1B008CCE25 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5DC8F29E3DE1B008CCE25 /* GoogleService-Info.plist */; };
 		8FE5DC9229E3F94C008CCE25 /* MyInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */; };
 		8FE5DC9629E42581008CCE25 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5DC9529E42581008CCE25 /* Splash.storyboard */; };
+		8FE60F462A10E8B10069B2E5 /* FreeboardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE60F452A10E8B10069B2E5 /* FreeboardDetailViewController.swift */; };
+		8FE60F482A10EF820069B2E5 /* MyRequestListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */; };
 		8FEF07AA29E1D5E6001D6962 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEF07A929E1D5E6001D6962 /* LoginViewController.swift */; };
 		8FF91FFA29CDA84B000C2AD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF91FF929CDA84B000C2AD1 /* AppDelegate.swift */; };
 		8FF91FFC29CDA84B000C2AD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF91FFB29CDA84B000C2AD1 /* SceneDelegate.swift */; };
@@ -51,6 +53,8 @@
 		8FE5DC8F29E3DE1B008CCE25 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInformationViewController.swift; sourceTree = "<group>"; };
 		8FE5DC9529E42581008CCE25 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		8FE60F452A10E8B10069B2E5 /* FreeboardDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeboardDetailViewController.swift; sourceTree = "<group>"; };
+		8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestListCell.swift; sourceTree = "<group>"; };
 		8FEF07A929E1D5E6001D6962 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8FF91FF629CDA84B000C2AD1 /* 2023_Graduate_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2023_Graduate_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FF91FF929CDA84B000C2AD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
 				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
 				8F2D7C402A0A76EB00ECED43 /* WriteBoardStruct.swift */,
+				8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				8FADDF6D2A0128BA00B2172A /* RequestViewController.swift */,
 				8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */,
 				8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */,
+				8FE60F452A10E8B10069B2E5 /* FreeboardDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 				8F23D7B22A02C6E400005174 /* FreeBoardWriteViewController.swift in Sources */,
 				8F0A692C29E1B4DF00E1ED2B /* BannerInfo.swift in Sources */,
 				8FF91FFA29CDA84B000C2AD1 /* AppDelegate.swift in Sources */,
+				8FE60F462A10E8B10069B2E5 /* FreeboardDetailViewController.swift in Sources */,
 				8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */,
 				8FF91FFC29CDA84B000C2AD1 /* SceneDelegate.swift in Sources */,
 				8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */,
@@ -299,6 +306,7 @@
 				8FE5DC9229E3F94C008CCE25 /* MyInformationViewController.swift in Sources */,
 				8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */,
 				8FF9200E29CDA96A000C2AD1 /* MapViewController.swift in Sources */,
+				8FE60F482A10EF820069B2E5 /* MyRequestListCell.swift in Sources */,
 				8FEF07AA29E1D5E6001D6962 /* LoginViewController.swift in Sources */,
 				8F2D7C412A0A76EB00ECED43 /* WriteBoardStruct.swift in Sources */,
 			);

@@ -15,8 +15,18 @@ import FirebaseStorage
 class FreeBoardWriteViewController: UIViewController {
     
     
-    
-    var article : Article = .init(title: "제목", datail: "내용")
+    struct Article : Codable {
+        
+       
+        var title : String
+        var datail : String
+        
+        
+    //    var toDictionary : [String : Any] {
+    //
+    //        let dict : [String : Any] = ["title" : title , "detail" : datail]
+    //        return dict
+        }
     
     
     let ref = Database.database().reference()
@@ -42,23 +52,35 @@ class FreeBoardWriteViewController: UIViewController {
     @IBAction func okButtonTabbed(_ sender: UIButton) {
         
         
-        let data = Article(title: "\(TitleTextField.text ?? "제목없음")", datail: "\(writeTextView.text ?? "내용없음")")
-        let encoder = JSONEncoder()
-        
-        do {
-            let jsonData = try encoder.encode(data)
-            print(jsonData)
-        } catch {
-            print("error")
+        guard let titleInput : String = TitleTextField.text, let descipInput : String = writeTextView.text,
+              titleInput.count > 0 else{
+            
+            
+            presentAlert()
+            return
         }
         
-        
-        ref.child("FreeBoard").child("Article").setValue(data.toDictionary)
+        self.ref
+            .child("Freeboard")
+            .childByAutoId()
+            .setValue(["제목" : titleInput ,
+                       "내용" : descipInput])
+       
         
         print("DB에 전송 완료 !")
             
         self.navigationController?.popViewController(animated: true)
         
+        
+    }
+    
+    fileprivate func presentAlert () {
+        
+        let alert = UIAlertController(title: "오류", message: "제목이 없습니다" , preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
         
     }
     
