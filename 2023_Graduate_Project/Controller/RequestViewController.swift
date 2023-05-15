@@ -94,7 +94,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         
         let email = Auth.auth().currentUser?.email ?? "고객"
         print(email)
-        print(type(of: email))
+        print(type(of: uid))
         
         
         
@@ -128,7 +128,9 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                         
                         
                         
-                        ref.child("ServiceRequest").child(self.uid ?? "error").setValue(["ㄱ서비스 요청자" : "\(email)",
+                        ref.child("ServiceRequest")
+                            .child(self.uid ?? "error")
+                            .childByAutoId().setValue(["ㄱ서비스 요청자" : "\(email)",
                                                                                  "요청 일시" : "\(self.requestDateTextField.text ?? "미입력")",
                                                                                  "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
 

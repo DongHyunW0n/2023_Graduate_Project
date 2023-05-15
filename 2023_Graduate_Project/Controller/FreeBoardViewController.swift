@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseDatabase
-
+import FirebaseAuth
 
 struct ArticleEntity {
     
@@ -23,6 +23,8 @@ class FreeBoardViewController: UIViewController{
     let ref = Database.database().reference().child("Freeboard")
     
     var articleList : [ArticleEntity] = []
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     

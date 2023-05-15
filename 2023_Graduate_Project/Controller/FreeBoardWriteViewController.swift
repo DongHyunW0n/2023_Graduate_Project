@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
-
+import FirebaseAuth
 
 
 class FreeBoardWriteViewController: UIViewController {
@@ -20,6 +20,7 @@ class FreeBoardWriteViewController: UIViewController {
        
         var title : String
         var datail : String
+        var uid : String
         
         
     //    var toDictionary : [String : Any] {
@@ -52,7 +53,7 @@ class FreeBoardWriteViewController: UIViewController {
     @IBAction func okButtonTabbed(_ sender: UIButton) {
         
         
-        guard let titleInput : String = TitleTextField.text, let descipInput : String = writeTextView.text,
+        guard let titleInput : String = TitleTextField.text, let descipInput : String = writeTextView.text, let uid : String = uid,
               titleInput.count > 0 else{
             
             
@@ -62,10 +63,11 @@ class FreeBoardWriteViewController: UIViewController {
         
         self.ref
             .child("Freeboard")
-            .child(uid ?? "uid ERROR")
+//            .child(uid ?? "uid ERROR")
             .childByAutoId()
             .setValue(["제목" : titleInput ,
-                       "내용" : descipInput])
+                       "내용" : descipInput ,
+                       "uid" : uid])
        
         
         print("DB에 전송 완료 !")
