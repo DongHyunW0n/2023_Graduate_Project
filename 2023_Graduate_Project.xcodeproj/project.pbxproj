@@ -15,7 +15,6 @@
 		8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692D29E1B54000E1ED2B /* BannerCell.swift */; };
 		8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */; };
 		8F23D7B22A02C6E400005174 /* FreeBoardWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */; };
-		8F2D7C412A0A76EB00ECED43 /* WriteBoardStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2D7C402A0A76EB00ECED43 /* WriteBoardStruct.swift */; };
 		8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */; };
 		8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513729D9E88300B6A0BE /* DeviceConfig.swift */; };
 		8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */; };
@@ -44,7 +43,6 @@
 		8F0A692D29E1B54000E1ED2B /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardViewController.swift; sourceTree = "<group>"; };
 		8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardWriteViewController.swift; sourceTree = "<group>"; };
-		8F2D7C402A0A76EB00ECED43 /* WriteBoardStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBoardStruct.swift; sourceTree = "<group>"; };
 		8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		8F97513729D9E88300B6A0BE /* DeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfig.swift; sourceTree = "<group>"; };
 		8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				8F0A692D29E1B54000E1ED2B /* BannerCell.swift */,
 				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
 				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
-				8F2D7C402A0A76EB00ECED43 /* WriteBoardStruct.swift */,
 				8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */,
 			);
 			path = Model;
@@ -308,7 +305,6 @@
 				8FF9200E29CDA96A000C2AD1 /* MapViewController.swift in Sources */,
 				8FE60F482A10EF820069B2E5 /* MyRequestListCell.swift in Sources */,
 				8FEF07AA29E1D5E6001D6962 /* LoginViewController.swift in Sources */,
-				8F2D7C412A0A76EB00ECED43 /* WriteBoardStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

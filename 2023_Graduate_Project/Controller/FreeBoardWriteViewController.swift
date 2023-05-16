@@ -23,10 +23,7 @@ class FreeBoardWriteViewController: UIViewController {
         var uid : String
         
         
-    //    var toDictionary : [String : Any] {
-    //
-    //        let dict : [String : Any] = ["title" : title , "detail" : datail]
-    //        return dict
+
         }
     
     let uid = Auth.auth().currentUser?.uid

@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import FirebaseAuth
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     let bannerInfos: [BannerInfo] = BannerInfo.list
     let colors: [UIColor] = [.systemYellow, .systemOrange, .systemMint, .systemGray6]
@@ -79,9 +79,9 @@ class MainViewController: UIViewController {
         
         self.pageControl.numberOfPages = bannerInfos.count
         
-//        locationManager.delegate = self // 로케이션 위임자
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest // 항상 최고의 로케이션을 받아오기
-//        locationManager.requestWhenInUseAuthorization() // 허용 받기 alert 띄우기
+        locationManager.delegate = self // 로케이션 위임자
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest // 항상 최고의 로케이션을 받아오기
+        locationManager.requestWhenInUseAuthorization() // 허용 받기 alert 띄우기
         
         self.getCurrentWeather(cityName: "Busan")
         // Do any additional setup after loading the view.

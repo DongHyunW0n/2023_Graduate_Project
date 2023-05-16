@@ -17,12 +17,18 @@ struct ArticleEntity {
 }
 
 
+var titleText1 : String?
+var detailText1 : String?
+
+let ref = Database.database().reference().child("Freeboard")
+
+
 class FreeBoardViewController: UIViewController{
 
+//
+//    let ref = Database.database().reference().child("Freeboard")
     
-    let ref = Database.database().reference().child("Freeboard")
-    
-    var articleList : [ArticleEntity] = []
+    public var articleList : [ArticleEntity] = []
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -31,16 +37,21 @@ class FreeBoardViewController: UIViewController{
     
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         self.tableView.dataSource = self
+        
+        
+        self.tableView.delegate = self
         
         
         ref.observe(.value) {snapshot in
             
-           
+            
             
             self.articleList = []
             
@@ -60,10 +71,25 @@ class FreeBoardViewController: UIViewController{
             
             
         }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToDetail" {
+            let vc = segue.destination as? FreeboardDetailViewController
+            
+            
+       
+                
+                vc?.titleText = titleText1
+                vc?.detailText = detailText1
+               
+         
+            
+            
+        }
+    }
 
     
-            }
-    }
+}
     
 
     extension FreeBoardViewController: UITableViewDataSource {
@@ -74,6 +100,7 @@ class FreeBoardViewController: UIViewController{
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? FreeBoardTableViewCell else {return UITableViewCell()}
             
+            
             let celldata : ArticleEntity = articleList[indexPath.row]
             cell.boardTitle.text = celldata.title
             cell.selectionStyle = .none
@@ -81,7 +108,43 @@ class FreeBoardViewController: UIViewController{
         }
     }
 
+
+extension FreeBoardViewController : UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+    
+        
+        print(articleList[indexPath.row])
+        
+    
+        
+        
+        let celldata : ArticleEntity = articleList[indexPath.row]
+        
+    
+        
+
+        titleText1 = celldata.title
+        detailText1 = celldata.describ
+        print(celldata.title)
+        print(celldata.describ)
+        
+        
+        performSegue(withIdentifier: "GoToDetail", sender: nil)
+        
+        
+        
+    }
+
+}
+
+
+
+
+    
+
+
 
 
 

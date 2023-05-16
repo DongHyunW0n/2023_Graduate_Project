@@ -17,23 +17,44 @@ class FreeboardDetailViewController: UIViewController {
     
     @IBOutlet weak var detailTextView: UITextView!
     
+    var titleText : String!
+    
+    var detailText : String!
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateUI()
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI(){
+        
+        if let title = self.titleText, let detail = self.detailText {
+            
+            titleLabel.text = ""
+            detailTextView.text = ""
+            
+            titleLabel.text = title
+            detailTextView.text = detail
+            
+            
+        }
+        
+        
+        
+        
+        
     }
-    */
+    
+   
+    
+
+   
 
 }
