@@ -17,9 +17,9 @@ class FreeboardDetailViewController: UIViewController {
     
     @IBOutlet weak var detailTextView: UITextView!
     
-    var titleText : String!
+    var titleText : String?
     
-    var detailText : String!
+    var detailText : String?
     
     
     
@@ -33,24 +33,15 @@ class FreeboardDetailViewController: UIViewController {
         
     }
     
-    func updateUI(){
-        
-        if let title = self.titleText, let detail = self.detailText {
+    func updateUI() {
+            if let title = titleText {
+                titleLabel.text = title
+            }
             
-            titleLabel.text = ""
-            detailTextView.text = ""
-            
-            titleLabel.text = title
-            detailTextView.text = detail
-            
-            
+            if let detail = detailText {
+                detailTextView.text = detail
+            }
         }
-        
-        
-        
-        
-        
-    }
     
    
     

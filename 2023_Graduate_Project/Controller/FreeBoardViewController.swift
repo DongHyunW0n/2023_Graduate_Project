@@ -17,16 +17,12 @@ struct ArticleEntity {
 }
 
 
-var titleText1 : String?
-var detailText1 : String?
 
 let ref = Database.database().reference().child("Freeboard")
 
 
 class FreeBoardViewController: UIViewController{
 
-//
-//    let ref = Database.database().reference().child("Freeboard")
     
     public var articleList : [ArticleEntity] = []
     
@@ -72,21 +68,7 @@ class FreeBoardViewController: UIViewController{
             
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GoToDetail" {
-            let vc = segue.destination as? FreeboardDetailViewController
-            
-            
-       
-                
-                vc?.titleText = titleText1
-                vc?.detailText = detailText1
-               
-         
-            
-            
-        }
-    }
+
 
     
 }
@@ -120,19 +102,16 @@ extension FreeBoardViewController : UITableViewDelegate {
     
         
         
-        let celldata : ArticleEntity = articleList[indexPath.row]
-        
-    
-        
-
-        titleText1 = celldata.title
-        detailText1 = celldata.describ
-        print(celldata.title)
-        print(celldata.describ)
-        
-        
-        performSegue(withIdentifier: "GoToDetail", sender: nil)
-        
+        let celldata: ArticleEntity = articleList[indexPath.row] //인덱스에 해당하는 셀데이터를 받음.
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "FreeboardDetailViewController") as? FreeboardDetailViewController {
+            detailViewController.detailText = celldata.describ
+            detailViewController.titleText = celldata.title
+            navigationController?.pushViewController(detailViewController, animated: true)
+            
+            
+           
+            
+        }
         
         
     }
