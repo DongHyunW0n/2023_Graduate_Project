@@ -15,6 +15,10 @@
 		8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692D29E1B54000E1ED2B /* BannerCell.swift */; };
 		8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */; };
 		8F23D7B22A02C6E400005174 /* FreeBoardWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */; };
+		8F70A3E32A13B32500C19B2E /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E22A13B32500C19B2E /* CustomAnnotation.swift */; };
+		8F70A3E52A1481A000C19B2E /* PickerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E42A1481A000C19B2E /* PickerListViewController.swift */; };
+		8F70A3E72A14D44E00C19B2E /* CompanyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */; };
+		8F70A3E92A16A43200C19B2E /* MyRequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E82A16A43200C19B2E /* MyRequestDetailViewController.swift */; };
 		8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */; };
 		8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513729D9E88300B6A0BE /* DeviceConfig.swift */; };
 		8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */; };
@@ -43,6 +47,10 @@
 		8F0A692D29E1B54000E1ED2B /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardViewController.swift; sourceTree = "<group>"; };
 		8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardWriteViewController.swift; sourceTree = "<group>"; };
+		8F70A3E22A13B32500C19B2E /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		8F70A3E42A1481A000C19B2E /* PickerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerListViewController.swift; sourceTree = "<group>"; };
+		8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListTableViewCell.swift; sourceTree = "<group>"; };
+		8F70A3E82A16A43200C19B2E /* MyRequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestDetailViewController.swift; sourceTree = "<group>"; };
 		8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		8F97513729D9E88300B6A0BE /* DeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfig.swift; sourceTree = "<group>"; };
 		8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +105,8 @@
 				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
 				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
 				8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */,
+				8F70A3E22A13B32500C19B2E /* CustomAnnotation.swift */,
+				8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,12 +128,14 @@
 				8F0A690729E084F500E1ED2B /* MainViewController.swift */,
 				8FE5DC8D29E32E68008CCE25 /* EnterEmailViewController.swift */,
 				8FE5DC9129E3F94C008CCE25 /* MyInformationViewController.swift */,
+				8F70A3E82A16A43200C19B2E /* MyRequestDetailViewController.swift */,
 				8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */,
 				8FF9200D29CDA96A000C2AD1 /* MapViewController.swift */,
 				8FADDF6D2A0128BA00B2172A /* RequestViewController.swift */,
 				8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */,
 				8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */,
 				8FE60F452A10E8B10069B2E5 /* FreeboardDetailViewController.swift */,
+				8F70A3E42A1481A000C19B2E /* PickerListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -287,15 +299,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F0A690829E084F500E1ED2B /* MainViewController.swift in Sources */,
+				8F70A3E72A14D44E00C19B2E /* CompanyListTableViewCell.swift in Sources */,
 				8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */,
+				8F70A3E52A1481A000C19B2E /* PickerListViewController.swift in Sources */,
 				8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */,
 				8FADDF6E2A0128BA00B2172A /* RequestViewController.swift in Sources */,
 				8F23D7B22A02C6E400005174 /* FreeBoardWriteViewController.swift in Sources */,
 				8F0A692C29E1B4DF00E1ED2B /* BannerInfo.swift in Sources */,
 				8FF91FFA29CDA84B000C2AD1 /* AppDelegate.swift in Sources */,
+				8F70A3E32A13B32500C19B2E /* CustomAnnotation.swift in Sources */,
 				8FE60F462A10E8B10069B2E5 /* FreeboardDetailViewController.swift in Sources */,
 				8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */,
 				8FF91FFC29CDA84B000C2AD1 /* SceneDelegate.swift in Sources */,
+				8F70A3E92A16A43200C19B2E /* MyRequestDetailViewController.swift in Sources */,
 				8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */,
 				8FE5DC8E29E32E68008CCE25 /* EnterEmailViewController.swift in Sources */,
 				8F0A690A29E0856300E1ED2B /* ErrorMessage.swift in Sources */,

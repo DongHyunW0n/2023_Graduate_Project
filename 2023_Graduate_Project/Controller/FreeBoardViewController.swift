@@ -28,12 +28,7 @@ class FreeBoardViewController: UIViewController{
     
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +63,6 @@ class FreeBoardViewController: UIViewController{
             
         }
     }
-
-
     
 }
     

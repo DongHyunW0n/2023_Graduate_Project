@@ -23,16 +23,16 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var uploadedImage: UIImageView!
     @IBOutlet weak var requestButton: UIButton!
     
-    let uid = Auth.auth().currentUser?.uid
-    let storageRef = Storage.storage().reference()
-    let ref = Database.database().reference()
-    var imagePicker: UIImagePickerController!
+    let uid = Auth.auth().currentUser?.uid // USER에서 UID를 받아서 옴.
+    let storageRef = Storage.storage().reference() // 스토리지를 쓰기 위해서 선언
+    let ref = Database.database().reference() // 실시간 데이터베이스를 위해서 선언
+    var imagePicker: UIImagePickerController! // 이미지피커 선언
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
+        imagePicker = UIImagePickerController() //이미지피커는 UIImagePicker
+        imagePicker.delegate = self // 이미지피커의 위임자는 나 자신으로 
         
         
         
