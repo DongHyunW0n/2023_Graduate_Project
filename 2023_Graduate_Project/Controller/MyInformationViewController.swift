@@ -46,6 +46,7 @@ class MyInformationViewController: UIViewController {
         print("UID is : \(userID ?? "error")")
         
         self.tableView.dataSource = self
+        self.tableView.delegate = self
 
         
         
@@ -126,11 +127,15 @@ extension MyInformationViewController : UITableViewDataSource {
     
 }
 
-//extension MyInformationViewController : UITableViewDelegate {
-//    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
-//    
-//    
-//}
+extension MyInformationViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        print(myRequestList[indexPath.row])
+        
+        
+        
+    }
+    
+    
+}
