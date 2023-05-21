@@ -13,7 +13,7 @@ import Firebase
 
 class RequestViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    @IBOutlet weak var requestDateTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var requestPartTextField: UITextField!
     
     @IBOutlet weak var requestDescriptTextView: UITextView!
@@ -32,7 +32,9 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         super.viewDidLoad()
         
         imagePicker = UIImagePickerController() //이미지피커는 UIImagePicker
-        imagePicker.delegate = self // 이미지피커의 위임자는 나 자신으로 
+        imagePicker.delegate = self // 이미지피커의 위임자는 나 자신으로
+        
+       
         
         
         
@@ -126,11 +128,16 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                         let ref = Database.database().reference()
                         
                         
-                        
+                        let selectedDate = self.datePicker.date
+
+                        // DateFormatter를 사용하여 날짜를 String으로 변환
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+                        let dateString = dateFormatter.string(from: selectedDate)
                         
                         ref.child("ServiceRequest")
                             .childByAutoId().setValue(["ㄱ서비스 요청자" : "\(self.uid ?? "uid")",
-                                                                                 "요청 일시" : "\(self.requestDateTextField.text ?? "미입력")",
+                                                       "요청 일시" : "\(dateString )",
                                                                                  "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
 
                                                                                  "요청 위치" :"\(self.requestPartTextField.text ?? "미입력")" ,
