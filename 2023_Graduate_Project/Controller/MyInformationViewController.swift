@@ -30,7 +30,7 @@ class MyInformationViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let ref = Database.database().reference().child("ServiceRequest").child(Auth.auth().currentUser?.uid ?? "ERROR")
+    let ref = Database.database().reference().child("ServiceRequest")
     
     
     let currentEmail = Auth.auth().currentUser?.email ?? "고객"
@@ -50,27 +50,27 @@ class MyInformationViewController: UIViewController {
 
         
         
-        ref.observe(.value) { snapshot in
-            
-            self.myRequestList = []
-            
-            for child in snapshot.children {
-                
-                guard let childSnapShot = child as? DataSnapshot else {return}
-                let value = childSnapShot.value as? NSDictionary
-                let date = value?["요청 일시"] as? String ?? ""
-                let place = value?["요청 장소"] as? String ?? ""
-                let detail = value?["상세 설명"] as? String ?? ""
-                let imageURL = value?["사진 URL"] as? String ?? ""
-                
-                let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL)
-                self.myRequestList.append(fetchedRequestList)
-            }
-            
-            self.tableView.reloadData()
-            
-            
-        }
+        if let userID = userID {
+                    let userRef = ref.queryOrdered(byChild: "ㄱ서비스 요청자").queryEqual(toValue: userID)
+
+                    userRef.observe(.value) { snapshot in
+                        self.myRequestList = []
+
+                        for child in snapshot.children {
+                            guard let childSnapShot = child as? DataSnapshot else { return }
+                            let value = childSnapShot.value as? NSDictionary
+                            let date = value?["요청 일시"] as? String ?? ""
+                            let place = value?["요청 위치"] as? String ?? ""
+                            let detail = value?["상세 설명"] as? String ?? ""
+                            let imageURL = value?["사진 URL"] as? String ?? ""
+
+                            let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL)
+                            self.myRequestList.append(fetchedRequestList)
+                        }
+
+                        self.tableView.reloadData()
+                    }
+                }
         
         
         
