@@ -129,8 +129,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                         
                         
                         ref.child("ServiceRequest")
-                            .child(self.uid ?? "error")
-                            .childByAutoId().setValue(["ㄱ서비스 요청자" : "\(email)",
+                            .childByAutoId().setValue(["ㄱ서비스 요청자" : "\(self.uid)",
                                                                                  "요청 일시" : "\(self.requestDateTextField.text ?? "미입력")",
                                                                                  "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
 
