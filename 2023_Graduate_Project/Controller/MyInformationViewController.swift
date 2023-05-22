@@ -133,6 +133,20 @@ extension MyInformationViewController : UITableViewDelegate {
     
         print(myRequestList[indexPath.row])
         
+        let celldata: requestListEntity = myRequestList[indexPath.row] //인덱스에 해당하는 셀데이터를 받음.
+        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
+            detailViewController.date = celldata.date
+            detailViewController.place = celldata.place
+            detailViewController.detail = celldata.detail
+           
+            detailViewController.receivedBid = 0
+            navigationController?.pushViewController(detailViewController, animated: true)
+            
+            
+           
+            
+        }
+        
         
         
     }

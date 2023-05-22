@@ -21,7 +21,7 @@ class MyRequestDetailViewController: UIViewController {
     var place : String?
     var detail : String?
     
-    var received : Bool?
+    var receivedBid : Int?
     
     @IBOutlet weak var company1: UILabel!
     @IBOutlet weak var company2: UILabel!
@@ -34,6 +34,7 @@ class MyRequestDetailViewController: UIViewController {
     @IBOutlet weak var stackview4: UIStackView!
     @IBOutlet weak var stackview5: UIStackView!
     
+    @IBOutlet weak var stackview6: UIStackView!
     @IBOutlet weak var company1_suggest: UILabel!
     @IBOutlet weak var company2_suggest: UILabel!
     @IBOutlet weak var company3_suggest: UILabel!
@@ -70,7 +71,7 @@ class MyRequestDetailViewController: UIViewController {
         super.viewDidLoad()
 
         
-        
+        updateUI()
         
         
     }
@@ -89,6 +90,67 @@ class MyRequestDetailViewController: UIViewController {
             detailLabel.text = detail
         }
 
+        if let receivedBid = receivedBid {
+            
+            switch receivedBid {
+                
+                
+            case 0:
+                stackview1.isHidden = true
+                stackview2.isHidden = true
+                stackview3.isHidden = true
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = false
+
+            case 1:
+                stackview1.isHidden = false
+                stackview2.isHidden = true
+                stackview3.isHidden = true
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+
+                
+            case 2:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = true
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+
+            case 3:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = false
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+
+            case 4:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = false
+                stackview4.isHidden = false
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+
+            case 5:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = false
+                stackview4.isHidden = false
+                stackview5.isHidden = false
+                stackview6.isHidden = true
+
+
+            default:
+                print("ERROR")
+            }
+            
+            
+        }
         
         
         
