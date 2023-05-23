@@ -141,45 +141,26 @@ extension MyInformationViewController : UITableViewDataSource {
 extension MyInformationViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-        print(myRequestList[indexPath.row])
-        
-        let celldata: requestListEntity = myRequestList[indexPath.row] //인덱스에 해당하는 셀데이터를 받음.
-        
+        let celldata: requestListEntity = myRequestList[indexPath.row]
         let postID = celldata.refid
-
+        
         ref.child(postID).observeSingleEvent(of: .value) { snapshot in
-                if snapshot.exists() {
-                    let columnCount = snapshot.childrenCount
+            if snapshot.exists() {
+                let columnCount = snapshot.childrenCount
+                print("글 내 컬럼 개수: \(columnCount)")
+                
+                if let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
+                    detailViewController.date = celldata.date
+                    detailViewController.place = celldata.place
+                    detailViewController.detail = celldata.detail
+                    detailViewController.postID = celldata.refid
+                    detailViewController.receivedBid = Int(columnCount - 5) // receivedBid에 columnCount 값을 할당
                     
-                    print("글 내 컬럼 개수: \(columnCount)")
-                    
-                    
-                    
-                    
-                    
-                } else {
-                    print("해당 글이 존재하지 않습니다.")
+                    self.navigationController?.pushViewController(detailViewController, animated: true)
                 }
+            } else {
+                print("해당 글이 존재하지 않습니다.")
             }
-        if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
-            detailViewController.date = celldata.date
-            detailViewController.place = celldata.place
-            detailViewController.detail = celldata.detail
-            detailViewController.postID = celldata.refid
-            
-           
-            detailViewController.receivedBid = 0
-            navigationController?.pushViewController(detailViewController, animated: true)
-            
-            
-           
-            
         }
-        
-        
-        
     }
-    
-    
 }
