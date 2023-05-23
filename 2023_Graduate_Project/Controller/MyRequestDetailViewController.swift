@@ -69,11 +69,19 @@ class MyRequestDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        detailLabel.isEditable = false
 
         
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         updateUI()
-        
-        
+
     }
     
 

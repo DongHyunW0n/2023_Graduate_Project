@@ -138,6 +138,7 @@ extension MyInformationViewController : UITableViewDelegate {
             detailViewController.date = celldata.date
             detailViewController.place = celldata.place
             detailViewController.detail = celldata.detail
+            
            
             detailViewController.receivedBid = 0
             navigationController?.pushViewController(detailViewController, animated: true)
