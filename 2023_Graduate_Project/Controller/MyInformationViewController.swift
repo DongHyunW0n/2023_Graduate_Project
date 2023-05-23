@@ -48,7 +48,8 @@ class MyInformationViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
 
-        
+        let searchString = "bid" // 검색할 문자열
+
         
         if let userID = userID {
                     let userRef = ref.queryOrdered(byChild: "ㄱ서비스 요청자").queryEqual(toValue: userID)
@@ -75,7 +76,11 @@ class MyInformationViewController: UIViewController {
 
                         self.tableView.reloadData()
                     }
+            
+        
                 }
+        
+        
         
         
         
@@ -140,6 +145,23 @@ extension MyInformationViewController : UITableViewDelegate {
         print(myRequestList[indexPath.row])
         
         let celldata: requestListEntity = myRequestList[indexPath.row] //인덱스에 해당하는 셀데이터를 받음.
+        
+        let postID = celldata.refid
+
+        ref.child(postID).observeSingleEvent(of: .value) { snapshot in
+                if snapshot.exists() {
+                    let columnCount = snapshot.childrenCount
+                    
+                    print("글 내 컬럼 개수: \(columnCount)")
+                    
+                    
+                    
+                    
+                    
+                } else {
+                    print("해당 글이 존재하지 않습니다.")
+                }
+            }
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
             detailViewController.date = celldata.date
             detailViewController.place = celldata.place
