@@ -59,6 +59,8 @@ class MyInformationViewController: UIViewController {
                         for child in snapshot.children {
                             guard let childSnapShot = child as? DataSnapshot else { return }
                             let value = childSnapShot.value as? NSDictionary
+                            
+                            let totalRowCount = snapshot.childrenCount
                             let date = value?["요청 일시"] as? String ?? ""
                             let place = value?["요청 위치"] as? String ?? ""
                             let detail = value?["상세 설명"] as? String ?? ""
@@ -66,6 +68,9 @@ class MyInformationViewController: UIViewController {
 
                             let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL)
                             self.myRequestList.append(fetchedRequestList)
+                            
+                            print(totalRowCount)
+                            
                         }
 
                         self.tableView.reloadData()
@@ -119,6 +124,7 @@ extension MyInformationViewController : UITableViewDataSource {
         
         let celldata : requestListEntity = myRequestList[indexPath.row]
         cell.titleLabel.text = celldata.detail
+        cell.layer.cornerRadius = cell.frame.height/3
         cell.selectionStyle = .none
         return cell
     }
@@ -138,6 +144,7 @@ extension MyInformationViewController : UITableViewDelegate {
             detailViewController.date = celldata.date
             detailViewController.place = celldata.place
             detailViewController.detail = celldata.detail
+            detailViewController.postID = celldata.refid
             
            
             detailViewController.receivedBid = 0

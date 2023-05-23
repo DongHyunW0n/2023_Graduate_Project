@@ -20,8 +20,10 @@ class MyRequestDetailViewController: UIViewController {
     var date : String?
     var place : String?
     var detail : String?
-    
+    var postID : String?
     var receivedBid : Int?
+    
+    var requestEntity : requestListEntity?
     
     @IBOutlet weak var company1: UILabel!
     @IBOutlet weak var company2: UILabel!
@@ -60,7 +62,7 @@ class MyRequestDetailViewController: UIViewController {
     
     
     
-    
+
     
     
     
@@ -72,6 +74,21 @@ class MyRequestDetailViewController: UIViewController {
         
         detailLabel.isEditable = false
 
+        let postRef = ref.child("ServiceRequest").child(postID ?? "ERROR")
+
+        
+        print("postID is \(postID ?? "POST ID ERROR")")
+        
+        
+        
+        postRef.observeSingleEvent(of: .value) { snapshot in
+            if snapshot.exists() {
+                let rowCount = snapshot.childrenCount
+                print("행의 개수: \(rowCount)")
+            } else {
+                print("해당 글이 존재하지 않습니다.")
+            }
+        }
         
         
         
