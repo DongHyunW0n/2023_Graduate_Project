@@ -17,6 +17,7 @@ struct requestListEntity {
     var place : String
     var detail : String
     var imageURL : String
+    var number : String
     
 }
 
@@ -64,10 +65,11 @@ class MyInformationViewController: UIViewController {
                             let totalRowCount = snapshot.childrenCount
                             let date = value?["요청 일시"] as? String ?? ""
                             let place = value?["요청 위치"] as? String ?? ""
+                            let number = value?["연락처"] as? String ?? ""
                             let detail = value?["상세 설명"] as? String ?? ""
                             let imageURL = value?["사진 URL"] as? String ?? ""
 
-                            let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL)
+                            let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL, number: number)
                             self.myRequestList.append(fetchedRequestList)
                             
                             print(totalRowCount)
@@ -225,6 +227,7 @@ extension MyInformationViewController: UITableViewDelegate {
                 }
 
                 if let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
+                    detailViewController.number = celldata.number
                     detailViewController.date = celldata.date
                     detailViewController.place = celldata.place
                     detailViewController.detail = celldata.detail

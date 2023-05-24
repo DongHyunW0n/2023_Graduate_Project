@@ -22,10 +22,12 @@ let refDetailView = Database.database().reference().child("ServiceRequest")
 class MyRequestDetailViewController: UIViewController {
     
     
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var detailLabel: UITextView!
     
+    var number : String?
     var date: String?
     var place: String?
     var detail: String?
@@ -83,6 +85,9 @@ class MyRequestDetailViewController: UIViewController {
         
         if let detail = detail {
             detailLabel.text = detail
+        }
+        if let number = number {
+            numberLabel.text = number
         }
         
         if let receivedBid = receivedBid {

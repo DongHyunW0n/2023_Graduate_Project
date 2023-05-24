@@ -13,6 +13,7 @@ import Firebase
 
 class RequestViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
+    @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var requestPartTextField: UITextField!
     
@@ -142,6 +143,7 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
                                                                                  "사진 URL" : "\(downloadURL.absoluteString ?? "사진 미선택")",
 
                                                                                  "요청 위치" :"\(self.requestPartTextField.text ?? "미입력")" ,
+                                                       "연락처" :"\(self.numberTextField.text ?? "미입력")" ,
                                                                                  "상세 설명" : "\(self.requestDescriptTextView.text ?? "미입력")"])
                     }
                 }
