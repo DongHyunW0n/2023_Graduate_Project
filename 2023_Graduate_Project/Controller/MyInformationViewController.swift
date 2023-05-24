@@ -144,17 +144,18 @@ extension MyInformationViewController : UITableViewDelegate {
         let celldata: requestListEntity = myRequestList[indexPath.row]
         let postID = celldata.refid
         
-        ref.child(postID).observeSingleEvent(of: .value) { snapshot in
+        ref.child(postID).child("받은 견적").observeSingleEvent(of: .value) { snapshot in
             if snapshot.exists() {
                 let columnCount = snapshot.childrenCount
-                print("글 내 컬럼 개수: \(columnCount)")
+                print("받은 견적의 개수: \(columnCount)")
                 
                 if let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
                     detailViewController.date = celldata.date
                     detailViewController.place = celldata.place
                     detailViewController.detail = celldata.detail
                     detailViewController.postID = celldata.refid
-                    detailViewController.receivedBid = Int(columnCount - 5) // receivedBid에 columnCount 값을 할당
+                    detailViewController.receivedBid = Int(columnCount) // receivedBid에 columnCount 값을 할당
+                    
                     
                     self.navigationController?.pushViewController(detailViewController, animated: true)
                 }
