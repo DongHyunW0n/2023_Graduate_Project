@@ -22,6 +22,8 @@ let refDetailView = Database.database().reference().child("ServiceRequest")
 
 
 class MyRequestDetailViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
@@ -155,33 +157,59 @@ class MyRequestDetailViewController: UIViewController {
             }
         }
 
+    
+    @IBAction func company1OKButtonPressed(_ sender: UIButton) {
+        updateSelectionStatus(for: 0, isSelected: "1")
+    }
+    
+    @IBAction func company2OKButtonPressed(_ sender: UIButton) {
+        updateSelectionStatus(for: 0, isSelected: "1")
+    }
+    
+    @IBAction func company3OKButtonPressed(_ sender: UIButton) {
+        updateSelectionStatus(for: 0, isSelected: "1")
+    }
+    
+    @IBAction func company4OKButtonPressed(_ sender: UIButton) {
+        updateSelectionStatus(for: 0, isSelected: "1")
+    }
+    
+    @IBAction func company5OKButtonPressed(_ sender: UIButton) {
+        updateSelectionStatus(for: 0, isSelected: "1")
+    }
+    
+    func updateSelectionStatus(for index: Int, isSelected: String) {
+        guard index < bidDetails.count else {
+            return
+        }
+        
+        bidDetails[index].isSelected = isSelected
+        
+        guard let postID = postID else {
+            print("POST ID ERROR")
+            return
+        }
+        
+        let refBidDetails = refDetailView.child(postID).child("받은 견적")
+        let childSnapshot = refBidDetails.childSnapshot(forPath: "\(index)")
+        let childRef = childSnapshot.ref
+        
+        childRef.updateChildValues(["isSelected": isSelected]) { error, _ in
+            if let error = error {
+                print("Failed to update isSelected: \(error.localizedDescription)")
+            } else {
+                print("isSelected updated successfully")
+            }
+        }
+    }
+    
+    
     func fetchBidDetails() {
         guard let postID = postID else {
             print("POST ID ERROR")
             return
         }
-//        ref.observe(.value) {snapshot in
-//
-//
-//
-//            self.articleList = []
-//
-//            for child in snapshot.children {
-//                guard let childSnapShot = child as? DataSnapshot else {return}
-//                let value = childSnapShot.value as? NSDictionary
-//                let title = value?["제목"] as? String ?? ""
-//                let discrib = value?["내용"] as? String ?? ""
-//
-//                let fetchedArticle = ArticleEntity(refid: childSnapShot.key, title: title, describ: discrib)
-//
-//                self.articleList.append(fetchedArticle)
-//            }
-//
-//            self.tableView.reloadData()
-//
-//
-//
-//        }
+
 
         refDetailView.child(postID).child("받은 견적").observe(.value) { snapshot in
             if snapshot.exists() {

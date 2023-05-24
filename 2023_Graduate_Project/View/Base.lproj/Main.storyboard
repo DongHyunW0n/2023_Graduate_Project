@@ -919,17 +919,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlP-fK-yJY">
-                                                        <rect key="frame" x="112" y="33.5" width="166" height="34.5"/>
+                                                        <rect key="frame" x="153.5" y="33.5" width="83" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3B-bO-t6C">
                                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="수락하기"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWw-4x-A3o">
-                                                                <rect key="frame" x="83" y="0.0" width="83" height="34.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="거절하기"/>
+                                                                <connections>
+                                                                    <action selector="company1OKButtonPressed:" destination="M7R-2k-lAL" eventType="touchUpInside" id="gIL-3X-NeG"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -961,17 +959,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ou4-Pv-u6g">
-                                                        <rect key="frame" x="112" y="33.5" width="166" height="34.5"/>
+                                                        <rect key="frame" x="153.5" y="33.5" width="83" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUW-DB-KHJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="수락하기"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-ir-r3t">
-                                                                <rect key="frame" x="83" y="0.0" width="83" height="34.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="거절하기"/>
+                                                                <connections>
+                                                                    <action selector="company2OKButtonPressed:" destination="M7R-2k-lAL" eventType="touchUpInside" id="EFw-JS-H69"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1003,17 +999,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVi-OY-qz9">
-                                                        <rect key="frame" x="112" y="33.5" width="166" height="34.5"/>
+                                                        <rect key="frame" x="153.5" y="33.5" width="83" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7w6-rS-VId">
                                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="수락하기"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL1-UC-XSw">
-                                                                <rect key="frame" x="83" y="0.0" width="83" height="34.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="거절하기"/>
+                                                                <connections>
+                                                                    <action selector="company3OKButtonPressed:" destination="M7R-2k-lAL" eventType="touchUpInside" id="NSU-EI-Ph3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1045,17 +1039,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhU-MD-iMa">
-                                                        <rect key="frame" x="112" y="33.5" width="166" height="34.5"/>
+                                                        <rect key="frame" x="153.5" y="33.5" width="83" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7S-3f-mVm">
                                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="수락하기"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wW-mN-pIo">
-                                                                <rect key="frame" x="83" y="0.0" width="83" height="34.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="거절하기"/>
+                                                                <connections>
+                                                                    <action selector="company5OKButtonPressed:" destination="M7R-2k-lAL" eventType="touchUpInside" id="boG-oF-Dqt"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1103,17 +1095,15 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZE-F8-FZW">
-                                                        <rect key="frame" x="112" y="33.5" width="166" height="34.5"/>
+                                                        <rect key="frame" x="153.5" y="33.5" width="83" height="34.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUU-Ql-anf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="83" height="34.5"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="수락하기"/>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7F-oZ-AVW">
-                                                                <rect key="frame" x="83" y="0.0" width="83" height="34.5"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="거절하기"/>
+                                                                <connections>
+                                                                    <action selector="company4OKButtonPressed:" destination="M7R-2k-lAL" eventType="touchUpInside" id="wbh-ke-bC6"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -1187,23 +1177,18 @@
                     <size key="freeformSize" width="428" height="1000"/>
                     <connections>
                         <outlet property="company1" destination="Fbw-os-ntV" id="2zm-Tb-LzY"/>
-                        <outlet property="company1_NO" destination="sWw-4x-A3o" id="eCc-7L-1rK"/>
                         <outlet property="company1_OK" destination="P3B-bO-t6C" id="SrP-kn-H39"/>
                         <outlet property="company1_suggest" destination="njT-CZ-ohS" id="qwA-L1-rAa"/>
                         <outlet property="company2" destination="cez-PJ-8kx" id="Prl-7q-4JI"/>
-                        <outlet property="company2_NO" destination="aeH-ir-r3t" id="i7W-Jz-bvE"/>
                         <outlet property="company2_OK" destination="qUW-DB-KHJ" id="8YM-dJ-Yaa"/>
                         <outlet property="company2_suggest" destination="rRO-Vc-Z04" id="toW-x0-ty6"/>
                         <outlet property="company3" destination="wUc-CA-Peb" id="daM-wS-w4T"/>
-                        <outlet property="company3_NO" destination="sL1-UC-XSw" id="Jmj-zw-yvf"/>
                         <outlet property="company3_OK" destination="7w6-rS-VId" id="2bp-d0-lVT"/>
                         <outlet property="company3_suggest" destination="F0d-PM-kRc" id="yF5-sT-HCV"/>
                         <outlet property="company4" destination="QYQ-LU-S3a" id="cL0-5H-0WO"/>
-                        <outlet property="company4_NO" destination="F7F-oZ-AVW" id="QsG-hS-4Lc"/>
                         <outlet property="company4_OK" destination="hUU-Ql-anf" id="EIw-CT-C5n"/>
                         <outlet property="company4_suggest" destination="Deo-cz-Z2Y" id="gfm-DQ-IlW"/>
                         <outlet property="company5" destination="Jpa-qn-jeE" id="xVT-r9-eSU"/>
-                        <outlet property="company5_NO" destination="2wW-mN-pIo" id="lfA-Ij-TDy"/>
                         <outlet property="company5_OK" destination="G7S-3f-mVm" id="F7R-5L-gKU"/>
                         <outlet property="company5_suggest" destination="dZI-XS-Jj4" id="CG0-JS-9PX"/>
                         <outlet property="dateLabel" destination="Vf4-ir-GN7" id="V5W-or-eFD"/>
