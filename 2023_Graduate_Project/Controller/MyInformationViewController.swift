@@ -122,15 +122,57 @@ extension MyInformationViewController : UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? MyRequestListCell else {
             return UITableViewCell()
         }
-        
-        let celldata : requestListEntity = myRequestList[indexPath.row]
+
+        let celldata: requestListEntity = myRequestList[indexPath.row]
         cell.titleLabel.text = celldata.detail
-        cell.layer.cornerRadius = cell.frame.height/3
+        cell.layer.cornerRadius = cell.frame.height / 3
         cell.selectionStyle = .none
+
+        // Check if the bid has been accepted
+        let postID = celldata.refid
+        let receivedBidRef = ref.child(postID).child("받은 견적")
+
+        receivedBidRef.observeSingleEvent(of: .value) { snapshot in
+            if snapshot.exists() {
+                let receivedBids = snapshot.children.allObjects as? [DataSnapshot] ?? []
+                var isAccepted = false
+                var hasReceivedBids = false
+
+                for bid in receivedBids {
+                    if let isSelected = bid.childSnapshot(forPath: "선택여부").value as? String {
+                        hasReceivedBids = true
+                        if isSelected == "1" {
+                            isAccepted = true
+                            break
+                        }
+                    }
+                }
+
+                DispatchQueue.main.async {
+                    if isAccepted {
+                        cell.isDoneLabel.text = "견적 완료"
+                        cell.isDoneLabel.textColor = UIColor.green
+                    } else {
+                        if hasReceivedBids {
+                            cell.isDoneLabel.text = "견적 수신"
+                            cell.isDoneLabel.textColor = UIColor.orange
+                        } else {
+                            cell.isDoneLabel.text = "견적 대기"
+                            cell.isDoneLabel.textColor = UIColor.red
+                        }
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    cell.isDoneLabel.text = "견적 대기"
+                    cell.isDoneLabel.textColor = UIColor.red
+                }
+            }
+        }
+
         return cell
     }
 

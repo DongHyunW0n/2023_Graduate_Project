@@ -21,18 +21,18 @@ let refDetailView = Database.database().reference().child("ServiceRequest")
 
 class MyRequestDetailViewController: UIViewController {
     
-
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var detailLabel: UITextView!
-
+    
     var date: String?
     var place: String?
     var detail: String?
     var postID: String?
     var receivedBid: Int?
     var requestEntity: requestListEntity?
-
+    
     @IBOutlet weak var company1: UILabel!
     @IBOutlet weak var company2: UILabel!
     @IBOutlet weak var company3: UILabel!
@@ -49,42 +49,42 @@ class MyRequestDetailViewController: UIViewController {
     @IBOutlet weak var company3_suggest: UILabel!
     @IBOutlet weak var company4_suggest: UILabel!
     @IBOutlet weak var company5_suggest: UILabel!
-
+    
     @IBOutlet weak var company1_OK: UIButton!
     @IBOutlet weak var company2_OK: UIButton!
     @IBOutlet weak var company3_OK: UIButton!
     @IBOutlet weak var company4_OK: UIButton!
     @IBOutlet weak var company5_OK: UIButton!
-
+    
     var bidDetails: [suggestEntity] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         detailLabel.isEditable = false
-
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
         fetchBidDetails()
     }
-
+    
     func updateUI() {
         print("postID is \(postID ?? "POST ID ERROR")")
-
+        
         if let date = date {
             dateLabel.text = date
         }
-
+        
         if let place = place {
             placeLabel.text = place
         }
-
+        
         if let detail = detail {
             detailLabel.text = detail
         }
-
+        
         if let receivedBid = receivedBid {
             switch receivedBid {
             case 0:
@@ -134,27 +134,56 @@ class MyRequestDetailViewController: UIViewController {
             }
         }
     }
-
+    
     @IBAction func company1OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 0, isSelected: "1")
+        showConfirmationAlert(for: 0) { [weak self] in
+            self?.updateSelectionStatus(for: 0, isSelected: "1")
+        }
     }
 
     @IBAction func company2OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 1, isSelected: "1")
+        showConfirmationAlert(for: 1) { [weak self] in
+            self?.updateSelectionStatus(for: 1, isSelected: "1")
+        }
     }
 
     @IBAction func company3OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 2, isSelected: "1")
+        showConfirmationAlert(for: 2) { [weak self] in
+            self?.updateSelectionStatus(for: 2, isSelected: "1")
+        }
     }
 
     @IBAction func company4OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 3, isSelected: "1")
+        showConfirmationAlert(for: 3) { [weak self] in
+            self?.updateSelectionStatus(for: 3, isSelected: "1")
+        }
     }
 
     @IBAction func company5OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 4, isSelected: "1")
+        showConfirmationAlert(for: 4) { [weak self] in
+            self?.updateSelectionStatus(for: 4, isSelected: "1")
+        }
     }
 
+    func showConfirmationAlert(for index: Int, completion: @escaping () -> Void) {
+        
+        let companyName = bidDetails[index].companyName
+        let alertController = UIAlertController(title: "\(companyName)의 견적을 선택하셨습니다",
+                                                message: "한번 선택하신 견적의 취소는 고객센터를 통해서만 가능합니다. 정말 선택하시겠습니까?",
+                                                preferredStyle: .alert)
+        
+        let confirmAction = UIAlertAction(title: "확인", style: .default) { _ in
+            completion()
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     func updateSelectionStatus(for index: Int, isSelected: String) {
         guard index < bidDetails.count else {
             return
@@ -179,13 +208,13 @@ class MyRequestDetailViewController: UIViewController {
             }
         }
     }
-
+    
     func fetchBidDetails() {
         guard let postID = postID else {
             print("POST ID ERROR")
             return
         }
-
+        
         refDetailView.child(postID).child("받은 견적").observe(.value) { snapshot in
             if snapshot.exists() {
                 self.bidDetails.removeAll() // Clear the array before populating with new data
@@ -194,15 +223,15 @@ class MyRequestDetailViewController: UIViewController {
                 
                 for child in snapshot.children {
                     guard let childSnapshot = child as? DataSnapshot else { return }
-
+                    
                     if let value = childSnapshot.value as? [String: Any],
                        let companyName = value["회사명"] as? String,
                        let isSelected = value["선택여부"] as? String,
                        let companyUID = value["사업자UID"] as? String,
                        let suggest = value["견적내용"] as? String {
-
+                        
                         let bidID = childSnapshot.key // bidID 가져오기
-
+                        
                         let fetchedSuggest = suggestEntity(bidID: bidID, companyName: companyName, companyUID: companyUID, detail: suggest, isSelected: isSelected)
                         self.bidDetails.append(fetchedSuggest)
                         
@@ -211,7 +240,7 @@ class MyRequestDetailViewController: UIViewController {
                         }
                     }
                 }
-
+                
                 self.updateBidDetails(self.bidDetails)
                 self.updateCompanyLabel(self.bidDetails)
                 print(self.bidDetails)
@@ -229,11 +258,11 @@ class MyRequestDetailViewController: UIViewController {
             }
         }
     }
-
+    
     func updateBidDetails(_ details: [suggestEntity]) {
         let suggestDetails = details.prefix(5)
         let suggestCount = suggestDetails.count
-
+        
         switch suggestCount {
         case 0:
             stackview1.isHidden = true
@@ -249,7 +278,7 @@ class MyRequestDetailViewController: UIViewController {
             stackview4.isHidden = true
             stackview5.isHidden = true
             stackview6.isHidden = true
-
+            
             company1_suggest.text = suggestDetails[0].detail
         case 2:
             stackview1.isHidden = false
@@ -258,7 +287,7 @@ class MyRequestDetailViewController: UIViewController {
             stackview4.isHidden = true
             stackview5.isHidden = true
             stackview6.isHidden = true
-
+            
             company1_suggest.text = suggestDetails[0].detail
             company2_suggest.text = suggestDetails[1].detail
         case 3:
@@ -268,7 +297,7 @@ class MyRequestDetailViewController: UIViewController {
             stackview4.isHidden = true
             stackview5.isHidden = true
             stackview6.isHidden = true
-
+            
             company1_suggest.text = suggestDetails[0].detail
             company2_suggest.text = suggestDetails[1].detail
             company3_suggest.text = suggestDetails[2].detail
@@ -279,7 +308,7 @@ class MyRequestDetailViewController: UIViewController {
             stackview4.isHidden = false
             stackview5.isHidden = true
             stackview6.isHidden = true
-
+            
             company1_suggest.text = suggestDetails[0].detail
             company2_suggest.text = suggestDetails[1].detail
             company3_suggest.text = suggestDetails[2].detail
@@ -291,7 +320,7 @@ class MyRequestDetailViewController: UIViewController {
             stackview4.isHidden = false
             stackview5.isHidden = false
             stackview6.isHidden = true
-
+            
             company1_suggest.text = suggestDetails[0].detail
             company2_suggest.text = suggestDetails[1].detail
             company3_suggest.text = suggestDetails[2].detail
@@ -301,11 +330,13 @@ class MyRequestDetailViewController: UIViewController {
             print("ERROR")
         }
     }
-
+    
     func updateCompanyLabel(_ details: [suggestEntity]) {
         let suggestDetails = details.prefix(5)
         let suggestCount = suggestDetails.count
-
+        
+        let selectedCompanyIndex = suggestDetails.firstIndex { $0.isSelected == "1" } // Index of the selected company
+        
         switch suggestCount {
         case 0:
             company1.text = ""
@@ -345,6 +376,19 @@ class MyRequestDetailViewController: UIViewController {
             company5.text = suggestDetails[4].companyName
         default:
             print("ERROR")
+        }
+        
+        // Update stackview borders based on the selected company
+        let stackViews = [stackview1, stackview2, stackview3, stackview4, stackview5]
+        
+        stackViews.forEach { stackView in
+            stackView?.layer.borderWidth = 0 // Reset border width and color
+            stackView?.layer.borderColor = UIColor.clear.cgColor
+        }
+        
+        if let selectedIndex = selectedCompanyIndex {
+            stackViews[selectedIndex]?.layer.borderWidth = 2 // Set border width and color for the selected company
+            stackViews[selectedIndex]?.layer.borderColor = UIColor.red.cgColor
         }
     }
 }
