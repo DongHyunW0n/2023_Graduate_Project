@@ -223,12 +223,13 @@ class MyRequestDetailViewController: UIViewController {
         let companyName = selectedBid.companyName
         
         // FinishedBid 노드에 회사명 노드 생성
-        let finishedBidRef = Database.database().reference().child("FinishedBid").child(companyName)
+        let finishedBidRef = Database.database().reference().child("FinishedBid").child(companyName).child(postID)
         
         let bidDetailsData: [String: Any] = [
             "postID": postID,
             "bidID": selectedBid.bidID,
-            "detail": selectedBid.detail,
+            "상세 설명": selectedBid.detail,
+            
         
             // 다른 필요한 정보들을 추가로 저장할 수 있습니다.
         ]
