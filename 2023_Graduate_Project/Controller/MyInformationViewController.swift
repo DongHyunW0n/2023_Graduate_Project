@@ -180,25 +180,57 @@ extension MyInformationViewController : UITableViewDataSource {
     
 }
 
-extension MyInformationViewController : UITableViewDelegate {
-    
+extension MyInformationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let celldata: requestListEntity = myRequestList[indexPath.row]
         let postID = celldata.refid
-        
+
         ref.child(postID).child("받은 견적").observeSingleEvent(of: .value) { snapshot in
             if snapshot.exists() {
                 let columnCount = snapshot.childrenCount
                 print("받은 견적의 개수: \(columnCount)")
-                
+
+                var isAccepted = false
+
+                // Check if the bid has been accepted
+                let receivedBids = snapshot.children.allObjects as? [DataSnapshot] ?? []
+                for bid in receivedBids {
+                    if let isSelected = bid.childSnapshot(forPath: "선택여부").value as? String {
+                        if isSelected == "1" {
+                            isAccepted = true
+                            break
+                        }
+                    }
+                }
+
+                if isAccepted {
+                    
+//                    // 견적이 선택된 경우에만 저장
+//                    let companyRef = Database.database().reference().child("Company").child(celldata.refid)
+//                    let userDetails = [
+//                        "요청 일시": celldata.date,
+//                        "요청 위치": celldata.place,
+//                        "상세 설명": celldata.detail,
+//                        "사진 URL": celldata.imageURL
+//                    ]
+//                    companyRef.setValue(userDetails) { error, _ in
+//                        if let error = error {
+//                            print("Failed to save user details: \(error)")
+//                        } else {
+//                            print("User details saved successfully")
+//                        }
+//                    }
+                } else {
+                    print("견적이 선택되지 않았습니다.")
+                }
+
                 if let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
                     detailViewController.date = celldata.date
                     detailViewController.place = celldata.place
                     detailViewController.detail = celldata.detail
                     detailViewController.postID = celldata.refid
                     detailViewController.receivedBid = Int(columnCount) // receivedBid에 columnCount 값을 할당
-                    
-                    
+
                     self.navigationController?.pushViewController(detailViewController, animated: true)
                 }
             } else {

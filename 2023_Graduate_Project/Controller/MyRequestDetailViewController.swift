@@ -205,6 +205,40 @@ class MyRequestDetailViewController: UIViewController {
                 print("Failed to update isSelected: \(error.localizedDescription)")
             } else {
                 print("isSelected updated successfully")
+                
+                // 견적 선택 여부가 "1"로 변경된 경우 FinishedBid에 저장
+                if isSelected == "1" {
+                    self.saveSelectedBidDetails(index: index, postID: postID)
+                }
+            }
+        }
+    }
+    
+    func saveSelectedBidDetails(index: Int, postID: String) {
+        guard index < bidDetails.count else {
+            return
+        }
+        
+        let selectedBid = bidDetails[index]
+        let companyName = selectedBid.companyName
+        
+        // FinishedBid 노드에 회사명 노드 생성
+        let finishedBidRef = Database.database().reference().child("FinishedBid").child(companyName)
+        
+        let bidDetailsData: [String: Any] = [
+            "postID": postID,
+            "bidID": selectedBid.bidID,
+            "detail": selectedBid.detail,
+        
+            // 다른 필요한 정보들을 추가로 저장할 수 있습니다.
+        ]
+        
+        // 해당 회사의 선택된 견적 상세 정보를 저장
+        finishedBidRef.setValue(bidDetailsData) { error, _ in
+            if let error = error {
+                print("Failed to save selected bid details: \(error.localizedDescription)")
+            } else {
+                print("Selected bid details saved successfully")
             }
         }
     }
