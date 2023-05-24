@@ -189,7 +189,9 @@ class MyRequestDetailViewController: UIViewController {
         refDetailView.child(postID).child("받은 견적").observe(.value) { snapshot in
             if snapshot.exists() {
                 self.bidDetails.removeAll() // Clear the array before populating with new data
-
+                
+                var hasSelectedBid = false // Flag to check if any bid is already selected
+                
                 for child in snapshot.children {
                     guard let childSnapshot = child as? DataSnapshot else { return }
 
@@ -203,12 +205,25 @@ class MyRequestDetailViewController: UIViewController {
 
                         let fetchedSuggest = suggestEntity(bidID: bidID, companyName: companyName, companyUID: companyUID, detail: suggest, isSelected: isSelected)
                         self.bidDetails.append(fetchedSuggest)
+                        
+                        if isSelected == "1" {
+                            hasSelectedBid = true
+                        }
                     }
                 }
 
                 self.updateBidDetails(self.bidDetails)
                 self.updateCompanyLabel(self.bidDetails)
                 print(self.bidDetails)
+                
+                // Disable all OK buttons if a bid is already selected
+                if hasSelectedBid {
+                    self.company1_OK.isEnabled = false
+                    self.company2_OK.isEnabled = false
+                    self.company3_OK.isEnabled = false
+                    self.company4_OK.isEnabled = false
+                    self.company5_OK.isEnabled = false
+                }
             } else {
                 print("스냅샷 제대로 안됨")
             }
