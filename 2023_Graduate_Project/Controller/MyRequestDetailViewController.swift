@@ -9,34 +9,30 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-
 struct suggestEntity {
-    
-    var companyName : String
-    var companyUID : String
-    var detail : String
-    var isSelected : String
-    
+    var bidID: String
+    var companyName: String
+    var companyUID: String
+    var detail: String
+    var isSelected: String
 }
 let refDetailView = Database.database().reference().child("ServiceRequest")
 
 
 class MyRequestDetailViewController: UIViewController {
     
-    
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var detailLabel: UITextView!
-    
-    var date : String?
-    var place : String?
-    var detail : String?
-    var postID : String?
-    var receivedBid : Int?
-    
-    var requestEntity : requestListEntity?
-    
+
+    var date: String?
+    var place: String?
+    var detail: String?
+    var postID: String?
+    var receivedBid: Int?
+    var requestEntity: requestListEntity?
+
     @IBOutlet weak var company1: UILabel!
     @IBOutlet weak var company2: UILabel!
     @IBOutlet weak var company3: UILabel!
@@ -47,7 +43,6 @@ class MyRequestDetailViewController: UIViewController {
     @IBOutlet weak var stackview3: UIStackView!
     @IBOutlet weak var stackview4: UIStackView!
     @IBOutlet weak var stackview5: UIStackView!
-    
     @IBOutlet weak var stackview6: UIStackView!
     @IBOutlet weak var company1_suggest: UILabel!
     @IBOutlet weak var company2_suggest: UILabel!
@@ -56,128 +51,110 @@ class MyRequestDetailViewController: UIViewController {
     @IBOutlet weak var company5_suggest: UILabel!
 
     @IBOutlet weak var company1_OK: UIButton!
-    @IBOutlet weak var company1_NO: UIButton!
-    
     @IBOutlet weak var company2_OK: UIButton!
-    @IBOutlet weak var company2_NO: UIButton!
-    
     @IBOutlet weak var company3_OK: UIButton!
-    @IBOutlet weak var company3_NO: UIButton!
-    
     @IBOutlet weak var company4_OK: UIButton!
-    @IBOutlet weak var company4_NO: UIButton!
-    
     @IBOutlet weak var company5_OK: UIButton!
-    @IBOutlet weak var company5_NO: UIButton!
-    
-    
-    
-    
-    
 
-    
-    
-    
-    
-    
-    
+    var bidDetails: [suggestEntity] = []
+
     override func viewDidLoad() {
-            super.viewDidLoad()
-            detailLabel.isEditable = false
+        super.viewDidLoad()
+        detailLabel.isEditable = false
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+        fetchBidDetails()
+    }
+
+    func updateUI() {
+        print("postID is \(postID ?? "POST ID ERROR")")
+
+        if let date = date {
+            dateLabel.text = date
         }
 
-        override func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
-            updateUI()
-            fetchBidDetails()
+        if let place = place {
+            placeLabel.text = place
         }
 
-        func updateUI() {
-            print("postID is \(postID ?? "POST ID ERROR")")
-
-            if let date = date {
-                dateLabel.text = date
-            }
-            
-            if let place = place {
-                placeLabel.text = place
-            }
-            
-            if let detail = detail {
-                detailLabel.text = detail
-            }
-
-            if let receivedBid = receivedBid {
-                switch receivedBid {
-                case 0:
-                    stackview1.isHidden = true
-                    stackview2.isHidden = true
-                    stackview3.isHidden = true
-                    stackview4.isHidden = true
-                    stackview5.isHidden = true
-                    stackview6.isHidden = false
-                case 1:
-                    stackview1.isHidden = false
-                    stackview2.isHidden = true
-                    stackview3.isHidden = true
-                    stackview4.isHidden = true
-                    stackview5.isHidden = true
-                    stackview6.isHidden = true
-                case 2:
-                    stackview1.isHidden = false
-                    stackview2.isHidden = false
-                    stackview3.isHidden = true
-                    stackview4.isHidden = true
-                    stackview5.isHidden = true
-                    stackview6.isHidden = true
-                case 3:
-                    stackview1.isHidden = false
-                    stackview2.isHidden = false
-                    stackview3.isHidden = false
-                    stackview4.isHidden = true
-                    stackview5.isHidden = true
-                    stackview6.isHidden = true
-                case 4:
-                    stackview1.isHidden = false
-                    stackview2.isHidden = false
-                    stackview3.isHidden = false
-                    stackview4.isHidden = false
-                    stackview5.isHidden = true
-                    stackview6.isHidden = true
-                case 5:
-                    stackview1.isHidden = false
-                    stackview2.isHidden = false
-                    stackview3.isHidden = false
-                    stackview4.isHidden = false
-                    stackview5.isHidden = false
-                    stackview6.isHidden = true
-                default:
-                    print("ERROR")
-                }
-            }
+        if let detail = detail {
+            detailLabel.text = detail
         }
 
-    
+        if let receivedBid = receivedBid {
+            switch receivedBid {
+            case 0:
+                stackview1.isHidden = true
+                stackview2.isHidden = true
+                stackview3.isHidden = true
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = false
+            case 1:
+                stackview1.isHidden = false
+                stackview2.isHidden = true
+                stackview3.isHidden = true
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+            case 2:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = true
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+            case 3:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = false
+                stackview4.isHidden = true
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+            case 4:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = false
+                stackview4.isHidden = false
+                stackview5.isHidden = true
+                stackview6.isHidden = true
+            case 5:
+                stackview1.isHidden = false
+                stackview2.isHidden = false
+                stackview3.isHidden = false
+                stackview4.isHidden = false
+                stackview5.isHidden = false
+                stackview6.isHidden = true
+            default:
+                print("ERROR")
+            }
+        }
+    }
+
     @IBAction func company1OKButtonPressed(_ sender: UIButton) {
         updateSelectionStatus(for: 0, isSelected: "1")
     }
-    
+
     @IBAction func company2OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 0, isSelected: "1")
+        updateSelectionStatus(for: 1, isSelected: "1")
     }
-    
+
     @IBAction func company3OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 0, isSelected: "1")
+        updateSelectionStatus(for: 2, isSelected: "1")
     }
-    
+
     @IBAction func company4OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 0, isSelected: "1")
+        updateSelectionStatus(for: 3, isSelected: "1")
     }
-    
+
     @IBAction func company5OKButtonPressed(_ sender: UIButton) {
-        updateSelectionStatus(for: 0, isSelected: "1")
+        updateSelectionStatus(for: 4, isSelected: "1")
     }
-    
+
     func updateSelectionStatus(for index: Int, isSelected: String) {
         guard index < bidDetails.count else {
             return
@@ -190,11 +167,11 @@ class MyRequestDetailViewController: UIViewController {
             return
         }
         
-        let refBidDetails = refDetailView.child(postID).child("받은 견적")
-        let childSnapshot = refBidDetails.childSnapshot(forPath: "\(index)")
-        let childRef = childSnapshot.ref
+        let selectedBidID = bidDetails[index].bidID // 견적 항목의 고유한 ID 가져오기
+        let refSelectedBid = refDetailView.child(postID).child("받은 견적").child(selectedBidID)
+        let isSelectedRef = refSelectedBid.child("선택여부")
         
-        childRef.updateChildValues(["isSelected": isSelected]) { error, _ in
+        isSelectedRef.setValue(isSelected) { error, _ in
             if let error = error {
                 print("Failed to update isSelected: \(error.localizedDescription)")
             } else {
@@ -202,68 +179,157 @@ class MyRequestDetailViewController: UIViewController {
             }
         }
     }
-    
-    
+
     func fetchBidDetails() {
         guard let postID = postID else {
             print("POST ID ERROR")
             return
         }
 
-
         refDetailView.child(postID).child("받은 견적").observe(.value) { snapshot in
             if snapshot.exists() {
-                
-                var bidDetails : [suggestEntity] = []
+                self.bidDetails.removeAll() // Clear the array before populating with new data
 
                 for child in snapshot.children {
-                    
-                    guard let childSnapshot = child as? DataSnapshot else{return}
-                    
-                    let value = childSnapshot.value as? NSDictionary
-                    
-                    let name = value?["회사명"] as? String ?? ""
-                    let isSelected = value?["선택여부"] as? String ?? ""
-                    let uid = value?["사업자UID"] as? String ?? ""
+                    guard let childSnapshot = child as? DataSnapshot else { return }
 
+                    if let value = childSnapshot.value as? [String: Any],
+                       let companyName = value["회사명"] as? String,
+                       let isSelected = value["선택여부"] as? String,
+                       let companyUID = value["사업자UID"] as? String,
+                       let suggest = value["견적내용"] as? String {
 
-                    let suggest = value?["견적내용"] as? String ?? ""
-                    
-                    let fetchedSuggest = suggestEntity(companyName: name, companyUID: uid, detail: suggest, isSelected: isSelected)
-                    
-                    bidDetails.append(fetchedSuggest)
-                    
-                    
+                        let bidID = childSnapshot.key // bidID 가져오기
+
+                        let fetchedSuggest = suggestEntity(bidID: bidID, companyName: companyName, companyUID: companyUID, detail: suggest, isSelected: isSelected)
+                        self.bidDetails.append(fetchedSuggest)
+                    }
                 }
 
-                
-                self.updateBidDetails(bidDetails)
-                self.updateCompanyLabel(bidDetails)
-                print(bidDetails)
-            }else{
-                print("스냅샷 제대로 받아오지 못함.")
-            }
-
-        }
-    }
-
-    func updateBidDetails(_ bidDetails: [suggestEntity]) {
-        let labels = [company1_suggest, company2_suggest, company3_suggest, company4_suggest, company5_suggest]
-
-        for (index, bidDetail) in bidDetails.enumerated() {
-            if index < labels.count {
-                labels[index]?.text = bidDetail.detail
+                self.updateBidDetails(self.bidDetails)
+                self.updateCompanyLabel(self.bidDetails)
+                print(self.bidDetails)
+            } else {
+                print("스냅샷 제대로 안됨")
             }
         }
     }
-    
-    func updateCompanyLabel(_ bidDetails: [suggestEntity]) {
-        let labels = [company1, company2, company3, company4, company5]
 
-        for (index, bidDetail) in bidDetails.enumerated() {
-            if index < labels.count {
-                labels[index]?.text = bidDetail.companyName
-            }
+    func updateBidDetails(_ details: [suggestEntity]) {
+        let suggestDetails = details.prefix(5)
+        let suggestCount = suggestDetails.count
+
+        switch suggestCount {
+        case 0:
+            stackview1.isHidden = true
+            stackview2.isHidden = true
+            stackview3.isHidden = true
+            stackview4.isHidden = true
+            stackview5.isHidden = true
+            stackview6.isHidden = false
+        case 1:
+            stackview1.isHidden = false
+            stackview2.isHidden = true
+            stackview3.isHidden = true
+            stackview4.isHidden = true
+            stackview5.isHidden = true
+            stackview6.isHidden = true
+
+            company1_suggest.text = suggestDetails[0].detail
+        case 2:
+            stackview1.isHidden = false
+            stackview2.isHidden = false
+            stackview3.isHidden = true
+            stackview4.isHidden = true
+            stackview5.isHidden = true
+            stackview6.isHidden = true
+
+            company1_suggest.text = suggestDetails[0].detail
+            company2_suggest.text = suggestDetails[1].detail
+        case 3:
+            stackview1.isHidden = false
+            stackview2.isHidden = false
+            stackview3.isHidden = false
+            stackview4.isHidden = true
+            stackview5.isHidden = true
+            stackview6.isHidden = true
+
+            company1_suggest.text = suggestDetails[0].detail
+            company2_suggest.text = suggestDetails[1].detail
+            company3_suggest.text = suggestDetails[2].detail
+        case 4:
+            stackview1.isHidden = false
+            stackview2.isHidden = false
+            stackview3.isHidden = false
+            stackview4.isHidden = false
+            stackview5.isHidden = true
+            stackview6.isHidden = true
+
+            company1_suggest.text = suggestDetails[0].detail
+            company2_suggest.text = suggestDetails[1].detail
+            company3_suggest.text = suggestDetails[2].detail
+            company4_suggest.text = suggestDetails[3].detail
+        case 5:
+            stackview1.isHidden = false
+            stackview2.isHidden = false
+            stackview3.isHidden = false
+            stackview4.isHidden = false
+            stackview5.isHidden = false
+            stackview6.isHidden = true
+
+            company1_suggest.text = suggestDetails[0].detail
+            company2_suggest.text = suggestDetails[1].detail
+            company3_suggest.text = suggestDetails[2].detail
+            company4_suggest.text = suggestDetails[3].detail
+            company5_suggest.text = suggestDetails[4].detail
+        default:
+            print("ERROR")
         }
     }
+
+    func updateCompanyLabel(_ details: [suggestEntity]) {
+        let suggestDetails = details.prefix(5)
+        let suggestCount = suggestDetails.count
+
+        switch suggestCount {
+        case 0:
+            company1.text = ""
+            company2.text = ""
+            company3.text = ""
+            company4.text = ""
+            company5.text = ""
+        case 1:
+            company1.text = suggestDetails[0].companyName
+            company2.text = ""
+            company3.text = ""
+            company4.text = ""
+            company5.text = ""
+        case 2:
+            company1.text = suggestDetails[0].companyName
+            company2.text = suggestDetails[1].companyName
+            company3.text = ""
+            company4.text = ""
+            company5.text = ""
+        case 3:
+            company1.text = suggestDetails[0].companyName
+            company2.text = suggestDetails[1].companyName
+            company3.text = suggestDetails[2].companyName
+            company4.text = ""
+            company5.text = ""
+        case 4:
+            company1.text = suggestDetails[0].companyName
+            company2.text = suggestDetails[1].companyName
+            company3.text = suggestDetails[2].companyName
+            company4.text = suggestDetails[3].companyName
+            company5.text = ""
+        case 5:
+            company1.text = suggestDetails[0].companyName
+            company2.text = suggestDetails[1].companyName
+            company3.text = suggestDetails[2].companyName
+            company4.text = suggestDetails[3].companyName
+            company5.text = suggestDetails[4].companyName
+        default:
+            print("ERROR")
+        }
     }
+}
