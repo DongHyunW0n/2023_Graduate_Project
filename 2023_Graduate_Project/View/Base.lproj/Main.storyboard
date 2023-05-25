@@ -847,64 +847,93 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9F-Zv-xjk">
                                         <rect key="frame" x="0.0" y="20" width="420" height="963"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-wE-1G9" userLabel="요청일시스택뷰">
-                                                <rect key="frame" x="20" y="20" width="380" height="20.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZPm-Tr-T8C">
+                                                <rect key="frame" x="15" y="20" width="390" height="199.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청 일시 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOw-pP-Mxx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@@일/@@년/@@시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-ir-GN7">
-                                                        <rect key="frame" x="103.5" y="0.0" width="276.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EAK-Ed-62S" userLabel="요청장소스택뷰">
-                                                <rect key="frame" x="20" y="50.5" width="380" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청 장소 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP2-9w-HZi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="사직자이 아파트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-xW-tDP">
-                                                        <rect key="frame" x="103.5" y="0.0" width="276.5" height="20.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-wE-1G9" userLabel="요청일시스택뷰">
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청 일시 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOw-pP-Mxx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="@@일/@@년/@@시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-ir-GN7">
+                                                                <rect key="frame" x="106.5" y="0.0" width="283.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wnz-mO-RDd" userLabel="요청내용스택뷰">
-                                                <rect key="frame" x="20" y="101" width="380" height="120"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="요청 내용 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyy-Sc-AhC">
-                                                        <rect key="frame" x="0.0" y="50" width="83.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-jb-Ssm">
-                                                        <rect key="frame" x="103.5" y="0.0" width="276.5" height="120"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EAK-Ed-62S" userLabel="요청장소스택뷰">
+                                                        <rect key="frame" x="0.0" y="26.5" width="390" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요청 장소 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP2-9w-HZi">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="사직자이 아파트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-xW-tDP">
+                                                                <rect key="frame" x="106.5" y="0.0" width="283.5" height="20.5"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <string key="text">요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용</string>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="t6i-Q5-h02" userLabel="요청장소스택뷰">
+                                                        <rect key="frame" x="0.0" y="53" width="390" height="20.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O04-E9-4bR">
+                                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="010-0000-0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbK-n9-uQp">
+                                                                <rect key="frame" x="106.5" y="0.0" width="283.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wnz-mO-RDd" userLabel="요청내용스택뷰">
+                                                        <rect key="frame" x="0.0" y="79.5" width="390" height="120"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="요청 내용 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyy-Sc-AhC">
+                                                                <rect key="frame" x="0.0" y="50" width="86.5" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-jb-Ssm">
+                                                                <rect key="frame" x="106.5" y="0.0" width="283.5" height="120"/>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용</string>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="120" id="g0z-Io-odd"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="120" id="g0z-Io-odd"/>
+                                                    <constraint firstItem="Vf4-ir-GN7" firstAttribute="leading" secondItem="9wK-xW-tDP" secondAttribute="leading" id="2pu-rc-Wbi"/>
+                                                    <constraint firstItem="ymb-jb-Ssm" firstAttribute="leading" secondItem="AbK-n9-uQp" secondAttribute="leading" id="7tK-LB-Tkd"/>
+                                                    <constraint firstItem="AbK-n9-uQp" firstAttribute="leading" secondItem="9wK-xW-tDP" secondAttribute="leading" id="sE2-KI-ADW"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="j1z-QL-Vp8" userLabel="받은견적목록안내스텍뷰">
@@ -1170,64 +1199,34 @@
                                                     <constraint firstAttribute="trailing" secondItem="c7C-c1-q62" secondAttribute="trailing" id="sar-Nr-v3H"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="t6i-Q5-h02" userLabel="요청장소스택뷰">
-                                                <rect key="frame" x="20" y="81" width="380" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O04-E9-4bR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="010-0000-0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbK-n9-uQp">
-                                                        <rect key="frame" x="103.5" y="0.0" width="276.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="3K4-MA-U2L" secondAttribute="trailing" constant="15" id="6O3-dD-vF8"/>
                                             <constraint firstItem="s1d-PR-DKq" firstAttribute="top" secondItem="EVD-cs-tax" secondAttribute="bottom" constant="20" id="6my-ZN-5kl"/>
-                                            <constraint firstItem="t6i-Q5-h02" firstAttribute="leading" secondItem="EAK-Ed-62S" secondAttribute="leading" id="72V-lc-N4v"/>
                                             <constraint firstItem="K2p-fe-CyD" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="77q-wD-nyB"/>
                                             <constraint firstItem="3K4-MA-U2L" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="7Kn-p3-9iz"/>
                                             <constraint firstAttribute="bottom" secondItem="8l8-UL-nwV" secondAttribute="bottom" constant="20" id="8yq-Z4-CbS"/>
-                                            <constraint firstItem="ymb-jb-Ssm" firstAttribute="leading" secondItem="AbK-n9-uQp" secondAttribute="leading" id="CDx-5s-ocA"/>
-                                            <constraint firstItem="9TW-wE-1G9" firstAttribute="top" secondItem="g9F-Zv-xjk" secondAttribute="top" constant="20" id="ChV-Rf-8AC"/>
-                                            <constraint firstItem="wnz-mO-RDd" firstAttribute="top" secondItem="t6i-Q5-h02" secondAttribute="bottom" constant="-0.5" id="Csy-PV-Zgu"/>
-                                            <constraint firstItem="AbK-n9-uQp" firstAttribute="leading" secondItem="9wK-xW-tDP" secondAttribute="leading" id="Dpq-RX-Njq"/>
                                             <constraint firstItem="K2p-fe-CyD" firstAttribute="top" secondItem="j1z-QL-Vp8" secondAttribute="bottom" constant="20" id="Iji-6L-ezX"/>
-                                            <constraint firstAttribute="trailing" secondItem="wnz-mO-RDd" secondAttribute="trailing" constant="20" id="NBx-Qv-qFA"/>
                                             <constraint firstAttribute="trailing" secondItem="j1z-QL-Vp8" secondAttribute="trailing" constant="8" id="PGU-si-DNC"/>
-                                            <constraint firstItem="EAK-Ed-62S" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="20" id="TJh-v8-n9i"/>
                                             <constraint firstAttribute="trailing" secondItem="EVD-cs-tax" secondAttribute="trailing" constant="15" id="TWy-jN-x62"/>
                                             <constraint firstItem="8l8-UL-nwV" firstAttribute="top" secondItem="Wgv-G5-tLb" secondAttribute="bottom" constant="30" id="UaO-tA-svj"/>
-                                            <constraint firstItem="9wK-xW-tDP" firstAttribute="leading" secondItem="Vf4-ir-GN7" secondAttribute="leading" id="Xq3-Z2-McU"/>
+                                            <constraint firstItem="j1z-QL-Vp8" firstAttribute="top" secondItem="ZPm-Tr-T8C" secondAttribute="bottom" constant="21.5" id="VDs-VW-zBy"/>
                                             <constraint firstItem="Wgv-G5-tLb" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="Xsr-AK-WGW"/>
                                             <constraint firstAttribute="trailing" secondItem="Wgv-G5-tLb" secondAttribute="trailing" constant="15" id="ZfA-ln-5pM"/>
-                                            <constraint firstItem="AbK-n9-uQp" firstAttribute="trailing" secondItem="9wK-xW-tDP" secondAttribute="trailing" id="ao7-d8-wa8"/>
-                                            <constraint firstItem="j1z-QL-Vp8" firstAttribute="top" secondItem="wnz-mO-RDd" secondAttribute="bottom" constant="20" id="bEB-UT-DYZ"/>
+                                            <constraint firstItem="ZPm-Tr-T8C" firstAttribute="top" secondItem="g9F-Zv-xjk" secondAttribute="top" constant="20" symbolic="YES" id="aaE-6W-JnX"/>
                                             <constraint firstItem="8l8-UL-nwV" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="11" id="cOK-Us-067"/>
                                             <constraint firstAttribute="trailing" secondItem="s1d-PR-DKq" secondAttribute="trailing" constant="15" id="dKn-Rk-f57"/>
                                             <constraint firstAttribute="trailing" secondItem="8l8-UL-nwV" secondAttribute="trailing" constant="11" id="dwb-9h-hy0"/>
                                             <constraint firstItem="EVD-cs-tax" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="epa-k4-rJ5"/>
-                                            <constraint firstItem="wnz-mO-RDd" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="20" id="evK-wV-fEt"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZPm-Tr-T8C" secondAttribute="trailing" constant="15" id="exX-JB-Z6B"/>
                                             <constraint firstItem="s1d-PR-DKq" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="gha-VG-SIX"/>
                                             <constraint firstItem="j1z-QL-Vp8" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="24" id="h4D-za-DYu"/>
-                                            <constraint firstItem="9TW-wE-1G9" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="20" id="iLQ-Ka-9fY"/>
                                             <constraint firstItem="Wgv-G5-tLb" firstAttribute="top" secondItem="s1d-PR-DKq" secondAttribute="bottom" constant="20" id="jQj-K0-j4p"/>
+                                            <constraint firstItem="ZPm-Tr-T8C" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="jYx-n1-Gp2"/>
                                             <constraint firstItem="3K4-MA-U2L" firstAttribute="top" secondItem="K2p-fe-CyD" secondAttribute="bottom" constant="20" id="myT-4i-M19"/>
                                             <constraint firstAttribute="trailing" secondItem="K2p-fe-CyD" secondAttribute="trailing" constant="15" id="o9t-St-nUd"/>
                                             <constraint firstItem="EVD-cs-tax" firstAttribute="top" secondItem="3K4-MA-U2L" secondAttribute="bottom" constant="20" id="pdJ-uh-XJX"/>
-                                            <constraint firstAttribute="trailing" secondItem="9TW-wE-1G9" secondAttribute="trailing" constant="20" id="rNq-4z-zNG"/>
-                                            <constraint firstItem="EAK-Ed-62S" firstAttribute="top" secondItem="9TW-wE-1G9" secondAttribute="bottom" constant="10" id="rgB-9i-JDh"/>
-                                            <constraint firstItem="t6i-Q5-h02" firstAttribute="top" secondItem="EAK-Ed-62S" secondAttribute="bottom" constant="10" id="trC-Fp-bZy"/>
-                                            <constraint firstAttribute="trailing" secondItem="EAK-Ed-62S" secondAttribute="trailing" constant="20" id="y6Y-RQ-B9s"/>
                                         </constraints>
                                     </view>
                                 </subviews>

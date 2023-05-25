@@ -143,30 +143,40 @@ class MyRequestDetailViewController: UIViewController {
     @IBAction func company1OKButtonPressed(_ sender: UIButton) {
         showConfirmationAlert(for: 0) { [weak self] in
             self?.updateSelectionStatus(for: 0, isSelected: "1")
+            self?.okAlert()
+
         }
     }
 
     @IBAction func company2OKButtonPressed(_ sender: UIButton) {
         showConfirmationAlert(for: 1) { [weak self] in
             self?.updateSelectionStatus(for: 1, isSelected: "1")
+            self?.okAlert()
+
         }
     }
 
     @IBAction func company3OKButtonPressed(_ sender: UIButton) {
         showConfirmationAlert(for: 2) { [weak self] in
             self?.updateSelectionStatus(for: 2, isSelected: "1")
+            self?.okAlert()
+
         }
     }
 
     @IBAction func company4OKButtonPressed(_ sender: UIButton) {
         showConfirmationAlert(for: 3) { [weak self] in
             self?.updateSelectionStatus(for: 3, isSelected: "1")
+            self?.okAlert()
+
         }
     }
 
     @IBAction func company5OKButtonPressed(_ sender: UIButton) {
         showConfirmationAlert(for: 4) { [weak self] in
             self?.updateSelectionStatus(for: 4, isSelected: "1")
+            self?.okAlert()
+
         }
     }
 
@@ -187,6 +197,16 @@ class MyRequestDetailViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    func okAlert(){
+        
+        
+        let alert = UIAlertController(title: "확인", message: "해당 견적이 확정되었습니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "확인얼럿클릭"), style: .default, handler: { _ in
+        NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func updateSelectionStatus(for index: Int, isSelected: String) {
