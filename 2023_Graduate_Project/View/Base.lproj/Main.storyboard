@@ -863,6 +863,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="EAK-Ed-62S" userLabel="요청장소스택뷰">
                                                 <rect key="frame" x="20" y="50.5" width="380" height="20.5"/>
@@ -875,11 +876,13 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="사직자이 아파트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wK-xW-tDP">
                                                         <rect key="frame" x="103.5" y="0.0" width="276.5" height="20.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wnz-mO-RDd" userLabel="요청내용스택뷰">
                                                 <rect key="frame" x="20" y="101" width="380" height="120"/>
@@ -892,13 +895,14 @@
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-jb-Ssm">
                                                         <rect key="frame" x="103.5" y="0.0" width="276.5" height="120"/>
-                                                        <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <string key="text">요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용요청내용</string>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="g0z-Io-odd"/>
                                                 </constraints>
@@ -1137,7 +1141,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="t6i-Q5-h02" userLabel="요청장소스택뷰">
-                                                <rect key="frame" x="20" y="81" width="229" height="20.5"/>
+                                                <rect key="frame" x="20" y="81" width="380" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="연락처 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O04-E9-4bR">
                                                         <rect key="frame" x="0.0" y="0.0" width="73.5" height="20.5"/>
@@ -1146,12 +1150,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="010-0000-0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbK-n9-uQp">
-                                                        <rect key="frame" x="103.5" y="0.0" width="125.5" height="20.5"/>
+                                                        <rect key="frame" x="103.5" y="0.0" width="276.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1175,6 +1180,7 @@
                                             <constraint firstItem="9wK-xW-tDP" firstAttribute="leading" secondItem="Vf4-ir-GN7" secondAttribute="leading" id="Xq3-Z2-McU"/>
                                             <constraint firstItem="Wgv-G5-tLb" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="15" id="Xsr-AK-WGW"/>
                                             <constraint firstAttribute="trailing" secondItem="Wgv-G5-tLb" secondAttribute="trailing" constant="15" id="ZfA-ln-5pM"/>
+                                            <constraint firstItem="AbK-n9-uQp" firstAttribute="trailing" secondItem="9wK-xW-tDP" secondAttribute="trailing" id="ao7-d8-wa8"/>
                                             <constraint firstItem="j1z-QL-Vp8" firstAttribute="top" secondItem="wnz-mO-RDd" secondAttribute="bottom" constant="20" id="bEB-UT-DYZ"/>
                                             <constraint firstItem="8l8-UL-nwV" firstAttribute="leading" secondItem="g9F-Zv-xjk" secondAttribute="leading" constant="11" id="cOK-Us-067"/>
                                             <constraint firstAttribute="trailing" secondItem="s1d-PR-DKq" secondAttribute="trailing" constant="15" id="dKn-Rk-f57"/>
@@ -1249,7 +1255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNg-6N-MIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3614.0186915887848" y="-518.35853131749468"/>
+            <point key="canvasLocation" x="-3614.4927536231885" y="-518.97321428571422"/>
         </scene>
         <!--도와줘요 맥가이버-->
         <scene sceneID="TyB-Vu-27q">
