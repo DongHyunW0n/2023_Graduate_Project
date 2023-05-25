@@ -73,7 +73,7 @@ class MyRequestDetailViewController: UIViewController {
     }
     
     func updateUI() {
-        print("postID is \(postID ?? "POST ID ERROR")")
+        print("postID는  \(postID ?? "포스트 ID 에러")")
         
         if let date = date {
             dateLabel.text = date
@@ -236,15 +236,14 @@ class MyRequestDetailViewController: UIViewController {
             "상세 설명": selectedBid.detail,
             
         
-            // 다른 필요한 정보들을 추가로 저장할 수 있습니다.
         ]
         
         // 해당 회사의 선택된 견적 상세 정보를 저장
         finishedBidRef.setValue(bidDetailsData) { error, _ in
             if let error = error {
-                print("Failed to save selected bid details: \(error.localizedDescription)")
+                print("견적 선정에 실패하였습니다. 에러는 : \(error.localizedDescription)")
             } else {
-                print("Selected bid details saved successfully")
+                print("견적 선택 정보가 성공적으로 저장되었습니다")
             }
         }
     }
@@ -257,7 +256,7 @@ class MyRequestDetailViewController: UIViewController {
         
         refDetailView.child(postID).child("받은 견적").observe(.value) { snapshot in
             if snapshot.exists() {
-                self.bidDetails.removeAll() // Clear the array before populating with new data
+                self.bidDetails.removeAll() // 배열 초기화
                 
                 var hasSelectedBid = false // Flag to check if any bid is already selected
                 
@@ -285,7 +284,9 @@ class MyRequestDetailViewController: UIViewController {
                 self.updateCompanyLabel(self.bidDetails)
                 print(self.bidDetails)
                 
-                // Disable all OK buttons if a bid is already selected
+                
+                //모든 버튼 초기화
+                
                 if hasSelectedBid {
                     self.company1_OK.isEnabled = false
                     self.company2_OK.isEnabled = false
@@ -418,16 +419,23 @@ class MyRequestDetailViewController: UIViewController {
             print("ERROR")
         }
         
-        // Update stackview borders based on the selected company
         let stackViews = [stackview1, stackview2, stackview3, stackview4, stackview5]
         
         stackViews.forEach { stackView in
-            stackView?.layer.borderWidth = 0 // Reset border width and color
-            stackView?.layer.borderColor = UIColor.clear.cgColor
+            stackView?.layer.borderWidth = 1 // 보더값 1으로 초기화
+            stackView?.layer.borderColor = UIColor.gray.cgColor
+            stackView?.layer.cornerRadius = 20
+            stackView?.layer.backgroundColor = UIColor.white.cgColor
         }
         
+//        stackViews.forEach { stackView in
+//            stackView?.layer.borderWidth = 0 // 보더값 0으로 초기화
+//            stackView?.layer.borderColor = UIColor.clear.cgColor
+//        }
+        
         if let selectedIndex = selectedCompanyIndex {
-            stackViews[selectedIndex]?.layer.borderWidth = 2 // Set border width and color for the selected company
+            stackViews[selectedIndex]?.layer.borderWidth = 1 // 선택된 견적의 스택뷰를 빨간색으로 칠함
+            stackViews[selectedIndex]?.layer.backgroundColor = UIColor.systemMint.cgColor
             stackViews[selectedIndex]?.layer.borderColor = UIColor.red.cgColor
         }
     }
