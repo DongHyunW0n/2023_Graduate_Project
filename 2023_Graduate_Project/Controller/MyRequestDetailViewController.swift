@@ -35,6 +35,7 @@ class MyRequestDetailViewController: UIViewController {
     var receivedBid: Int?
     var requestEntity: requestListEntity?
     
+    @IBOutlet weak var requestStackView: UIStackView!
     @IBOutlet weak var company1: UILabel!
     @IBOutlet weak var company2: UILabel!
     @IBOutlet weak var company3: UILabel!
@@ -63,6 +64,9 @@ class MyRequestDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         detailLabel.isEditable = false
+        requestStackView.layer.borderWidth = 1
+        requestStackView.layer.borderColor = UIColor.lightGray.cgColor
+        requestStackView.layer.cornerRadius = 20
         
     }
     
