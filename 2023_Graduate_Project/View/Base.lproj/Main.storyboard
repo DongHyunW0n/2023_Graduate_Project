@@ -805,6 +805,12 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.92800839300000004" green="0.94074213500000003" blue="0.73255914740000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <outlet property="detailLabel" destination="3Yt-xF-kQm" id="AOy-QX-IHH"/>
+                                                    <outlet property="myNameLabel" destination="oaW-p0-YHX" id="3vV-MF-EeE"/>
+                                                    <outlet property="timeLabel" destination="WLv-uA-pPb" id="VGM-Zl-wyH"/>
+                                                    <outlet property="yourNameLabel" destination="HLm-ZY-Czt" id="fjD-0s-eQp"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

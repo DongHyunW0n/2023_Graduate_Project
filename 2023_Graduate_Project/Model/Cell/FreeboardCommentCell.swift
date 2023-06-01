@@ -6,8 +6,13 @@
 //
 
 import UIKit
+import Combine
+
+
 
 class FreeboardCommentCell: UITableViewCell {
+    
+    
 
     @IBOutlet weak var writterLabel: UILabel!
     
