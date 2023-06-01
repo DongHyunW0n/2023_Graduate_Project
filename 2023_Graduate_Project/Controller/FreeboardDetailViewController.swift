@@ -13,8 +13,8 @@ import FirebaseAuth
 
 class FreeboardDetailViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var tableView: UITableViewCell!
     @IBOutlet weak var detailTextView: UITextView!
     @IBOutlet weak var addCommentButton: UIButton!
     @IBOutlet weak var commentTextField: UITextField!
