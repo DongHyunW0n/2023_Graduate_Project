@@ -14,9 +14,10 @@ import FirebaseAuth
 class FreeboardDetailViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var tableView: UITableViewCell!
     @IBOutlet weak var detailTextView: UITextView!
-    
+    @IBOutlet weak var addCommentButton: UIButton!
+    @IBOutlet weak var commentTextField: UITextField!
     var titleText : String?
     
     var detailText : String?
@@ -46,6 +47,12 @@ class FreeboardDetailViewController: UIViewController {
    
     
 
-   
+    @IBAction func addButtonTabbed(_ sender: UIButton) {
+        
+        
+        
+        
+    }
+    
 
 }
