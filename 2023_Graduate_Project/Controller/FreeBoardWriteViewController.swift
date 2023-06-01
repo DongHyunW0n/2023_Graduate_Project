@@ -64,6 +64,7 @@ class FreeBoardWriteViewController: UIViewController {
             .childByAutoId()
             .setValue(["제목" : titleInput ,
                        "내용" : descipInput ,
+                       "댓글" : "" ,
                        "uid" : uid])
        
         

@@ -97,6 +97,10 @@ extension FreeBoardViewController : UITableViewDelegate {
         
         let celldata: ArticleEntity = articleList[indexPath.row] //인덱스에 해당하는 셀데이터를 받음.
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "FreeboardDetailViewController") as? FreeboardDetailViewController {
+            
+            
+            detailViewController.articleID = celldata.refid
+            print("글의 id 값은 : \(celldata.refid)")
             detailViewController.detailText = celldata.describ
             detailViewController.titleText = celldata.title
             navigationController?.pushViewController(detailViewController, animated: true)

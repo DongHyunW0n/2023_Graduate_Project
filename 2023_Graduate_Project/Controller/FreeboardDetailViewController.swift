@@ -12,6 +12,9 @@ import FirebaseAuth
 
 
 class FreeboardDetailViewController: UIViewController {
+    
+    let uid = Auth.auth().currentUser?.uid
+    let ref = Database.database().reference()
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,11 +25,15 @@ class FreeboardDetailViewController: UIViewController {
     
     var detailText : String?
     
+    var articleID : String?
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
         
         updateUI()
         
@@ -50,9 +57,33 @@ class FreeboardDetailViewController: UIViewController {
     @IBAction func addButtonTabbed(_ sender: UIButton) {
         
         
+        let commentRef = ref.child("Freeboard").child(articleID ?? "ERROR").child("댓글")
+        
+        commentRef.childByAutoId().setValue(["uid" : uid , "commentDetail" : commentTextField.text])
+        
+                
         
         
     }
     
 
+}
+
+extension FreeboardDetailViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+    
+    
+}
+
+extension FreeboardDetailViewController : UITableViewDelegate {
+    
+    
 }

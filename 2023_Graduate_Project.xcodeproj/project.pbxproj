@@ -11,6 +11,7 @@
 		8F09DED32A28545B00B04CC4 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09DED22A28545B00B04CC4 /* ChatListViewController.swift */; };
 		8F09DED52A28546A00B04CC4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09DED42A28546A00B04CC4 /* ChatViewController.swift */; };
 		8F09DED72A28547700B04CC4 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09DED62A28547700B04CC4 /* ChatCell.swift */; };
+		8F09DEDA2A28696C00B04CC4 /* FreeboardCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09DED92A28696C00B04CC4 /* FreeboardCommentCell.swift */; };
 		8F0A690629E084C000E1ED2B /* weatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690529E084C000E1ED2B /* weatherInformation.swift */; };
 		8F0A690829E084F500E1ED2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690729E084F500E1ED2B /* MainViewController.swift */; };
 		8F0A690A29E0856300E1ED2B /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690929E0856300E1ED2B /* ErrorMessage.swift */; };
@@ -45,6 +46,7 @@
 		8F09DED22A28545B00B04CC4 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		8F09DED42A28546A00B04CC4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		8F09DED62A28547700B04CC4 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		8F09DED92A28696C00B04CC4 /* FreeboardCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeboardCommentCell.swift; sourceTree = "<group>"; };
 		8F0A690529E084C000E1ED2B /* weatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherInformation.swift; sourceTree = "<group>"; };
 		8F0A690729E084F500E1ED2B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F0A690929E0856300E1ED2B /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */,
 				8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */,
 				8F09DED62A28547700B04CC4 /* ChatCell.swift */,
+				8F09DED92A28696C00B04CC4 /* FreeboardCommentCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				8F70A3E72A14D44E00C19B2E /* CompanyListTableViewCell.swift in Sources */,
 				8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */,
 				8F09DED72A28547700B04CC4 /* ChatCell.swift in Sources */,
+				8F09DEDA2A28696C00B04CC4 /* FreeboardCommentCell.swift in Sources */,
 				8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */,
 				8FADDF6E2A0128BA00B2172A /* RequestViewController.swift in Sources */,
 				8F09DED32A28545B00B04CC4 /* ChatListViewController.swift in Sources */,
