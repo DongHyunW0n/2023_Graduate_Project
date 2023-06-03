@@ -19,7 +19,9 @@ struct suggestEntity {
 let refDetailView = Database.database().reference().child("ServiceRequest")
 
 
+
 class MyRequestDetailViewController: UIViewController {
+    
     
     
     @IBOutlet weak var numberLabel: UILabel!
@@ -253,13 +255,23 @@ class MyRequestDetailViewController: UIViewController {
         
         // FinishedBid 노드에 회사명 노드 생성
         let finishedBidRef = Database.database().reference().child("FinishedBid").child(companyName).child(postID)
+        let chatRef = Database.database().reference().child("Chat").child(postID)
+        let uid = Auth.auth().currentUser?.uid
+
+        
+        let setChatData : [String : Any] = [
+            
+            "customerUID" : uid ?? "customer UID ERROR" ,
+            "companyName" : companyName ,
+            "PostID" : postID
+            
+        ]
         
         let bidDetailsData: [String: Any] = [
             "postID": postID,
             "bidID": selectedBid.bidID,
             "상세 설명": selectedBid.detail,
             
-        
         ]
         
         // 해당 회사의 선택된 견적 상세 정보를 저장
@@ -270,6 +282,17 @@ class MyRequestDetailViewController: UIViewController {
                 print("견적 선택 정보가 성공적으로 저장되었습니다")
             }
         }
+         //채팅방을 만들기 위한 데이터
+        chatRef.setValue(setChatData) { error, _ in
+            if let error = error {
+                print("채팅방 정보 생성에 실패하였습니다. 에러는 : \(error.localizedDescription)")
+            } else {
+                print("채팅방 생성 정보가 성공적으로 저장되었습니다")
+            }
+        }
+        
+        
+        
     }
     
     func fetchBidDetails() {

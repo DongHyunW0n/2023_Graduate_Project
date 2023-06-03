@@ -22,6 +22,7 @@
 		8F70A3E32A13B32500C19B2E /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E22A13B32500C19B2E /* CustomAnnotation.swift */; };
 		8F70A3E72A14D44E00C19B2E /* CompanyListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */; };
 		8F70A3E92A16A43200C19B2E /* MyRequestDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F70A3E82A16A43200C19B2E /* MyRequestDetailViewController.swift */; };
+		8F7FDFDB2A2B5AA700D56569 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FDFDA2A2B5AA700D56569 /* ChatListCell.swift */; };
 		8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */; };
 		8F97513829D9E88300B6A0BE /* DeviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97513729D9E88300B6A0BE /* DeviceConfig.swift */; };
 		8F9C762D29FFA84C00EC9478 /* FreeBoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */; };
@@ -57,6 +58,7 @@
 		8F70A3E22A13B32500C19B2E /* CustomAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListTableViewCell.swift; sourceTree = "<group>"; };
 		8F70A3E82A16A43200C19B2E /* MyRequestDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestDetailViewController.swift; sourceTree = "<group>"; };
+		8F7FDFDA2A2B5AA700D56569 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
 		8F97513529D9E82A00B6A0BE /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		8F97513729D9E88300B6A0BE /* DeviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConfig.swift; sourceTree = "<group>"; };
 		8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8FE60F472A10EF820069B2E5 /* MyRequestListCell.swift */,
 				8F70A3E62A14D44E00C19B2E /* CompanyListTableViewCell.swift */,
 				8F09DED62A28547700B04CC4 /* ChatCell.swift */,
+				8F7FDFDA2A2B5AA700D56569 /* ChatListCell.swift */,
 				8F09DED92A28696C00B04CC4 /* FreeboardCommentCell.swift */,
 			);
 			path = Cell;
@@ -344,6 +347,7 @@
 				8FE5DC8E29E32E68008CCE25 /* EnterEmailViewController.swift in Sources */,
 				8F0A690A29E0856300E1ED2B /* ErrorMessage.swift in Sources */,
 				8F0A690629E084C000E1ED2B /* weatherInformation.swift in Sources */,
+				8F7FDFDB2A2B5AA700D56569 /* ChatListCell.swift in Sources */,
 				8FE5DC9229E3F94C008CCE25 /* MyInformationViewController.swift in Sources */,
 				8F97513629D9E82A00B6A0BE /* LaunchScreenViewController.swift in Sources */,
 				8FF9200E29CDA96A000C2AD1 /* MapViewController.swift in Sources */,
