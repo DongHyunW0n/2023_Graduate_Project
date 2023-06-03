@@ -229,10 +229,16 @@ extension MyInformationViewController: UITableViewDelegate {
                 if let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MyRequestDetailViewController") as? MyRequestDetailViewController {
                     detailViewController.number = celldata.number
                     detailViewController.date = celldata.date
-                    detailViewController.place = celldata.place
+                    detailViewController.requestplace = celldata.place
                     detailViewController.detail = celldata.detail
                     detailViewController.postID = celldata.refid
                     detailViewController.receivedBid = Int(columnCount) // receivedBid에 columnCount 값을 할당
+                    
+                    detailViewController.customerNumber = celldata.number
+                    detailViewController.requestDate = celldata.date
+                    detailViewController.place = celldata.place
+                    detailViewController.requestDetail = celldata.detail
+
 
                     self.navigationController?.pushViewController(detailViewController, animated: true)
                 }

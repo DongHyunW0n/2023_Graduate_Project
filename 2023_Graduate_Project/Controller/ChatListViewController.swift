@@ -111,6 +111,8 @@ extension ChatListViewController : UITableViewDelegate {
             let cellData : myChatListEntity = myChatList[indexPath.row]
           
             chatView.postID = cellData.postID
+            chatView.title = "\(cellData.companyName) 사장님과의 대화"
+        
 
             self.navigationController?.pushViewController(chatView, animated: true)
         }

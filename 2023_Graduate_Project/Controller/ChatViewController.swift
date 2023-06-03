@@ -46,8 +46,9 @@ class ChatViewController: UIViewController {
         print(postID ?? "postID ERROR")
         
         chatTableView.dataSource = self
-        chatTableView.rowHeight = UITableView.automaticDimension
-        chatTableView.estimatedRowHeight = 60 // 예상 셀 높이 (임의의 값)
+       
+        let nibName = UINib(nibName: "ChatCell", bundle: nil)
+          chatTableView.register(nibName, forCellReuseIdentifier: "Cell")
 
         
         
@@ -162,15 +163,25 @@ extension ChatViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ChatCell
         let celldata : ChatMessageEntity = chatList[indexPath.row]
+        cell.selectionStyle = .none
         
        
         
         if celldata.sender == uid {
-            cell.detailLabel.text = "고객 : \(celldata.message)"
+            cell.timeLabel.textAlignment = .right
+            cell.detailLabel.textAlignment = .right
+
+
+            cell.detailLabel.text = "나 : \(celldata.message)"
             cell.timeLabel.text = celldata.timeStamp
             
         }else{
-            cell.detailLabel.text = celldata.message
+            
+
+            cell.timeLabel.textAlignment = .left
+            cell.detailLabel.textAlignment = .left
+
+            cell.detailLabel.text = "상대 : \(celldata.message)"
             cell.timeLabel.text = celldata.timeStamp
         }
         

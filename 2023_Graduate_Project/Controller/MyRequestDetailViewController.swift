@@ -62,6 +62,13 @@ class MyRequestDetailViewController: UIViewController {
     @IBOutlet weak var company5_OK: UIButton!
     
     var bidDetails: [suggestEntity] = []
+    var customerNumber : String?
+    var requestDate : String?
+    var requestplace : String?
+    var requestDetail : String?
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -208,7 +215,7 @@ class MyRequestDetailViewController: UIViewController {
     func okAlert(){
         
         
-        let alert = UIAlertController(title: "확인", message: "해당 견적이 확정되었습니다.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "확인", message: "해당 견적이 확정되었습니다. 채팅 탭에서 사장님과 채팅이 가능합니다.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "확인얼럿클릭"), style: .default, handler: { _ in
         NSLog("The \"OK\" alert occured.")
         }))
@@ -252,6 +259,12 @@ class MyRequestDetailViewController: UIViewController {
         
         let selectedBid = bidDetails[index]
         let companyName = selectedBid.companyName
+        let companyUID = selectedBid.companyUID
+        let postTitle = selectedBid.detail
+        let customerNumber = customerNumber
+        let requestDate = requestDate
+        let place = requestplace
+        let requestDetail = requestDetail
         
         // FinishedBid 노드에 회사명 노드 생성
         let finishedBidRef = Database.database().reference().child("FinishedBid").child(companyName).child(postID)
@@ -263,7 +276,13 @@ class MyRequestDetailViewController: UIViewController {
             
             "customerUID" : uid ?? "customer UID ERROR" ,
             "companyName" : companyName ,
-            "PostID" : postID
+            "PostID" : postID ,
+            "CompanyUID" : companyUID,
+            "Detail" : requestDetail ?? "장소 에러",
+            "customerNumber" : customerNumber ?? "고객 번호 에러",
+            "requestDate" : requestDate ?? "요청 일시 에러",
+            "requestPlace" : place ?? "장소 에러"
+            
             
         ]
         
