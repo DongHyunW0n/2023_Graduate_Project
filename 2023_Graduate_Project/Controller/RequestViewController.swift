@@ -42,10 +42,15 @@ class RequestViewController: UIViewController, UIImagePickerControllerDelegate &
         requestDescriptTextView.delegate = self
         requestDescriptTextView.text = "자세히 적어주세요 !!"
         requestDescriptTextView.textColor = UIColor.lightGray
-        requestDescriptTextView.layer.borderWidth = 1
-        requestDescriptTextView.layer.borderColor = UIColor.lightGray.cgColor
-        requestPartTextField.layer.borderColor = UIColor.lightGray.cgColor
-        
+        requestDescriptTextView.layer.borderWidth = 0.5
+        requestDescriptTextView.layer.borderColor = UIColor.gray.cgColor
+        requestPartTextField.layer.borderWidth = 0.5
+
+        requestPartTextField.layer.borderColor = UIColor.gray.cgColor
+        numberTextField.layer.borderColor = UIColor.gray.cgColor
+
+        numberTextField.layer.borderWidth = 0.5
+
         
         
         guard let urlString = UserDefaults.standard.value(forKey: "url") as? String,
