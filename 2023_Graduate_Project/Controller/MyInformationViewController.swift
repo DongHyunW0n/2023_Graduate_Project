@@ -155,7 +155,7 @@ extension MyInformationViewController : UITableViewDataSource {
 
                 DispatchQueue.main.async {
                     if isAccepted {
-                        cell.isDoneLabel.text = "견적 완료"
+                        cell.isDoneLabel.text = "채택 완료"
                         cell.isDoneLabel.textColor = UIColor.green
                     } else {
                         if hasReceivedBids {

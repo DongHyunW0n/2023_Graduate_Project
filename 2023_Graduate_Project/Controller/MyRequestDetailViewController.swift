@@ -501,7 +501,7 @@ class MyRequestDetailViewController: UIViewController {
         
         if let selectedIndex = selectedCompanyIndex {
             stackViews[selectedIndex]?.layer.borderWidth = 1 // 선택된 견적의 스택뷰를 빨간색으로 칠함
-            stackViews[selectedIndex]?.layer.backgroundColor = UIColor.systemMint.cgColor
+            stackViews[selectedIndex]?.layer.backgroundColor = UIColor.gray.cgColor
             stackViews[selectedIndex]?.layer.borderColor = UIColor.red.cgColor
         }
     }
