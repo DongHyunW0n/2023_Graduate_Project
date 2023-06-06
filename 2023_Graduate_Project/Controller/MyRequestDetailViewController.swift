@@ -236,7 +236,10 @@ class MyRequestDetailViewController: UIViewController {
         
         let selectedBidID = bidDetails[index].bidID // 견적 항목의 고유한 ID 가져오기
         let refSelectedBid = refDetailView.child(postID).child("받은 견적").child(selectedBidID)
+        let finishedRef = refDetailView.child(postID).child("끝남 여부")
         let isSelectedRef = refSelectedBid.child("선택여부")
+        
+        finishedRef.setValue("1")
         
         isSelectedRef.setValue(isSelected) { error, _ in
             if let error = error {
