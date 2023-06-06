@@ -62,8 +62,18 @@ class EnterEmailViewController: UIViewController{
                 let code = (error as NSError).code
                 switch code {
                     
-                case 17007 : // 이미 아이디가 있는데?
-                    let alertController = UIAlertController(title: "이미 존재하는 계정입니다", message: "입력하신 계정으로 로그인 합니다.", preferredStyle: UIAlertController.Style.alert)
+                    
+                case 17007 : // 이메일 이미 있음
+                    let alertController = UIAlertController(title: "이미 존재하는 이메일 주소입니다", message: "", preferredStyle: UIAlertController.Style.alert)
+
+                    let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
+
+                    alertController.addAction(okButton)
+                present(alertController, animated: true)
+                        loginUser(withEmail: email, password: password)
+                    
+                case 17009 : // 비번틀림
+                    let alertController = UIAlertController(title: "비밀번호가 올바르지 않습니다.", message: "", preferredStyle: UIAlertController.Style.alert)
 
                     let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
 
@@ -74,7 +84,7 @@ class EnterEmailViewController: UIViewController{
                     
                     let alertController = UIAlertController(title: "오류", message: "오류 메시지를 확인해 주세요", preferredStyle: UIAlertController.Style.alert)
 
-                    let okButton = UIAlertAction(title: "ㅠㅠ", style: UIAlertAction.Style.cancel, handler: nil)
+                    let okButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
 
                     alertController.addAction(okButton)
                 present(alertController, animated: true)

@@ -36,10 +36,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Sn2-2b-Pbg" userLabel="로그인 방식 선택 스택뷰">
-                                <rect key="frame" x="20" y="544.5" width="374" height="136.5"/>
+                                <rect key="frame" x="20" y="544.5" width="374" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ful-Hy-zvk">
-                                        <rect key="frame" x="90" y="0.0" width="194" height="33.5"/>
+                                        <rect key="frame" x="90" y="0.0" width="194" height="33"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="아이디 / 비밀번호로 계속하기">
@@ -47,26 +47,6 @@
                                         </state>
                                         <connections>
                                             <segue destination="Yga-pI-jql" kind="show" id="n4e-03-YOS"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0D-Rs-SvE">
-                                        <rect key="frame" x="113.5" y="51.5" width="147.5" height="33.5"/>
-                                        <inset key="imageEdgeInsets" minX="-36" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="구글로 계속하기" image="googleLoginLogo">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="googleLoginButtonTabbed:" destination="6Qs-B4-KxV" eventType="touchUpInside" id="m8v-5O-g6P"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uan-DE-BnI">
-                                        <rect key="frame" x="106" y="103" width="162.5" height="33.5"/>
-                                        <inset key="imageEdgeInsets" minX="-20" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Apple로 계속하기" image="appleLoginLogo">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="appleLoginButtonTabbed:" destination="6Qs-B4-KxV" eventType="touchUpInside" id="lLz-Jo-umN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -88,9 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="IlH-Kn-sf8"/>
                     <connections>
-                        <outlet property="appleLoginButton" destination="uan-DE-BnI" id="VmL-7G-Fz9"/>
                         <outlet property="emailLoginButton" destination="Ful-Hy-zvk" id="a50-LJ-Ry1"/>
-                        <outlet property="googleLoginButton" destination="I0D-Rs-SvE" id="RQx-Ja-oj9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0y-zH-yut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1746,14 +1724,13 @@
         <image name="confirmButton" width="161" height="96"/>
         <image name="confirmButton2" width="161" height="96"/>
         <image name="figure.wave" catalog="system" width="80" height="128"/>
-        <image name="googleLoginLogo" width="33.333332061767578" height="33.333332061767578"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="message.badge.filled.fill.rtl" catalog="system" width="128" height="116"/>
         <image name="network" catalog="system" width="128" height="123"/>
         <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="person" catalog="system" width="128" height="121"/>
-        <image name="spannerImage" width="360" height="360"/>
+        <image name="spannerImage" width="512" height="512"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
