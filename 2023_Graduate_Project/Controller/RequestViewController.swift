@@ -9,6 +9,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 import Firebase
+import FirebaseStorage
 
 
 class RequestViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {

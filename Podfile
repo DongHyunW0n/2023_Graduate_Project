@@ -5,11 +5,11 @@ target '2023_Graduate_Project' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-pod 'Alamofire', '~> 5.2'
+
 pod 'Firebase/Auth'
 pod 'Firebase/Database'	
 pod 'FirebaseStorage'	
-pod 'FirebaseFirestore'
+
 
 
 
