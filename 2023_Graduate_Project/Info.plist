@@ -2,10 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SOYO Maple Bold.otf</string>
+		<string>SOYO Maple Regular.otf</string>
+	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>위치좀 쓸게 ㅋ</string>
+	<string>주변 업체 확인을 위해 위치 정보를 사용하겠습니다.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>니 위치좀 쓸게</string>
+	<string>주변 업체 확인을 위해 위치 정보를 사용하겠습니다.</string>
 	<key>CFBundleIdentifier</key>
 	<string></string>
 	<key>NSPhotoLibraryAddUsageDescription</key>

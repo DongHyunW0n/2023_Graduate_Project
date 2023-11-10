@@ -100,6 +100,7 @@ class LoginViewController: UIViewController {
                     self.showAlert(detail: "아이디나 비밀번호를 확인해주세요.")
                 default:
                     print("다른 로그인 오류 코드: \(errorCode)")
+                    self.showAlert(detail: "아이디나 비밀번호를 확인해주세요.")
                 }
             }
         }
@@ -115,7 +116,7 @@ class LoginViewController: UIViewController {
     func moveToMainView(uid: String) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainListViewController = storyboard.instantiateViewController(identifier: "MainViewController") as! MainViewController
-        self.navigationController?.pushViewController(mainListViewController, animated: true)
+        self.navigationController?.setViewControllers([mainListViewController], animated: true)
         print("메인 화면으로 이동합니다.")
     }
 }

@@ -22,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         sleep(1)
         //파베 초기화 코드
-        
+        UINavigationBar.appearance().tintColor = UIColor.black
+
         FirebaseApp.configure()
         return true
     }
