@@ -37,50 +37,50 @@ class MyInformationViewController: UIViewController {
     let currentEmail = Auth.auth().currentUser?.email ?? "고객"
     let userID = Auth.auth().currentUser?.uid
     
-   
-
+    
+    
     
     @IBOutlet weak var userNameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         print("UID is : \(userID ?? "error")")
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-
+        
         let searchString = "bid" // 검색할 문자열
-
+        
         
         if let userID = userID {
-                    let userRef = ref.queryOrdered(byChild: "ㄱ서비스 요청자").queryEqual(toValue: userID)
-
-                    userRef.observe(.value) { snapshot in
-                        self.myRequestList = []
-
-                        for child in snapshot.children {
-                            guard let childSnapShot = child as? DataSnapshot else { return }
-                            let value = childSnapShot.value as? NSDictionary
-                            
-                            let totalRowCount = snapshot.childrenCount
-                            let date = value?["요청 일시"] as? String ?? ""
-                            let place = value?["요청 위치"] as? String ?? ""
-                            let number = value?["연락처"] as? String ?? ""
-                            let detail = value?["상세 설명"] as? String ?? ""
-                            let imageURL = value?["사진 URL"] as? String ?? ""
-
-                            let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL, number: number)
-                            self.myRequestList.append(fetchedRequestList)
-                            
-                            print(totalRowCount)
-                            
-                        }
-
-                        self.tableView.reloadData()
-                    }
+            let userRef = ref.queryOrdered(byChild: "ㄱ서비스 요청자").queryEqual(toValue: userID)
             
-        
+            userRef.observe(.value) { snapshot in
+                self.myRequestList = []
+                
+                for child in snapshot.children {
+                    guard let childSnapShot = child as? DataSnapshot else { return }
+                    let value = childSnapShot.value as? NSDictionary
+                    
+                    let totalRowCount = snapshot.childrenCount
+                    let date = value?["요청 일시"] as? String ?? ""
+                    let place = value?["요청 위치"] as? String ?? ""
+                    let number = value?["연락처"] as? String ?? ""
+                    let detail = value?["상세 설명"] as? String ?? ""
+                    let imageURL = value?["사진 URL"] as? String ?? ""
+                    
+                    let fetchedRequestList = requestListEntity(refid: childSnapShot.key, date: date, place: place, detail: detail, imageURL: imageURL, number: number)
+                    self.myRequestList.append(fetchedRequestList)
+                    
+                    print(totalRowCount)
+                    
                 }
+                
+                self.tableView.reloadData()
+            }
+            
+            
+        }
         
         
         
@@ -88,7 +88,7 @@ class MyInformationViewController: UIViewController {
         
     }
     
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -97,23 +97,25 @@ class MyInformationViewController: UIViewController {
         
         userNameLabel.text = "현재 로그인한 계정 : \(email)"
     }
-
+    
     @IBAction func logoutButtonTabbed(_ sender: UIButton) {
         
         
-        let firebaseAuth = Auth.auth()
         
+                if let uid = userID{
         
-        do{
-            try firebaseAuth.signOut()
-            self.navigationController?.popToRootViewController(animated: true)
-
-            
-        }catch let sighOutError as NSError{
-            
-            print("ERROR : SIGNOUT \(sighOutError.localizedDescription)")
-            
-        }
+                    try? Auth.auth().signOut()
+                    print("로그아웃 성공")
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let VC = storyboard.instantiateViewController(withIdentifier: "FirstView")
+                    self.navigationController?.setViewControllers([VC], animated: true)
+        
+                }else{
+        
+                    print("로그아웃 실패")
+                    
+                    
+                }
     }
 }
 

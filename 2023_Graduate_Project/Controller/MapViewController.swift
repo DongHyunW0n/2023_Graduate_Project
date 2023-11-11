@@ -31,8 +31,8 @@ class MapViewController : UIViewController, MKMapViewDelegate, CLLocationManager
                 mapView.showsUserLocation = true
         
         var coordinate3 = CLLocationCoordinate2D(
-            latitude: 35.27716238064634,
-            longitude: 129.08314500423676)
+            latitude: 35.196,
+            longitude: 129.08)
         // 샘플 어노테이션 데이터
         let annotation1 = CustomAnnotation(title: "동서 철물", subtitle: "배관 전문점", coordinate: CLLocationCoordinate2D(latitude: 35.196, longitude: 129.08), rating: 4.5)
         let annotation2 = CustomAnnotation(title: "경남 철물", subtitle: "도배 전문점", coordinate: CLLocationCoordinate2D(latitude: 35.18, longitude: 129.1), rating: 4.8)

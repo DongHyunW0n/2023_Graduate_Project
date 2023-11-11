@@ -27,7 +27,7 @@ class MyRequestDetailViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
-    @IBOutlet weak var detailLabel: UITextView!
+    @IBOutlet weak var detailLabel: UILabel!
     
     var number : String?
     var date: String?
@@ -72,7 +72,6 @@ class MyRequestDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailLabel.isEditable = false
         requestStackView.layer.borderWidth = 0.5
         requestStackView.layer.borderColor = UIColor.lightGray.cgColor
         requestStackView.layer.cornerRadius = 10

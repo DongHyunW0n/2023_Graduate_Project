@@ -16,6 +16,7 @@
 		8F0A690A29E0856300E1ED2B /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A690929E0856300E1ED2B /* ErrorMessage.swift */; };
 		8F0A692C29E1B4DF00E1ED2B /* BannerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */; };
 		8F0A692E29E1B54100E1ED2B /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0A692D29E1B54000E1ED2B /* BannerCell.swift */; };
+		8F0B2CE32AFF3C3E000FC0EC /* ChatCellSender.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0B2CE12AFF3C3E000FC0EC /* ChatCellSender.xib */; };
 		8F23D7AD2A02BF1500005174 /* FreeBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */; };
 		8F23D7B22A02C6E400005174 /* FreeBoardWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */; };
 		8F4261EF2AFD1AF1004E2936 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8F4261EE2AFD1AF1004E2936 /* FirebaseAnalytics */; };
@@ -86,6 +87,7 @@
 		8F0A690929E0856300E1ED2B /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerInfo.swift; sourceTree = "<group>"; };
 		8F0A692D29E1B54000E1ED2B /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		8F0B2CE12AFF3C3E000FC0EC /* ChatCellSender.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCellSender.xib; sourceTree = "<group>"; };
 		8F23D7AC2A02BF1500005174 /* FreeBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardViewController.swift; sourceTree = "<group>"; };
 		8F23D7B12A02C6E400005174 /* FreeBoardWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeBoardWriteViewController.swift; sourceTree = "<group>"; };
 		8F4262242AFD25AC004E2936 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				8F7FDFDC2A2B7E3F00D56569 /* ChatCell.xib */,
 				8F7FDFDA2A2B5AA700D56569 /* ChatListCell.swift */,
 				8F09DED92A28696C00B04CC4 /* FreeboardCommentCell.swift */,
+				8F0B2CE12AFF3C3E000FC0EC /* ChatCellSender.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				8FF9200329CDA84C000C2AD1 /* Assets.xcassets in Resources */,
 				8FE5DC9629E42581008CCE25 /* Splash.storyboard in Resources */,
 				8FF9200129CDA84B000C2AD1 /* Main.storyboard in Resources */,
+				8F0B2CE32AFF3C3E000FC0EC /* ChatCellSender.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

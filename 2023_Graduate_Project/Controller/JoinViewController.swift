@@ -7,7 +7,6 @@ import FirebaseDatabase
 
 private let minimalUsernameLength = 5
 private let minimalPasswordLength = 6
-private let minimalNicknameLength = 2
 
 
 
@@ -32,7 +31,6 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var repasswordOutlet: UITextField!
     
     @IBOutlet weak var repasswordValidOutlet: UILabel!
-    @IBOutlet weak var nickNameOutlet: UITextField!
     @IBOutlet weak var doSomethingOutlet: UIButton!
     
     @IBOutlet weak var nickNameValidOutlet: UILabel!
@@ -49,10 +47,9 @@ class JoinViewController: UIViewController {
 //        doSomethingOutlet.titleLabel?.font = UIFont(name: "SOYO Maple Regular", size: 10)
 //        doSomethingOutlet.titleLabel?.textColor = .white
 
-        passwordValidOutlet.text = NSLocalizedString("Please enter a password of at least 6 characters", comment: "")
-        repasswordValidOutlet.text = NSLocalizedString("Please check if the passwords match", comment: "")
-        nickNameValidOutlet.text = NSLocalizedString("Please enter a nickname of at least 2 characters", comment: "")
-
+        passwordValidOutlet.text = "비밀번호는 6자 이상 입력해주세요."
+        repasswordValidOutlet.text = "비밀번호 일치를 확인하세요."
+   
         let usernameValid = usernameOutlet.rx.text.orEmpty
             .map { $0.count >= minimalUsernameLength }
             .share(replay: 1) // without this map would be executed once for each binding, rx is stateless by default
@@ -70,12 +67,9 @@ class JoinViewController: UIViewController {
         }.map { $0 }
         .share(replay: 1)
         
-        
-        let nickNameValid = nickNameOutlet.rx.text.orEmpty
-            .map { $0.count >= minimalNicknameLength }
-            .share(replay: 1)
-        let everythingValid = Observable.combineLatest(usernameValid, passwordValid, nickNameValid, passwordsMatch) {
-            $0 && $1 && $2 && $3
+       
+        let everythingValid = Observable.combineLatest(usernameValid, passwordValid, passwordsMatch) {
+            $0 && $1 && $2
         }.share(replay: 1)
         usernameValid
             .bind(to: passwordOutlet.rx.isEnabled)
@@ -91,19 +85,11 @@ class JoinViewController: UIViewController {
             .disposed(by: disposeBag)
         
         passwordsMatch
-            .bind(to: nickNameOutlet.rx.isEnabled)
-            .disposed(by: disposeBag)
-        
-        passwordsMatch
             .bind(to: repasswordValidOutlet.rx.isHidden)
             .disposed(by: disposeBag)
         
     
-    
-        
-        nickNameValid
-            .bind(to: nickNameValidOutlet.rx.isHidden)
-            .disposed(by: disposeBag)
+
  
         everythingValid
             .bind(to: doSomethingOutlet.rx.isEnabled)
@@ -152,10 +138,6 @@ class JoinViewController: UIViewController {
                 
                 
                 print("계정 생성 완료 ! UID는 : \(user.uid)")
-                let nickName = self.nickNameOutlet.text
-                self.ref.child("가입자 리스트").child("\(user.uid)").setValue(["닉네임" : nickName])
-                print("리얼타임 데이터베이스에 가입자 목록 추가 완료")
-                
                 
                 let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                 
