@@ -73,9 +73,9 @@ class MyRequestDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         detailLabel.isEditable = false
-        requestStackView.layer.borderWidth = 1
+        requestStackView.layer.borderWidth = 0.5
         requestStackView.layer.borderColor = UIColor.lightGray.cgColor
-        requestStackView.layer.cornerRadius = 20
+        requestStackView.layer.cornerRadius = 10
         
     }
     
@@ -493,7 +493,7 @@ class MyRequestDetailViewController: UIViewController {
         stackViews.forEach { stackView in
             stackView?.layer.borderWidth = 1 // 보더값 1으로 초기화
             stackView?.layer.borderColor = UIColor.gray.cgColor
-            stackView?.layer.cornerRadius = 20
+            stackView?.layer.cornerRadius = 10
             stackView?.layer.backgroundColor = UIColor.white.cgColor
         }
         
@@ -503,7 +503,7 @@ class MyRequestDetailViewController: UIViewController {
 //        }
         
         if let selectedIndex = selectedCompanyIndex {
-            stackViews[selectedIndex]?.layer.borderWidth = 1 // 선택된 견적의 스택뷰를 빨간색으로 칠함
+            stackViews[selectedIndex]?.layer.borderWidth = 0.5 // 선택된 견적의 스택뷰를 빨간색으로 칠함
             stackViews[selectedIndex]?.layer.backgroundColor = UIColor.gray.cgColor
             stackViews[selectedIndex]?.layer.borderColor = UIColor.red.cgColor
         }
