@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sd4-Am-pGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5131" y="1048"/>
+            <point key="canvasLocation" x="-5406" y="1107"/>
         </scene>
         <!--지도로 보기-->
         <scene sceneID="Qly-IY-ned">
@@ -401,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcH-35-D10" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4451" y="889"/>
+            <point key="canvasLocation" x="-4500" y="750"/>
         </scene>
         <!--FreeboardDetailViewController-->
         <scene sceneID="LEn-94-udi">
@@ -542,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WF9-GH-KI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5819" y="1703"/>
+            <point key="canvasLocation" x="-6102" y="1758"/>
         </scene>
         <!--Chat List View Controller-->
         <scene sceneID="FGX-PO-3Q5">
@@ -623,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UUe-bT-0WH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6959" y="1282"/>
+            <point key="canvasLocation" x="-6959" y="1107"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="uLM-Qa-3xi">
@@ -685,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BnU-mT-oJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7639" y="1282"/>
+            <point key="canvasLocation" x="-7639" y="1107"/>
         </scene>
         <!--게시판 메인-->
         <scene sceneID="JV8-Cu-Cbp">
@@ -699,38 +699,64 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="882"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="cjO-cm-YlM" customClass="FreeBoardTableViewCell" customModule="_023_Graduate_Project" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="428" height="63.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="154" id="cjO-cm-YlM" customClass="FreeBoardTableViewCell" customModule="_023_Graduate_Project" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="428" height="154"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cjO-cm-YlM" id="7E0-PM-fuE">
-                                            <rect key="frame" x="0.0" y="0.0" width="397.66666666666669" height="63.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="397.66666666666669" height="154"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목들어가는곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEb-8F-WdV">
-                                                    <rect key="frame" x="29.999999999999993" y="21" width="113.33333333333331" height="21.666666666666671"/>
-                                                    <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="익명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijf-8S-VyM">
-                                                    <rect key="frame" x="349.66666666666669" y="21" width="30" height="21.666666666666671"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="z4b-Ei-vHz">
+                                                    <rect key="frame" x="20.000000000000004" y="20" width="34.333333333333343" height="114"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEb-8F-WdV">
+                                                            <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="80.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-jY-e7y">
+                                                            <rect key="frame" x="0.0" y="100.66666666666667" width="21" height="13.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11F-Xi-rkq">
+                                                    <rect key="frame" x="349.66666666666669" y="62" width="30" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8O-f1-qfO">
+                                                            <rect key="frame" x="3" y="3" width="24" height="24"/>
+                                                            <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="E8O-f1-qfO" secondAttribute="bottom" constant="3" id="cdP-hq-YjE"/>
+                                                        <constraint firstAttribute="width" constant="30" id="fx0-kV-Pcp"/>
+                                                        <constraint firstAttribute="height" constant="30" id="hTr-Ca-jIe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="E8O-f1-qfO" secondAttribute="trailing" constant="3" id="i25-PZ-SXI"/>
+                                                        <constraint firstItem="E8O-f1-qfO" firstAttribute="top" secondItem="11F-Xi-rkq" secondAttribute="top" constant="3" id="jn4-U3-IKi"/>
+                                                        <constraint firstItem="E8O-f1-qfO" firstAttribute="leading" secondItem="11F-Xi-rkq" secondAttribute="leading" constant="3" id="mMi-Wb-R2R"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="YEb-8F-WdV" firstAttribute="top" secondItem="7E0-PM-fuE" secondAttribute="topMargin" constant="10" id="5BZ-7w-06o"/>
-                                                <constraint firstItem="Ijf-8S-VyM" firstAttribute="top" secondItem="7E0-PM-fuE" secondAttribute="topMargin" constant="10" id="ACh-b0-ai4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ijf-8S-VyM" secondAttribute="trailing" constant="10" id="FYn-Ls-oGf"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ijf-8S-VyM" secondAttribute="bottom" constant="10" id="TTW-T0-h9P"/>
-                                                <constraint firstItem="Ijf-8S-VyM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YEb-8F-WdV" secondAttribute="trailing" constant="50" id="rDj-mh-MlG"/>
-                                                <constraint firstItem="YEb-8F-WdV" firstAttribute="leading" secondItem="7E0-PM-fuE" secondAttribute="leadingMargin" constant="10" id="tZV-7F-CNl"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="YEb-8F-WdV" secondAttribute="bottom" constant="10" id="vNC-GP-uAb"/>
+                                                <constraint firstAttribute="bottom" secondItem="z4b-Ei-vHz" secondAttribute="bottom" constant="20" id="2wG-4I-Vz5"/>
+                                                <constraint firstItem="z4b-Ei-vHz" firstAttribute="leading" secondItem="7E0-PM-fuE" secondAttribute="leading" constant="20" id="8Xp-Aw-1vt"/>
+                                                <constraint firstItem="11F-Xi-rkq" firstAttribute="centerY" secondItem="7E0-PM-fuE" secondAttribute="centerY" id="NGT-XD-eMk"/>
+                                                <constraint firstItem="z4b-Ei-vHz" firstAttribute="top" secondItem="7E0-PM-fuE" secondAttribute="top" constant="20" id="axw-xb-NkL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="11F-Xi-rkq" secondAttribute="trailing" constant="10" id="ysH-dE-gib"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="boardTitle" destination="YEb-8F-WdV" id="QRF-1g-a3Y"/>
+                                            <outlet property="commentCountLabel" destination="E8O-f1-qfO" id="X4L-3W-Uj9"/>
+                                            <outlet property="commentView" destination="11F-Xi-rkq" id="O53-5u-kyV"/>
+                                            <outlet property="detailLabel" destination="v7Q-jY-e7y" id="p9D-9I-KM4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -767,7 +793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LI-mj-qG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5819" y="1048"/>
+            <point key="canvasLocation" x="-6102.3364485981301" y="1106.695464362851"/>
         </scene>
         <!--My Information View Controller-->
         <scene sceneID="JDD-fu-fYy">

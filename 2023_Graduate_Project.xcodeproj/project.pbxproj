@@ -190,8 +190,8 @@
 				8F09DECF2A2853D700B04CC4 /* Error */,
 				8F09DECE2A2853CA00B04CC4 /* Cell */,
 				8F0A690529E084C000E1ED2B /* weatherInformation.swift */,
-				8F97513729D9E88300B6A0BE /* DeviceConfig.swift */,
 				8F9C762B29FFA84C00EC9478 /* FreeBoardTableViewCell.swift */,
+				8F97513729D9E88300B6A0BE /* DeviceConfig.swift */,
 				8F0A692B29E1B4DF00E1ED2B /* BannerInfo.swift */,
 				8F70A3E22A13B32500C19B2E /* CustomAnnotation.swift */,
 			);
