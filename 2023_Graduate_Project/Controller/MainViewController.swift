@@ -13,7 +13,7 @@ import FirebaseAuth
 class MainViewController: UIViewController, CLLocationManagerDelegate {
     
     let bannerInfos: [BannerInfo] = BannerInfo.list
-    let colors: [UIColor] = [.systemMint, .systemYellow, .systemFill , .systemOrange]
+    let colors: [UIColor] = [.clear, .clear, .clear , .clear]
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!

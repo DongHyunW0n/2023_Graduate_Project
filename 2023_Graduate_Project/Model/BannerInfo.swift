@@ -17,9 +17,9 @@ struct BannerInfo: Hashable {
 extension BannerInfo {
     static let list = [
         BannerInfo(title: "동서대학교 AI 언박싱", description: "화이팅", imageName: "showme" ),
-        BannerInfo(title: "TestBanner2", description: "동서대학교 화이팅2 !", imageName: "mapMarker" ),
-        BannerInfo(title: "TestBanner3", description: "동서대학교 화이팅3 !", imageName: "mapMarker" ),
-        BannerInfo(title: "TestBanner4", description: "동서대학교 화이팅4 !", imageName: "mapMarker" )
+        BannerInfo(title: "TestBanner2", description: "동서대학교 화이팅2 !", imageName: "showme" ),
+        BannerInfo(title: "TestBanner3", description: "동서대학교 화이팅3 !", imageName: "showme" ),
+        BannerInfo(title: "TestBanner4", description: "동서대학교 화이팅4 !", imageName: "showme" )
        
         
     ]

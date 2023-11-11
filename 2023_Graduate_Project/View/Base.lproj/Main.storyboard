@@ -415,13 +415,13 @@
                                 <rect key="frame" x="15" y="67" width="398" height="541.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-Ni-MAw">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="25.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="24.666666666666668"/>
                                         <fontDescription key="fontDescription" name="SOYO-Maple-Bold" family="SOYO Maple" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jYE-Sp-Oys">
-                                        <rect key="frame" x="0.0" y="36.333333333333314" width="398" height="504.99999999999994"/>
+                                        <rect key="frame" x="0.0" y="35.666666666666657" width="398" height="505.66666666666686"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="18"/>
@@ -433,13 +433,13 @@
                                 <rect key="frame" x="15" y="614.33333333333337" width="398" height="262.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oh7-mW-ESm">
-                                        <rect key="frame" x="0.0" y="0.0" width="36.333333333333336" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="22.333333333333332"/>
                                         <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YTY-ip-3KY">
-                                        <rect key="frame" x="0.0" y="63.000000000000007" width="398" height="125.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="62.333333333333265" width="398" height="125.66666666666669"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="40" id="QQ3-5m-Q0r" customClass="FreeboardCommentCell" customModule="_023_Graduate_Project" customModuleProvider="target">
@@ -450,13 +450,13 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="익명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBW-fP-li2">
-                                                            <rect key="frame" x="10.000000000000002" y="10" width="26.666666666666671" height="20"/>
+                                                            <rect key="frame" x="9.9999999999999982" y="10" width="24.333333333333329" height="20"/>
                                                             <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntN-B3-w7U">
-                                                            <rect key="frame" x="51.666666666666671" y="11.666666666666664" width="38.666666666666671" height="17"/>
+                                                            <rect key="frame" x="49.333333333333329" y="11.999999999999998" width="34.333333333333329" height="16.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -479,15 +479,15 @@
                                         </prototypes>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dOV-pa-Ron">
-                                        <rect key="frame" x="0.0" y="228.66666666666663" width="398" height="34"/>
+                                        <rect key="frame" x="0.0" y="228" width="398" height="34.666666666666686"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6xJ-M3-eyX">
-                                                <rect key="frame" x="0.0" y="0.0" width="324.66666666666669" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="327.66666666666669" height="34.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJb-9f-MzX">
-                                                <rect key="frame" x="339.66666666666669" y="0.0" width="58.333333333333314" height="34"/>
+                                                <rect key="frame" x="342.66666666666669" y="0.0" width="55.333333333333314" height="34.666666666666664"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="등록">
                                                     <fontDescription key="titleFontDescription" name="SOYO-Maple-Regular" family="SOYO Maple" pointSize="18"/>
@@ -522,7 +522,6 @@
                             <constraint firstItem="BP1-4V-JgW" firstAttribute="trailing" secondItem="fCO-3e-beM" secondAttribute="trailing" constant="15" id="3MT-d8-SFE"/>
                             <constraint firstItem="fCO-3e-beM" firstAttribute="top" secondItem="BP1-4V-JgW" secondAttribute="top" constant="20" id="DZH-Bs-G04"/>
                             <constraint firstItem="BP1-4V-JgW" firstAttribute="bottom" secondItem="zBK-6w-EH3" secondAttribute="bottom" constant="15" id="NlL-vs-ghh"/>
-                            <constraint firstItem="zBK-6w-EH3" firstAttribute="top" secondItem="Kyz-gN-GEx" secondAttribute="bottom" constant="19.333333333333371" id="cfe-X8-C2f"/>
                             <constraint firstItem="BP1-4V-JgW" firstAttribute="trailing" secondItem="zBK-6w-EH3" secondAttribute="trailing" constant="15" id="l9J-ej-68G"/>
                             <constraint firstItem="zBK-6w-EH3" firstAttribute="leading" secondItem="BP1-4V-JgW" secondAttribute="leading" constant="15" id="mVG-Ab-fLD"/>
                             <constraint firstItem="zBK-6w-EH3" firstAttribute="top" secondItem="Kyz-gN-GEx" secondAttribute="bottom" constant="5" id="qJs-gG-HC6"/>
@@ -1420,48 +1419,27 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="181"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타이틀" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoV-RU-VWF">
-                                                                            <rect key="frame" x="30" y="30" width="189" height="26.333333333333329"/>
-                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzf-7e-aKo">
-                                                                            <rect key="frame" x="30" y="76.333333333333329" width="189" height="20.333333333333329"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FAX-gb-TOf">
-                                                                            <rect key="frame" x="249" y="30" width="70" height="70"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="70" id="INL-Ix-zL9"/>
-                                                                                <constraint firstAttribute="height" constant="70" id="R7k-bj-Szw"/>
-                                                                            </constraints>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="181"/>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="Hzf-7e-aKo" firstAttribute="top" secondItem="GoV-RU-VWF" secondAttribute="bottom" constant="20" id="39l-IB-ylw"/>
-                                                                        <constraint firstItem="FAX-gb-TOf" firstAttribute="top" secondItem="GoV-RU-VWF" secondAttribute="top" id="4xU-e6-LID"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="FAX-gb-TOf" secondAttribute="trailing" constant="40" id="HxU-Hx-YYI"/>
-                                                                        <constraint firstItem="GoV-RU-VWF" firstAttribute="top" secondItem="k6n-l8-hZ1" secondAttribute="top" constant="30" id="JfU-uI-hTv"/>
-                                                                        <constraint firstItem="Hzf-7e-aKo" firstAttribute="leading" secondItem="GoV-RU-VWF" secondAttribute="leading" id="QvC-cV-MBA"/>
-                                                                        <constraint firstItem="FAX-gb-TOf" firstAttribute="leading" secondItem="GoV-RU-VWF" secondAttribute="trailing" constant="30" id="VFa-U7-Lh1"/>
-                                                                        <constraint firstItem="GoV-RU-VWF" firstAttribute="leading" secondItem="k6n-l8-hZ1" secondAttribute="leading" constant="30" id="fcV-cE-Snv"/>
-                                                                        <constraint firstItem="FAX-gb-TOf" firstAttribute="leading" secondItem="Hzf-7e-aKo" secondAttribute="trailing" constant="30" id="uac-Z4-5bn"/>
+                                                                        <constraint firstItem="FAX-gb-TOf" firstAttribute="top" secondItem="k6n-l8-hZ1" secondAttribute="top" id="5zi-d8-d9p"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="FAX-gb-TOf" secondAttribute="bottom" id="RgA-Sd-ohN"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="FAX-gb-TOf" secondAttribute="trailing" id="ejg-fG-p1f"/>
+                                                                        <constraint firstItem="FAX-gb-TOf" firstAttribute="leading" secondItem="k6n-l8-hZ1" secondAttribute="leading" id="fav-Nw-Uec"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <size key="customSize" width="359" height="181"/>
                                                                 <connections>
-                                                                    <outlet property="descriptionLabel" destination="Hzf-7e-aKo" id="IPK-7V-bTL"/>
                                                                     <outlet property="thumbnailImageView" destination="FAX-gb-TOf" id="oMA-yL-OHx"/>
-                                                                    <outlet property="titleLabel" destination="GoV-RU-VWF" id="GYp-Py-kQe"/>
                                                                 </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
                                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-fr-ZPh">
                                                         <rect key="frame" x="149.33333333333334" y="215" width="115.66666666666666" height="25.666666666666657"/>
+                                                        <color key="currentPageIndicatorTintColor" systemColor="systemGray4Color"/>
                                                     </pageControl>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1907,10 +1885,10 @@
     <resources>
         <image name="appleLoginLogo" width="33.333332061767578" height="33.333332061767578"/>
         <image name="arrow.up" catalog="system" width="118" height="128"/>
-        <image name="house.fill" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="loginbutton" width="281" height="96"/>
         <image name="loginbutton1" width="281" height="96"/>
-        <image name="map" catalog="system" width="32" height="32"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="spannerImage" width="512" height="512"/>
         <systemColor name="labelColor">
@@ -1920,31 +1898,31 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
