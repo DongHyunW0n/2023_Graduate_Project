@@ -66,6 +66,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.96862745100000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="chatBubble" destination="Tpm-Lk-9Wk" id="Gd8-SR-BeA"/>
                 <outlet property="detailLabel" destination="ik8-b6-e36" id="ciV-CY-87T"/>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9EE1B6A9-88D9-4E07-A600-36A81FCB43C4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EA5B393-9D07-42B9-B6ED-4B80880381B0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_Graduate_Project/Controller/EnterEmailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "EnterEmailViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE0CDF91-1795-430F-90E2-E73B9BCA7517"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_Graduate_Project/Controller/MyInformationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "DE0CDF91-1795-430F-90E2-E73B9BCA7517 - 3851390f070e3f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_Graduate_Project.MyInformationViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; _023_Graduate_Project.MyInformationViewController"
+                  moduleName = "2023_Graduate_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wondonghyun/Desktop/2023_Graduate_Project/2023_Graduate_Project/Controller/MyInformationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "DE0CDF91-1795-430F-90E2-E73B9BCA7517 - 3d65f41ae5686493"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_Graduate_Project.MyInformationViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; _023_Graduate_Project.MyInformationViewController"
+                  moduleName = "2023_Graduate_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wondonghyun/Desktop/2023_Graduate_Project/2023_Graduate_Project/Controller/MyInformationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "DE0CDF91-1795-430F-90E2-E73B9BCA7517 - 3f8a902b3e6a701a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_Graduate_Project.MyInformationViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;_023_Graduate_Project.MyInformationViewController&gt;"
+                  moduleName = "2023_Graduate_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wondonghyun/Desktop/2023_Graduate_Project/2023_Graduate_Project/Controller/MyInformationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "DE0CDF91-1795-430F-90E2-E73B9BCA7517 - b77f8a0cd032f8d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_Graduate_Project.MyInformationViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;_023_Graduate_Project.MyInformationViewController&gt;"
+                  moduleName = "2023_Graduate_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wondonghyun/Desktop/2023_Graduate_Project/2023_Graduate_Project/Controller/MyInformationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "DE0CDF91-1795-430F-90E2-E73B9BCA7517 - 71a62f4211d860e0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_023_Graduate_Project.MyInformationViewController.__deallocating_deinit"
+                  moduleName = "2023_Graduate_Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wondonghyun/Desktop/2023_Graduate_Project/2023_Graduate_Project/Controller/MyInformationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A22A5366-A151-45D2-89C7-CD66D862099C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_Graduate_Project/Controller/MyInformationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "requestListEntity"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34BE7944-C7E3-442E-9CA7-3AC0D8961EA2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_Graduate_Project/Controller/PickerListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "048D9304-52E4-4D49-9B44-D699C8B0D9E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "2023_Graduate_Project/Controller/RequestViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
